@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: hexo | zhouzhuo810</title>
+  <title>JavaEE-Tomcat使用服务开机自启动 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,16 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="周卓的github博客">
-<meta name="keywords" content="Android,IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouzhuo810">
-<meta property="og:url" content="http://zhouzhuo810.github.io/tags/hexo/index.html">
+  <meta name="description" content="前提条件 JDK和Tomcat同为32位或同为64位。 配置JDK环境变量。 配置Tomcat环境变量。">
+<meta name="keywords" content="JavaEE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaEE-Tomcat使用服务开机自启动">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/10/04/JavaEE-Tomcat使用服务开机自启动/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="周卓的github博客">
+<meta property="og:description" content="前提条件 JDK和Tomcat同为32位或同为64位。 配置JDK环境变量。 配置Tomcat环境变量。">
+<meta property="og:updated_time" content="2017-10-04T13:45:49.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhouzhuo810">
-<meta name="twitter:description" content="周卓的github博客">
+<meta name="twitter:title" content="JavaEE-Tomcat使用服务开机自启动">
+<meta name="twitter:description" content="前提条件 JDK和Tomcat同为32位或同为64位。 配置JDK环境变量。 配置Tomcat环境变量。">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,62 +143,70 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : hexo'}
-  </script>
-
-<section class="post-list">
+        <article id="post-JavaEE-Tomcat使用服务开机自启动"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/10/04/JavaEE-Tomcat使用服务开机自启动/">
+    	JavaEE-Tomcat使用服务开机自启动
+    </a>
+  </h2>
+	<time>
+	  10月 4, 2017
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/01/使用hexo搭建github静态博客/">
-        使用hexo搭建github静态博客
-      </a>
-    </h2>
-    
-    <time>
-      6月 1, 2017
-    </time>
-		
     
     <div class='cats'>
-        <a href="/categories/hexo/">hexo</a>
+        <a href="/categories/Tomcat/">Tomcat</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>网上虽然不乏此类教程，但是实际操作起来还是遇到了一些问题。<br>总结如下。</p>
-<p>以Windows 7系统为例：</p>
-<h3 id="登陆Github，创建Reposity"><a href="#登陆Github，创建Reposity" class="headerlink" title="登陆Github，创建Reposity"></a>登陆Github，创建Reposity</h3><ol>
-<li>用户名.github.io, 例如我的是zhouzhuo810.github.io</li>
-<li>点击Setting-&gt;Choose Theme-&gt;随便选一个Theme-&gt;Select-&gt;默认Readme</li>
-<li>访问username.github.io可以看到readme的内容即可。</li>
-</ol>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a><br>选择第二个下载安装。</p>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提条件"><span class="toc-number">1.</span> <span class="toc-text">前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置服务"><span class="toc-number">2.</span> <span class="toc-text">设置服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载服务"><span class="toc-number">3.</span> <span class="toc-text">卸载服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置服务开机自启动"><span class="toc-number">4.</span> <span class="toc-text">设置服务开机自启动</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li>JDK和Tomcat同为32位或同为64位。</li>
+<li>配置JDK环境变量。</li>
+<li>配置Tomcat环境变量。</li>
+</ul>
+<a id="more"></a>
+<h2 id="设置服务"><a href="#设置服务" class="headerlink" title="设置服务"></a>设置服务</h2><ul>
+<li>打开cmd</li>
+<li>切换到tomcat bin目录</li>
+<li>运行下列命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service.bat install Tomcat</div></pre></td></tr></table></figure>
+<h2 id="卸载服务"><a href="#卸载服务" class="headerlink" title="卸载服务"></a>卸载服务</h2><ul>
+<li>打开cmd</li>
+<li>切换到tomcat bin目录</li>
+<li>运行下列命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service.bat uninstall Tomcat</div></pre></td></tr></table></figure>
+<h2 id="设置服务开机自启动"><a href="#设置服务开机自启动" class="headerlink" title="设置服务开机自启动"></a>设置服务开机自启动</h2><ul>
+<li>打开服务管理</li>
+<li>设置为自动，应用。</li>
+</ul>
 
-    
-	  <div class="readmore">
-      <a href="/2017/06/01/使用hexo搭建github静态博客/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/hexo/">hexo</a>
+        <a href="/tags/JavaEE/">JavaEE</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'JavaEE-Tomcat使用服务开机自启动',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
