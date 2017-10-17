@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>ACM-(括号配对问题) | zhouzhuo810</title>
+  <title>Android常用代码-微信QQ分享文件 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="描述 现在，有一行括号序列，请你检查这行括号是否配对。 输入 第一行输入一个数N（0&amp;lt;N&amp;lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有”[“,”]”,”(“,”)”四种字符 输出 每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配">
-<meta name="keywords" content="ACM">
+  <meta name="description" content="不使用SDK实现QQ和微信文件分享。 QQ分享12345678910111213141516private void shareDbToQQ(File file) &amp;#123;    Intent share = new Intent(Intent.ACTION_SEND);    ComponentName component = new ComponentName(&amp;quot;com.tenc">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ACM-(括号配对问题)">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/07/ACM-括号配对问题/index.html">
+<meta property="og:title" content="Android常用代码-微信QQ分享文件">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/10/17/Android常用代码-微信QQ分享文件/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="描述 现在，有一行括号序列，请你检查这行括号是否配对。 输入 第一行输入一个数N（0&amp;lt;N&amp;lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有”[“,”]”,”(“,”)”四种字符 输出 每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.196Z">
+<meta property="og:description" content="不使用SDK实现QQ和微信文件分享。 QQ分享12345678910111213141516private void shareDbToQQ(File file) &amp;#123;    Intent share = new Intent(Intent.ACTION_SEND);    ComponentName component = new ComponentName(&amp;quot;com.tenc">
+<meta property="og:updated_time" content="2017-10-17T07:20:09.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ACM-(括号配对问题)">
-<meta name="twitter:description" content="描述 现在，有一行括号序列，请你检查这行括号是否配对。 输入 第一行输入一个数N（0&amp;lt;N&amp;lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有”[“,”]”,”(“,”)”四种字符 输出 每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配">
+<meta name="twitter:title" content="Android常用代码-微信QQ分享文件">
+<meta name="twitter:description" content="不使用SDK实现QQ和微信文件分享。 QQ分享12345678910111213141516private void shareDbToQQ(File file) &amp;#123;    Intent share = new Intent(Intent.ACTION_SEND);    ComponentName component = new ComponentName(&amp;quot;com.tenc">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,46 +143,39 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-ACM-括号配对问题"
+        <article id="post-Android常用代码-微信QQ分享文件"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/06/07/ACM-括号配对问题/">
-    	ACM-(括号配对问题)
+  	<a href="/2017/10/17/Android常用代码-微信QQ分享文件/">
+    	Android常用代码-微信QQ分享文件
     </a>
   </h2>
 	<time>
-	  6月 7, 2017
+	  10月 17, 2017
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/ACM/">ACM</a>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考答案"><span class="toc-number">1.</span> <span class="toc-text">参考答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java版"><span class="toc-number">1.1.</span> <span class="toc-text">Java版</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ分享"><span class="toc-number">1.</span> <span class="toc-text">QQ分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信分享"><span class="toc-number">2.</span> <span class="toc-text">微信分享</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p><strong>描述</strong></p>
-<p>现在，有一行括号序列，请你检查这行括号是否配对。</p>
-<p><strong>输入</strong></p>
-<p>第一行输入一个数N（0&lt;N&lt;=100）,表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S(S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有”[“,”]”,”(“,”)”四种字符</p>
-<p><strong>输出</strong></p>
-<p>每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配对则输出No</p>
-<p><strong>样例输入</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">3</div><div class="line">[(])</div><div class="line">(])</div><div class="line">([[]()])</div></pre></td></tr></table></figure></p>
-<p><strong>样例输出</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">No</div><div class="line">No</div><div class="line">Yes</div></pre></td></tr></table></figure></p>
+    	<p>不使用SDK实现QQ和微信文件分享。</p>
+<h3 id="QQ分享"><a href="#QQ分享" class="headerlink" title="QQ分享"></a>QQ分享</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareDbToQQ(File file) &#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.provider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><h3 id="Java版"><a href="#Java版" class="headerlink" title="Java版"></a>Java版</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.io.*;</div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">        <span class="keyword">int</span> count= sc.nextInt();</div><div class="line">        String[] strs = <span class="keyword">new</span> String[count];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;count; i++) &#123;</div><div class="line">            strs[i] = sc.next();</div><div class="line">        &#125;</div><div class="line">        Stack&lt;Character&gt; stack = <span class="keyword">null</span>;  </div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;count; j++) &#123;</div><div class="line">            String str = strs[j];</div><div class="line">            <span class="keyword">if</span>(str.length() % <span class="number">2</span> == <span class="number">1</span>)&#123;  </div><div class="line">                System.out.println(<span class="string">"No"</span>);  </div><div class="line">            &#125;<span class="keyword">else</span>&#123;    </div><div class="line">                stack = <span class="keyword">new</span> Stack&lt;Character&gt;();  </div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;str.length();i++)&#123;  </div><div class="line">                    <span class="keyword">if</span>(stack.isEmpty())&#123;  </div><div class="line">                        stack.push(str.charAt(i));  </div><div class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(stack.peek() == <span class="string">'['</span> &amp;&amp; str.charAt(i) == <span class="string">']'</span> || stack.peek() == <span class="string">'('</span> &amp;&amp; str.charAt(i) == <span class="string">')'</span>)&#123;   </div><div class="line">                        stack.pop();  </div><div class="line">                    &#125;<span class="keyword">else</span>&#123;  </div><div class="line">                        stack.push(str.charAt(i));  </div><div class="line">                    &#125;  </div><div class="line">                &#125;  </div><div class="line">                <span class="keyword">if</span>(stack.isEmpty())&#123;  </div><div class="line">                    <span class="comment">//如果栈是空的，说明括号匹配  </span></div><div class="line">                    System.out.println(<span class="string">"Yes"</span>);  </div><div class="line">                &#125;<span class="keyword">else</span>&#123;  </div><div class="line">                    <span class="comment">//说明栈不为空，括号不匹配  </span></div><div class="line">                    System.out.println(<span class="string">"No"</span>);  </div><div class="line">                &#125;  </div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<h3 id="微信分享"><a href="#微信分享" class="headerlink" title="微信分享"></a>微信分享</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">shareToWx</span><span class="params">(File file)</span> </span>&#123;</div><div class="line">    Intent intent = <span class="keyword">new</span> Intent();</div><div class="line">    ComponentName comp = <span class="keyword">new</span> ComponentName(<span class="string">"com.tencent.mm"</span>, <span class="string">"com.tencent.mm.ui.tools.ShareImgUI"</span>);</div><div class="line">    intent.setComponent(comp);</div><div class="line">    Uri uri = <span class="keyword">null</span>;</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt; <span class="number">23</span>) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + <span class="string">".provider"</span>,</div><div class="line">                file);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    intent.setAction(<span class="string">"android.intent.action.SEND"</span>);</div><div class="line">    intent.setType(<span class="string">"file/*"</span>);</div><div class="line">    intent.putExtra(Intent.EXTRA_TEXT, <span class="string">"CE数据库"</span>);</div><div class="line">    intent.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
   	</div>
 	  
 	  <div class="article-tags tags">
       
-        <a href="/tags/ACM/">ACM</a>
+        <a href="/tags/Android/">Android</a>
       
 	  </div>
     
@@ -191,7 +184,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'ACM-(括号配对问题)',
+		title: 'Android常用代码-微信QQ分享文件',
 		tools: true
 	}
 </script>
