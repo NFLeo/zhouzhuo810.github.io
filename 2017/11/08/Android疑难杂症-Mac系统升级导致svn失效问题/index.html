@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
+  <meta name="description" content="问题描述Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android疑难杂症-Mac系统升级导致svn失效问题">
 <meta property="og:url" content="http://zhouzhuo810.github.io/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
-<meta property="og:updated_time" content="2017-11-08T05:26:06.081Z">
+<meta property="og:description" content="问题描述Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
+<meta property="og:updated_time" content="2017-11-08T05:30:52.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android疑难杂症-Mac系统升级导致svn失效问题">
-<meta name="twitter:description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
+<meta name="twitter:description" content="问题描述Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -163,15 +163,16 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#升级之后权限问题"><span class="toc-number">2.1.</span> <span class="toc-text">升级之后权限问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还原svn"><span class="toc-number">2.2.</span> <span class="toc-text">还原svn</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#升级之后权限问题"><span class="toc-number">2.1.</span> <span class="toc-text">升级之后权限问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方式1（推荐）"><span class="toc-number">2.1.1.</span> <span class="toc-text">方式1（推荐）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方式2"><span class="toc-number">2.1.2.</span> <span class="toc-text">方式2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还原svn"><span class="toc-number">2.2.</span> <span class="toc-text">还原svn</span></a></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Mac升级系统后，打开Android Studio的老项目，svn没法使用了。</p>
+    	<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Mac系统升级或Xcode系统升级后，打开Android Studio的老项目，svn没法使用了。</p>
 <p>且打开终端，输入svn upgrade会出现如下问题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="升级之后权限问题"><a href="#升级之后权限问题" class="headerlink" title="升级之后权限问题"></a>升级之后权限问题</h3><p>1、打开终端，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo xcodebuild -license</div></pre></td></tr></table></figure></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="升级之后权限问题"><a href="#升级之后权限问题" class="headerlink" title="升级之后权限问题"></a>升级之后权限问题</h3><h4 id="方式1（推荐）"><a href="#方式1（推荐）" class="headerlink" title="方式1（推荐）"></a>方式1（推荐）</h4><p>打开XCode，同意协议。</p>
+<h4 id="方式2"><a href="#方式2" class="headerlink" title="方式2"></a>方式2</h4><p>1、打开终端，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo xcodebuild -license</div></pre></td></tr></table></figure></p>
 <p>2、终端提示敲回车键（enter）打开许可协议，照做</p>
 <p>3、终端提示 按下  “space” 键阅读许可协议，按“q” 不阅读</p>
 <p>4、最终，终端会出现三个选项，agree 、print、cancel，不用想，能不是agree 吗！输入agree，然后enter</p>
