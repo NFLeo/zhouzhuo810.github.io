@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>AndroidStudio技巧-mac使用SVN项目 | zhouzhuo810</title>
+  <title>AndroidStudio技巧-mac上导入导出SVN项目 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分享项目导入项目1.Check out project from version control2.选择Subversion3.选中项目文件夹4.选择保存路径(中文路径，新建一个文件夹)5.等待完成(打开会报错,别急)。6.复制其他项目的local.properties文件到项目文件夹。7.open a new Android Studio project打开项目">
+  <meta name="description" content="Android Studio -&amp;gt; SVN 1.打开项目 2.Preferences -&amp;gt; Version Control -&amp;gt; Ignored Files（1）app/build（2）build（3）*.iml 3.VCS -&amp;gt; import into version control -&amp;gt; import into subversion 4.Submit  SVN -">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AndroidStudio技巧-mac使用SVN项目">
+<meta property="og:title" content="AndroidStudio技巧-mac上导入导出SVN项目">
 <meta property="og:url" content="http://zhouzhuo810.github.io/2017/11/07/AndroidStudio技巧-mac导入SVN项目/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="分享项目导入项目1.Check out project from version control2.选择Subversion3.选中项目文件夹4.选择保存路径(中文路径，新建一个文件夹)5.等待完成(打开会报错,别急)。6.复制其他项目的local.properties文件到项目文件夹。7.open a new Android Studio project打开项目">
-<meta property="og:updated_time" content="2017-11-07T09:26:29.567Z">
+<meta property="og:description" content="Android Studio -&amp;gt; SVN 1.打开项目 2.Preferences -&amp;gt; Version Control -&amp;gt; Ignored Files（1）app/build（2）build（3）*.iml 3.VCS -&amp;gt; import into version control -&amp;gt; import into subversion 4.Submit  SVN -">
+<meta property="og:updated_time" content="2017-11-07T12:16:29.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AndroidStudio技巧-mac使用SVN项目">
-<meta name="twitter:description" content="分享项目导入项目1.Check out project from version control2.选择Subversion3.选中项目文件夹4.选择保存路径(中文路径，新建一个文件夹)5.等待完成(打开会报错,别急)。6.复制其他项目的local.properties文件到项目文件夹。7.open a new Android Studio project打开项目">
+<meta name="twitter:title" content="AndroidStudio技巧-mac上导入导出SVN项目">
+<meta name="twitter:description" content="Android Studio -&amp;gt; SVN 1.打开项目 2.Preferences -&amp;gt; Version Control -&amp;gt; Ignored Files（1）app/build（2）build（3）*.iml 3.VCS -&amp;gt; import into version control -&amp;gt; import into subversion 4.Submit  SVN -">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -149,7 +149,7 @@
 	<section class='meta'>
 	<h2 class="title">
   	<a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
-    	AndroidStudio技巧-mac使用SVN项目
+    	AndroidStudio技巧-mac上导入导出SVN项目
     </a>
   </h2>
 	<time>
@@ -163,11 +163,25 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#分享项目"><span class="toc-number">1.</span> <span class="toc-text">分享项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#导入项目"><span class="toc-number">2.</span> <span class="toc-text">导入项目</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio-gt-SVN"><span class="toc-number">1.</span> <span class="toc-text">Android Studio -> SVN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SVN-gt-Android-Studio"><span class="toc-number">2.</span> <span class="toc-text">SVN -> Android Studio</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h3 id="分享项目"><a href="#分享项目" class="headerlink" title="分享项目"></a>分享项目</h3><h3 id="导入项目"><a href="#导入项目" class="headerlink" title="导入项目"></a>导入项目</h3><p>1.Check out project from version control<br>2.选择Subversion<br>3.选中项目文件夹<br>4.选择保存路径(中文路径，新建一个文件夹)<br>5.等待完成(打开会报错,别急)。<br>6.复制其他项目的local.properties文件到项目文件夹。<br>7.open a new Android Studio project打开项目</p>
+    	<h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
+<li>1.打开项目</li>
+<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
+<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
+<li>4.Submit</li>
+</ul>
+<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
+<li>1.Check out project from version control</li>
+<li>2.选择Subversion</li>
+<li>3.选中项目文件夹根目录</li>
+<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
+<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
+<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
+<li>7.open a new Android Studio project打开项目</li>
+</ul>
 
   	</div>
 	  
@@ -182,7 +196,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'AndroidStudio技巧-mac使用SVN项目',
+		title: 'AndroidStudio技巧-mac上导入导出SVN项目',
 		tools: true
 	}
 </script>
