@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: Android开发工具 | zhouzhuo810</title>
+  <title>Android疑难杂症-Mac系统升级导致svn失效问题 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,16 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="周卓的github博客">
-<meta name="keywords" content="Android,IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouzhuo810">
-<meta property="og:url" content="http://zhouzhuo810.github.io/categories/Android开发工具/index.html">
+  <meta name="description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android疑难杂症-Mac系统升级导致svn失效问题">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="周卓的github博客">
+<meta property="og:description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
+<meta property="og:updated_time" content="2017-11-08T05:26:06.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhouzhuo810">
-<meta name="twitter:description" content="周卓的github博客">
+<meta name="twitter:title" content="Android疑难杂症-Mac系统升级导致svn失效问题">
+<meta name="twitter:description" content="问题描述Mac升级系统后，打开Android Studio的老项目，svn没法使用了。 且打开终端，输入svn upgrade会出现如下问题。 1Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,66 +143,59 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Category : Android开发工具'}
-  </script>
-
-<section class="post-list">
+        <article id="post-Android疑难杂症-Mac系统升级导致svn失效问题"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/11/08/Android疑难杂症-Mac系统升级导致svn失效问题/">
+    	Android疑难杂症-Mac系统升级导致svn失效问题
+    </a>
+  </h2>
+	<time>
+	  11月 8, 2017
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
-        AndroidStudio技巧-mac上导入导出SVN项目
-      </a>
-    </h2>
-    
-    <time>
-      11月 7, 2017
-    </time>
-		
     
     <div class='cats'>
-        <a href="/categories/Android开发工具/">Android开发工具</a>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
-<li>1.打开项目</li>
-<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
-<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
-<li>4.Submit</li>
-</ul>
-<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
-<li>1.Check out project from version control</li>
-<li>2.选择Subversion</li>
-<li>3.选中项目文件夹根目录</li>
-<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
-<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
-<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
-<li>7.open a new Android Studio project打开项目</li>
-</ul>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#升级之后权限问题"><span class="toc-number">2.1.</span> <span class="toc-text">升级之后权限问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#还原svn"><span class="toc-number">2.2.</span> <span class="toc-text">还原svn</span></a></li></ol></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Mac升级系统后，打开Android Studio的老项目，svn没法使用了。</p>
+<p>且打开终端，输入svn upgrade会出现如下问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="升级之后权限问题"><a href="#升级之后权限问题" class="headerlink" title="升级之后权限问题"></a>升级之后权限问题</h3><p>1、打开终端，输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo xcodebuild -license</div></pre></td></tr></table></figure></p>
+<p>2、终端提示敲回车键（enter）打开许可协议，照做</p>
+<p>3、终端提示 按下  “space” 键阅读许可协议，按“q” 不阅读</p>
+<p>4、最终，终端会出现三个选项，agree 、print、cancel，不用想，能不是agree 吗！输入agree，然后enter</p>
+<h3 id="还原svn"><a href="#还原svn" class="headerlink" title="还原svn"></a>还原svn</h3><p>1、终端，切换到项目根目录</p>
+<p>2、输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">svn upgrade</div></pre></td></tr></table></figure></p>
+<p>3、问题解决。</p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/Android/">Android</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'Android疑难杂症-Mac系统升级导致svn失效问题',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
