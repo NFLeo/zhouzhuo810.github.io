@@ -155,6 +155,52 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-析构过程/">
+        Swift笔记-析构过程
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>在一个类的实例被释放之前，析构函数被立即调用。</p>
+<p>用关键字<strong>deinit</strong>来标示析构函数，类似于初始化函数用init来标示。析构函数只适用于类类型。</p>
+<ul>
+<li>Swift 会自动释放不再需要的实例以释放资源。</li>
+<li>Swift 通过自动引用计数（ARC）处理实例的内存管理。</li>
+<li>通常当你的实例被释放时不需要手动地去清理。但是，当使用自己的资源时，你可能需要进行一些额外的清理。</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-析构过程/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/06/Swift笔记-继承/">
         Swift笔记-继承
       </a>
@@ -525,48 +571,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/05/Swift笔记-控制流/">
-        Swift笔记-控制流
-      </a>
-    </h2>
-    
-    <time>
-      6月 5, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="For循环"><a href="#For循环" class="headerlink" title="For循环"></a>For循环</h2><h3 id="For-In"><a href="#For-In" class="headerlink" title="For-In"></a>For-In</h3><p>你可以使用for-in循环来遍历一个集合里面的所有元素<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="number">1</span>...<span class="number">5</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"\(index) times 5 is \(index * 5)"</span>)</div><div class="line">&#125;</div><div class="line"><span class="comment">// 1 times 5 is 5</span></div><div class="line"><span class="comment">// 2 times 5 is 10</span></div><div class="line"><span class="comment">// 3 times 5 is 15</span></div><div class="line"><span class="comment">// 4 times 5 is 20</span></div><div class="line"><span class="comment">// 5 times 5 is 25</span></div></pre></td></tr></table></figure></p>
-<p>如果你不需要知道区间序列内每一项的值，你可以使用下划线（_）替代变量名来忽略对值的访问：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> base = <span class="number">3</span></div><div class="line"><span class="keyword">let</span> power = <span class="number">10</span></div><div class="line"><span class="keyword">var</span> answer = <span class="number">1</span></div><div class="line"><span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> <span class="number">1</span>...power &#123;</div><div class="line">    answer *= base</div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(<span class="string">"\(base) to the power of \(power) is \(answer)"</span>)</div><div class="line"><span class="comment">// 输出 "3 to the power of 10 is 59049"</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/05/Swift笔记-控制流/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -623,7 +627,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>8</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>1</div></a></li>
+        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>2</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     

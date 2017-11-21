@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: Git | zhouzhuo810</title>
+  <title>AndroidStudio技巧-Terminal权限问题 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,16 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="周卓的github博客">
-<meta name="keywords" content="Android,IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouzhuo810">
-<meta property="og:url" content="http://zhouzhuo810.github.io/tags/Git/index.html">
+  <meta name="description" content="系统macOs Sierra 10.12.6系统 工具Android Studio 2.3.1 Terminal 问题描述执行./gradlew install命令时提示gradlew: Permission Denied 解决方案1chmod +x gradlew 再操作即可。">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidStudio技巧-Terminal权限问题">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/11/21/AndroidStudio技巧-Terminal权限问题/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="周卓的github博客">
+<meta property="og:description" content="系统macOs Sierra 10.12.6系统 工具Android Studio 2.3.1 Terminal 问题描述执行./gradlew install命令时提示gradlew: Permission Denied 解决方案1chmod +x gradlew 再操作即可。">
+<meta property="og:updated_time" content="2017-11-21T06:08:34.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhouzhuo810">
-<meta name="twitter:description" content="周卓的github博客">
+<meta name="twitter:title" content="AndroidStudio技巧-Terminal权限问题">
+<meta name="twitter:description" content="系统macOs Sierra 10.12.6系统 工具Android Studio 2.3.1 Terminal 问题描述执行./gradlew install命令时提示gradlew: Permission Denied 解决方案1chmod +x gradlew 再操作即可。">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,59 +143,53 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Git'}
-  </script>
-
-<section class="post-list">
+        <article id="post-AndroidStudio技巧-Terminal权限问题"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/11/21/AndroidStudio技巧-Terminal权限问题/">
+    	AndroidStudio技巧-Terminal权限问题
+    </a>
+  </h2>
+	<time>
+	  11月 21, 2017
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/16/Git常见问题-Android-Studio重新分享项目到Github提示项目已存在/">
-        Git常见问题-Android Studio重新分享项目到Github提示项目已存在
-      </a>
-    </h2>
-    
-    <time>
-      10月 16, 2017
-    </time>
-		
     
     <div class='cats'>
-        <a href="/categories/Git常见问题/">Git常见问题</a>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <ul>
-<li>打开Git Bash</li>
-<li>cd ${项目跟目录}</li>
-<li>git remote rm origin</li>
-<li>git remote add origin git@github.com:${用户名}/${项目名}</li>
-<li>vi .git/config</li>
-<li>删除[remote “origin”]那一行<br>(vi操作方法，输入i进入输入模式，删除该行之后，按下Esc，输入”:wq”保存并退出)</li>
-</ul>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工具"><span class="toc-number">2.</span> <span class="toc-text">工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题描述"><span class="toc-number">3.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方案"><span class="toc-number">4.</span> <span class="toc-text">解决方案</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><p>macOs Sierra 10.12.6系统</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>Android Studio 2.3.1 Terminal</p>
+<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>执行./gradlew install命令时提示<br>gradlew: Permission Denied</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod +x gradlew</div></pre></td></tr></table></figure>
+<p>再操作即可。</p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/Git/">Git</a>
+        <a href="/tags/Android/">Android</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'AndroidStudio技巧-Terminal权限问题',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
