@@ -150,6 +150,95 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-自动引用计数/">
+        Swift笔记-自动引用计数
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Swift 使用自动引用计数（ARC）这一机制来跟踪和管理应用程序的内存<br>通常情况下我们不需要去手动释放内存，因为 ARC 会在类的实例不再被使用时，自动释放其占用的内存。<br>但在有些时候我们还是需要在代码中实现内存管理。</p>
+<h2 id="ARC-功能"><a href="#ARC-功能" class="headerlink" title="ARC 功能"></a>ARC 功能</h2><ul>
+<li>当每次使用 init() 方法创建一个类的新的实例的时候，ARC 会分配一大块内存用来储存实例的信息。</li>
+<li>内存中会包含实例的类型信息，以及这个实例所有相关属性的值。</li>
+<li>当实例不再被使用时，ARC 释放实例所占用的内存，并让释放的内存能挪作他用。</li>
+<li>为了确保使用中的实例不会被销毁，ARC 会跟踪和计算每一个实例正在被多少属性，常量和变量所引用。</li>
+<li>实例赋值给属性、常量或变量，它们都会创建此实例的强引用，只要强引用还在，实例是不允许被销毁的。</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-自动引用计数/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-可选链/">
+        Swift笔记-可选链
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="！"><a href="#！" class="headerlink" title="！"></a>！</h2><p>使用感叹号(!)可选链实例</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> residence: <span class="type">Residence</span>?</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Residence</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> numberOfRooms = <span class="number">1</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">let</span> john = <span class="type">Person</span>()</div><div class="line">  </div><div class="line"><span class="comment">//将导致运行时错误</span></div><div class="line"><span class="keyword">let</span> roomCount = john.residence!.numberOfRooms</div><div class="line">  </div><div class="line"><span class="comment">//fatal error: unexpectedly found nil while unwrapping an Optional value</span></div></pre></td></tr></table></figure>
+<p>想使用感叹号（!）强制解析获得这个人residence属性numberOfRooms属性值，将会引发运行时错误，因为这时没有可以供解析的residence值。</p>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-可选链/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/06/Swift笔记-析构过程/">
         Swift笔记-析构过程
       </a>
@@ -485,87 +574,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/05/Swift笔记-闭包/">
-        Swift笔记-闭包
-      </a>
-    </h2>
-    
-    <time>
-      6月 5, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="sorted-方法"><a href="#sorted-方法" class="headerlink" title="sorted 方法"></a>sorted 方法</h2><p>排序闭包函数类型需为(String, String) -&gt; Bool。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="comment">// 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&gt; Bool。</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">backwards</span><span class="params">(s1: String, s2: String)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> s1 &gt; s2</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> reversed = names.sorted(by: backwards)</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure></p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/05/Swift笔记-闭包/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/05/Swift笔记-函数/">
-        Swift笔记-函数
-      </a>
-    </h2>
-    
-    <time>
-      6月 5, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="函数的定义与调用"><a href="#函数的定义与调用" class="headerlink" title="函数的定义与调用"></a>函数的定义与调用</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloAgain</span><span class="params">(personName: String)</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Hello again, "</span> + personName + <span class="string">"!"</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(sayHelloAgain(personName: <span class="string">"Anna"</span>))</div><div class="line"><span class="comment">// prints "Hello again, Anna!"</span></div></pre></td></tr></table></figure>
-<h2 id="函数参数与返回值"><a href="#函数参数与返回值" class="headerlink" title="函数参数与返回值"></a>函数参数与返回值</h2><h3 id="无参函数"><a href="#无参函数" class="headerlink" title="无参函数"></a>无参函数</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHelloWorld</span><span class="params">()</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"hello, world"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">print</span>(sayHelloWorld())</div><div class="line"><span class="comment">// prints "hello, world"</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/05/Swift笔记-函数/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -619,7 +627,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>8</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>9</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>2</div></a></li>
     
@@ -629,7 +637,7 @@
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
     
