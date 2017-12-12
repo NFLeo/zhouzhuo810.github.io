@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: Android开发工具 | zhouzhuo810</title>
+  <title>RxJava-无限重复定时任务 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,16 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="周卓的github博客">
-<meta name="keywords" content="Android,IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouzhuo810">
-<meta property="og:url" content="http://zhouzhuo810.github.io/categories/Android开发工具/index.html">
+  <meta name="description" content="开启任务123456789101112131415161718192021222324252627282930313233343536373839private void getAllDatas(final long delay) &amp;#123;	//解除上次订阅    if (subscribe != null) &amp;#123;        subscribe.unsubscribe();">
+<meta name="keywords" content="RxJava">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RxJava-无限重复定时任务">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2017/12/12/RxJava-无限重复定时任务/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="周卓的github博客">
+<meta property="og:description" content="开启任务123456789101112131415161718192021222324252627282930313233343536373839private void getAllDatas(final long delay) &amp;#123;	//解除上次订阅    if (subscribe != null) &amp;#123;        subscribe.unsubscribe();">
+<meta property="og:updated_time" content="2017-12-12T03:01:55.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhouzhuo810">
-<meta name="twitter:description" content="周卓的github博客">
+<meta name="twitter:title" content="RxJava-无限重复定时任务">
+<meta name="twitter:description" content="开启任务123456789101112131415161718192021222324252627282930313233343536373839private void getAllDatas(final long delay) &amp;#123;	//解除上次订阅    if (subscribe != null) &amp;#123;        subscribe.unsubscribe();">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,107 +143,50 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Category : Android开发工具'}
-  </script>
-
-<section class="post-list">
+        <article id="post-RxJava-无限重复定时任务"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2017/12/12/RxJava-无限重复定时任务/">
+    	RxJava-无限重复定时任务
+    </a>
+  </h2>
+	<time>
+	  12月 12, 2017
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/11/21/AndroidStudio技巧-Terminal权限问题/">
-        AndroidStudio技巧-Terminal权限问题
-      </a>
-    </h2>
-    
-    <time>
-      11月 21, 2017
-    </time>
-		
     
     <div class='cats'>
-        <a href="/categories/Android开发工具/">Android开发工具</a>
+        <a href="/categories/RxJava/">RxJava</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><p>macOs Sierra 10.12.6系统</p>
-<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>Android Studio 2.3.1 Terminal</p>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>执行./gradlew install命令时提示<br>gradlew: Permission Denied</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod +x gradlew</div></pre></td></tr></table></figure>
-<p>再操作即可。</p>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#开启任务"><span class="toc-number">1.</span> <span class="toc-text">开启任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取消任务"><span class="toc-number">2.</span> <span class="toc-text">取消任务</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h3 id="开启任务"><a href="#开启任务" class="headerlink" title="开启任务"></a>开启任务</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">getAllDatas</span><span class="params">(<span class="keyword">final</span> <span class="keyword">long</span> delay)</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="comment">//解除上次订阅</span></div><div class="line">    <span class="keyword">if</span> (subscribe != <span class="keyword">null</span>) &#123;</div><div class="line">        subscribe.unsubscribe();</div><div class="line">        subscribe = <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    subscribe = Observable.interval(delay, TimeUnit.MILLISECONDS)</div><div class="line">            .flatMap(<span class="keyword">new</span> Func1&lt;Long, Observable&lt;GetSomeThingResult&gt;&gt;() &#123;</div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> Observable&lt;GetSomeThingResult&gt; <span class="title">call</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                	<span class="comment">//接口调用</span></div><div class="line">                    <span class="keyword">return</span> Api.getDefaultApi().getSomeThing();</div><div class="line">                &#125;</div><div class="line">            &#125;)</div><div class="line">            .observeOn(AndroidSchedulers.mainThread())</div><div class="line">            .subscribeOn(Schedulers.io())</div><div class="line">            .subscribe(<span class="keyword">new</span> Subscriber&lt;GetSomeThingResult&gt;() &#123;</div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line">                    ToastUtils.showCustomBgToast(getString(R.string.no_net_text) + e.toString());</div><div class="line">                    getAllDatas(Constants.AUTO_REFRESH_DURATION);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="meta">@Override</span></div><div class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(GetSomeThingResult result)</span> </span>&#123;</div><div class="line">                	<span class="comment">//... do some thing with data</span></div><div class="line"></div><div class="line">                    getAllDatas(Constants.AUTO_REFRESH_DURATION);</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="取消任务"><a href="#取消任务" class="headerlink" title="取消任务"></a>取消任务</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onDestroy();</div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        <span class="keyword">if</span> (subscribe != <span class="keyword">null</span> &amp;&amp; !subscribe.isUnsubscribed()) &#123;</div><div class="line">            subscribe.unsubscribe();</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">        e.printStackTrace();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/Android/">Android</a>
+        <a href="/tags/RxJava/">RxJava</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/11/07/AndroidStudio技巧-mac导入SVN项目/">
-        AndroidStudio技巧-mac上导入导出SVN项目
-      </a>
-    </h2>
-    
-    <time>
-      11月 7, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android开发工具/">Android开发工具</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="Android-Studio-gt-SVN"><a href="#Android-Studio-gt-SVN" class="headerlink" title="Android Studio -&gt; SVN"></a>Android Studio -&gt; SVN</h3><ul>
-<li>1.打开项目</li>
-<li>2.Preferences -&gt; Version Control -&gt; Ignored Files<br>（1）app/build<br>（2）build<br>（3）*.iml</li>
-<li>3.VCS -&gt; import into version control -&gt; import into subversion</li>
-<li>4.Submit</li>
-</ul>
-<h3 id="SVN-gt-Android-Studio"><a href="#SVN-gt-Android-Studio" class="headerlink" title="SVN -&gt; Android Studio"></a>SVN -&gt; Android Studio</h3><ul>
-<li>1.Check out project from version control</li>
-<li>2.选择Subversion</li>
-<li>3.选中项目文件夹根目录</li>
-<li>4.选择保存路径(非中文路径，新建一个项目文件夹)</li>
-<li>5.等待完成(如果打开会报错,大多是找不到gradle,别急)。</li>
-<li>6.复制其他项目的local.properties文件到项目文件夹。</li>
-<li>7.open a new Android Studio project打开项目</li>
-</ul>
-
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'RxJava-无限重复定时任务',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
