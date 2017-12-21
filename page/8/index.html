@@ -150,6 +150,86 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-属性/">
+        Swift笔记-属性
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="存储属性"><a href="#存储属性" class="headerlink" title="存储属性"></a>存储属性</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Number</span></span></div><div class="line">&#123;</div><div class="line">   <span class="keyword">var</span> digits: <span class="type">Int</span></div><div class="line">   <span class="keyword">let</span> pi = <span class="number">3.1415</span></div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="keyword">var</span> n = <span class="type">Number</span>(digits: <span class="number">12345</span>)</div><div class="line">n.digits = <span class="number">67</span></div><div class="line">  </div><div class="line"><span class="built_in">print</span>(<span class="string">"\(n.digits)"</span>)</div><div class="line"><span class="built_in">print</span>(<span class="string">"\(n.pi)"</span>)</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-属性/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-类/">
+        Swift笔记-类
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> studname: <span class="type">String</span></div><div class="line">    <span class="keyword">var</span> mark: <span class="type">Int</span></div><div class="line">    <span class="keyword">var</span> mark2: <span class="type">Int</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-类/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/06/Swift笔记-结构体/">
         Swift笔记-结构体
       </a>
@@ -486,100 +566,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/02/Swift笔记-基础部分/">
-        Swift笔记-基础部分
-      </a>
-    </h2>
-    
-    <time>
-      6月 2, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="常量和变量"><a href="#常量和变量" class="headerlink" title="常量和变量"></a>常量和变量</h2><ol>
-<li>变量</li>
-</ol>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//变量声明</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">//声明多个变量</span></div><div class="line"><span class="keyword">var</span> x = <span class="number">1</span>, y = <span class="number">2</span></div><div class="line"></div><div class="line"><span class="comment">//带类型声明</span></div><div class="line"><span class="keyword">var</span> msg: <span class="type">String</span></div><div class="line"><span class="comment">//变量赋值</span></div><div class="line">msg = <span class="string">"Hello"</span></div></pre></td></tr></table></figure>
-<ol>
-<li>常量</li>
-</ol>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//声明常量</span></div><div class="line"><span class="keyword">let</span> pi = <span class="number">3.14159</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/02/Swift笔记-基础部分/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/01/使用hexo搭建github静态博客/">
-        使用hexo搭建github静态博客
-      </a>
-    </h2>
-    
-    <time>
-      6月 1, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/hexo/">hexo</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>网上虽然不乏此类教程，但是实际操作起来还是遇到了一些问题。<br>总结如下。</p>
-<p>以Windows 7系统为例：</p>
-<h3 id="登陆Github，创建Reposity"><a href="#登陆Github，创建Reposity" class="headerlink" title="登陆Github，创建Reposity"></a>登陆Github，创建Reposity</h3><ol>
-<li>用户名.github.io, 例如我的是zhouzhuo810.github.io</li>
-<li>点击Setting-&gt;Choose Theme-&gt;随便选一个Theme-&gt;Select-&gt;默认Readme</li>
-<li>访问username.github.io可以看到readme的内容即可。</li>
-</ol>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a><br>选择第二个下载安装。</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/01/使用hexo搭建github静态博客/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/hexo/">hexo</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -590,6 +576,11 @@
       <span class="text">Previous</span>
     </a>
     
+    
+    <a class="next" rel="next" href="/page/9/">
+      <span class="text">Next</span>
+      <span class="icon icon-chevron-right"></span>
+    </a>
     
   </nav>
   
@@ -636,11 +627,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>11</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>12</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>4</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>5</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     
