@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1 | zhouzhuo810</title>
+  <title>Tag: Android | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,16 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="发布证书 Windows和Mac一样 打开Android Studio  找到Terminal,studio下方">
-<meta name="keywords" content="Android">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/index.html">
+  <meta name="description" content="周卓的github博客">
+<meta name="keywords" content="Android,IOS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="zhouzhuo810">
+<meta property="og:url" content="http://zhouzhuo810.github.io/tags/Android/page/5/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="发布证书 Windows和Mac一样 打开Android Studio  找到Terminal,studio下方">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.309Z">
+<meta property="og:description" content="周卓的github博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1">
-<meta name="twitter:description" content="发布证书 Windows和Mac一样 打开Android Studio  找到Terminal,studio下方">
+<meta name="twitter:title" content="zhouzhuo810">
+<meta name="twitter:description" content="周卓的github博客">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,84 +142,65 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-Android签名打包-获取Mac调试证书的SHA1"
-  class="post white-box article-type-post"
-  itemscope itemprop="blogPost">
-	<section class='meta'>
-	<h2 class="title">
-  	<a href="/2017/07/28/Android签名打包-获取Mac调试证书的SHA1/">
-    	Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1
-    </a>
-  </h2>
-	<time>
-	  7月 28, 2017
-	</time>
+        
+  <script>
+    window.subData= { title:'Tag : Android'}
+  </script>
+
+<section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/">
+        Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
+      </a>
+    </h2>
+    
+    <time>
+      6月 13, 2017
+    </time>
+		
     
     <div class='cats'>
-        <a href="/categories/Android签名打包/">Android签名打包</a>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
     </div>
 
-	</section>
-	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#发布证书"><span class="toc-number">1.</span> <span class="toc-text">发布证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows和Mac一样"><span class="toc-number">2.</span> <span class="toc-text">Windows和Mac一样</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调试证书"><span class="toc-number">3.</span> <span class="toc-text">调试证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows"><span class="toc-number">4.</span> <span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac"><span class="toc-number">5.</span> <span class="toc-text">Mac</span></a></li></ol></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<hr>
-<h2 id="发布证书"><a href="#发布证书" class="headerlink" title="发布证书"></a>发布证书</h2><hr>
-<h2 id="Windows和Mac一样"><a href="#Windows和Mac一样" class="headerlink" title="Windows和Mac一样"></a>Windows和Mac一样</h2><ul>
-<li><p>打开Android Studio</p>
-</li>
-<li><p>找到Terminal,studio下方</p>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li>键入命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -v -list -keystore keystorePath(例:e:\test.keystore)</div></pre></td></tr></table></figure>
-<ul>
-<li>输入密钥库口令，即可查看相关信息</li>
-</ul>
-<p><em>注意</em>：如果命令不加-v 是没有MD5信息的</p>
-<hr>
-<h2 id="调试证书"><a href="#调试证书" class="headerlink" title="调试证书"></a>调试证书</h2><hr>
-<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ul>
-<li><p>win+R</p>
-</li>
-<li><p>cmd,回车</p>
-</li>
-<li><p>输入如下命令 (admin是电脑用户名)：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -v -list -keystore c:\users\admin\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android</div></pre></td></tr></table></figure>
-<h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><ul>
-<li><p>打开Android Studio</p>
-</li>
-<li><p>进入Terminal</p>
-</li>
-<li><p>输入如下命令：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android</div></pre></td></tr></table></figure>
-  	</div>
-	  
-	  <div class="article-tags tags">
+  </section>
+  <section class="article typo">
+	  <p>解决方法：</p>
+<p>在addView()之前</p>
+<p>添加如下代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),</div><div class="line">        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
       
         <a href="/tags/Android/">Android</a>
       
 	  </div>
     
-	</section>
-	
+  </section>
 </article>
-<script>
-	window.subData = {
-		title: 'Android签名打包-获取Windows和Mac系统中调试证书和发布证书的SHA1',
-		tools: true
-	}
-</script>
+    </div>
+  
+</section>
+
+
+  <nav id="page-nav">
+    
+    <a class="prev" rel="prev" href="/tags/Android/page/4/">
+      <span class="icon icon-chevron-left"></span>
+      <span class="text">Previous</span>
+    </a>
+    
+    
+  </nav>
+  
 
       </div>
       <aside class='l_side'>
