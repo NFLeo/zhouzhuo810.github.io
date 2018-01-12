@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>RxJava-模拟进度 | zhouzhuo810</title>
+  <title>小常识-让服务器通过公网IP连接远程桌面 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,19 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171819202122232425//0-100 每隔20ms +1Observable.just(100)        .flatMap(new Func1&amp;lt;Integer, Observable&amp;lt;Long&amp;gt;&amp;gt;() &amp;#123;            @Override            public Observab">
-<meta name="keywords" content="RxJava">
+  <meta name="description" content="操作步骤 路由器添加端口映射3389 windows用户设置登陆密码 设置自动登陆参考这个 我的电脑-&amp;gt;属性-&amp;gt;远程设置 配置如下：">
+<meta name="keywords" content="常识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RxJava-模拟进度">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/12/11/RxJava-模拟进度/index.html">
+<meta property="og:title" content="小常识-让服务器通过公网IP连接远程桌面">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/01/12/小常识-让服务器通过公网IP连接远程桌面/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="12345678910111213141516171819202122232425//0-100 每隔20ms +1Observable.just(100)        .flatMap(new Func1&amp;lt;Integer, Observable&amp;lt;Long&amp;gt;&amp;gt;() &amp;#123;            @Override            public Observab">
-<meta property="og:updated_time" content="2017-12-26T06:28:58.294Z">
+<meta property="og:description" content="操作步骤 路由器添加端口映射3389 windows用户设置登陆密码 设置自动登陆参考这个 我的电脑-&amp;gt;属性-&amp;gt;远程设置 配置如下：">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/remotedesk.png">
+<meta property="og:updated_time" content="2018-01-12T09:40:50.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RxJava-模拟进度">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425//0-100 每隔20ms +1Observable.just(100)        .flatMap(new Func1&amp;lt;Integer, Observable&amp;lt;Long&amp;gt;&amp;gt;() &amp;#123;            @Override            public Observab">
+<meta name="twitter:title" content="小常识-让服务器通过公网IP连接远程桌面">
+<meta name="twitter:description" content="操作步骤 路由器添加端口映射3389 windows用户设置登陆密码 设置自动登陆参考这个 我的电脑-&amp;gt;属性-&amp;gt;远程设置 配置如下：">
+<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/remotedesk.png">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,42 +145,44 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-RxJava-模拟进度"
+        <article id="post-小常识-让服务器通过公网IP连接远程桌面"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/12/11/RxJava-模拟进度/">
-    	RxJava-模拟进度
+  	<a href="/2018/01/12/小常识-让服务器通过公网IP连接远程桌面/">
+    	小常识-让服务器通过公网IP连接远程桌面
     </a>
   </h2>
 	<time>
-	  12月 11, 2017
+	  1月 12, 2018
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/RxJava/">RxJava</a>
+        <a href="/categories/常识/">常识</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#应用场景"><span class="toc-number">1.</span> <span class="toc-text">应用场景</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作步骤"><span class="toc-number">1.</span> <span class="toc-text">操作步骤</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//0-100 每隔20ms +1</span></div><div class="line">Observable.just(<span class="number">100</span>)</div><div class="line">        .flatMap(<span class="keyword">new</span> Func1&lt;Integer, Observable&lt;Long&gt;&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> Observable&lt;Long&gt; <span class="title">call</span><span class="params">(Integer integer)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> Observable.timer(<span class="number">20</span>, TimeUnit.MILLISECONDS);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">        .compose(RxHelper.&lt;Long&gt;io_main())</div><div class="line">        .subscribe(<span class="keyword">new</span> Subscriber&lt;Long&gt;() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCompleted</span><span class="params">()</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</div><div class="line">  </div><div class="line">            &#125;</div><div class="line">  </div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                pb.setProgress(aLong.intValue());</div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
-<li>计时器</li>
-<li>进度模拟</li>
-<li>定时任务</li>
+    	<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ul>
+<li>路由器添加端口映射3389</li>
+<li>windows用户设置登陆密码</li>
+<li>设置自动登陆<a href="http://blog.csdn.net/qq244570672/article/details/48250139" target="_blank" rel="external">参考这个</a></li>
+<li>我的电脑-&gt;属性-&gt;远程设置</li>
+<li>配置如下：</li>
 </ul>
+<p><img src="../../../../images/remotedesk.png" alt="图1"></p>
 
   	</div>
 	  
 	  <div class="article-tags tags">
       
-        <a href="/tags/RxJava/">RxJava</a>
+        <a href="/tags/常识/">常识</a>
       
 	  </div>
     
@@ -187,7 +191,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'RxJava-模拟进度',
+		title: '小常识-让服务器通过公网IP连接远程桌面',
 		tools: true
 	}
 </script>
