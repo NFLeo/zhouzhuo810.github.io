@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>JavaEE-SpingMVC之log4j日志配置 | zhouzhuo810</title>
+  <title>小常识-Android Studio上传library到jitpack并带有中文文档注释 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web.xml 添加配置12345678910111213141516&amp;lt;!-- Spring的log4j监听器 --&amp;gt;&amp;lt;context-param&amp;gt;    &amp;lt;param-name&amp;gt;webAppRootKey&amp;lt;/param-name&amp;gt;    &amp;lt;param-value&amp;gt;webapp.root1&amp;lt;/param-value&amp;gt;&amp;lt;/">
-<meta name="keywords" content="JavaEE">
+  <meta name="description" content="工程的build.gradle中添加1234567891011121314buildscript &amp;#123;    repositories &amp;#123;        jcenter()    &amp;#125;    dependencies &amp;#123;        classpath &amp;apos;com.android.tools.build:gradle:2.3.1&amp;apos;">
+<meta name="keywords" content="常识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaEE-SpingMVC之log4j日志配置">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/08/23/JavaEE-SpingMVC之log4j日志配置/index.html">
+<meta property="og:title" content="小常识-Android Studio上传library到jitpack并带有中文文档注释">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/01/19/小常识-Android-Studio上传library到jitpack并带有中文文档注释/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="web.xml 添加配置12345678910111213141516&amp;lt;!-- Spring的log4j监听器 --&amp;gt;&amp;lt;context-param&amp;gt;    &amp;lt;param-name&amp;gt;webAppRootKey&amp;lt;/param-name&amp;gt;    &amp;lt;param-value&amp;gt;webapp.root1&amp;lt;/param-value&amp;gt;&amp;lt;/">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.352Z">
+<meta property="og:description" content="工程的build.gradle中添加1234567891011121314buildscript &amp;#123;    repositories &amp;#123;        jcenter()    &amp;#125;    dependencies &amp;#123;        classpath &amp;apos;com.android.tools.build:gradle:2.3.1&amp;apos;">
+<meta property="og:updated_time" content="2018-01-19T04:37:20.379Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaEE-SpingMVC之log4j日志配置">
-<meta name="twitter:description" content="web.xml 添加配置12345678910111213141516&amp;lt;!-- Spring的log4j监听器 --&amp;gt;&amp;lt;context-param&amp;gt;    &amp;lt;param-name&amp;gt;webAppRootKey&amp;lt;/param-name&amp;gt;    &amp;lt;param-value&amp;gt;webapp.root1&amp;lt;/param-value&amp;gt;&amp;lt;/">
+<meta name="twitter:title" content="小常识-Android Studio上传library到jitpack并带有中文文档注释">
+<meta name="twitter:description" content="工程的build.gradle中添加1234567891011121314buildscript &amp;#123;    repositories &amp;#123;        jcenter()    &amp;#125;    dependencies &amp;#123;        classpath &amp;apos;com.android.tools.build:gradle:2.3.1&amp;apos;">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,41 +143,56 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-JavaEE-SpingMVC之log4j日志配置"
+        <article id="post-小常识-Android-Studio上传library到jitpack并带有中文文档注释"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/08/23/JavaEE-SpingMVC之log4j日志配置/">
-    	JavaEE-SpingMVC之log4j日志配置
+  	<a href="/2018/01/19/小常识-Android-Studio上传library到jitpack并带有中文文档注释/">
+    	小常识-Android Studio上传library到jitpack并带有中文文档注释
     </a>
   </h2>
 	<time>
-	  8月 23, 2017
+	  1月 19, 2018
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/SpringMVC/">SpringMVC</a>
+        <a href="/categories/常识/">常识</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#web-xml-添加配置"><span class="toc-number">1.</span> <span class="toc-text">web.xml 添加配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resources中添加log4j-properties"><span class="toc-number">2.</span> <span class="toc-text">resources中添加log4j.properties</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#工程的build-gradle中添加"><span class="toc-number">1.</span> <span class="toc-text">工程的build.gradle中添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#library的build-gradle中添加"><span class="toc-number">2.</span> <span class="toc-text">library的build.gradle中添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试一下"><span class="toc-number">3.</span> <span class="toc-text">测试一下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后分享到github"><span class="toc-number">4.</span> <span class="toc-text">最后分享到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#release一个版本即可"><span class="toc-number">5.</span> <span class="toc-text">release一个版本即可</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前往jitpack查看"><span class="toc-number">6.</span> <span class="toc-text">前往jitpack查看</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h3 id="web-xml-添加配置"><a href="#web-xml-添加配置" class="headerlink" title="web.xml 添加配置"></a>web.xml 添加配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Spring的log4j监听器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>webAppRootKey<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>webapp.root1<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:log4j.properties<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>log4jRefreshInterval<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>6000<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.util.Log4jConfigListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></div></pre></td></tr></table></figure>
+    	<h3 id="工程的build-gradle中添加"><a href="#工程的build-gradle中添加" class="headerlink" title="工程的build.gradle中添加"></a>工程的build.gradle中添加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.3.1&apos;</div><div class="line">  </div><div class="line">        //gradle 2.2+ 使用1.4.1</div><div class="line">        classpath &apos;com.github.dcendents:android-maven-gradle-plugin:1.4.1&apos;</div><div class="line">  </div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="resources中添加log4j-properties"><a href="#resources中添加log4j-properties" class="headerlink" title="resources中添加log4j.properties"></a>resources中添加log4j.properties</h3><ul>
-<li>注意：webAppRootKey的值和${webapp.root1}的内容相对相。</li>
+<h3 id="library的build-gradle中添加"><a href="#library的build-gradle中添加" class="headerlink" title="library的build.gradle中添加"></a>library的build.gradle中添加</h3><ul>
+<li><p>顶部添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.github.dcendents.android-maven&apos; // 添加这个</div><div class="line">  </div><div class="line">group=&apos;com.github.zhouzhuo810&apos; // 指定group，com.github.&lt;用户名&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>底部添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 指定编码</div><div class="line">tasks.withType(JavaCompile) &#123;</div><div class="line">    options.encoding = &quot;UTF-8&quot;</div><div class="line">&#125;</div><div class="line">  </div><div class="line">// 打包源码</div><div class="line">task sourcesJar(type: Jar) &#123;</div><div class="line">    from android.sourceSets.main.java.srcDirs</div><div class="line">    classifier = &apos;sources&apos;</div><div class="line">&#125;</div><div class="line">  </div><div class="line">task javadoc(type: Javadoc) &#123;</div><div class="line">    failOnError  false</div><div class="line">    source = android.sourceSets.main.java.sourceFiles</div><div class="line">    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))</div><div class="line">    classpath += configurations.compile</div><div class="line">&#125;</div><div class="line">  </div><div class="line">// 制作文档(Javadoc)</div><div class="line">task javadocJar(type: Jar, dependsOn: javadoc) &#123;</div><div class="line">    classifier = &apos;javadoc&apos;</div><div class="line">    from javadoc.destinationDir</div><div class="line">&#125;</div><div class="line">  </div><div class="line">artifacts &#123;</div><div class="line">    archives sourcesJar</div><div class="line">    archives javadocJar</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">### 设置###</div><div class="line">log4j.rootLogger = debug,stdout,D,E</div><div class="line">### 输出信息到控制抬 ###</div><div class="line">#log4j.appender.stdout = org.apache.log4j.ConsoleAppender</div><div class="line">#log4j.appender.stdout.Target = System.out</div><div class="line">#log4j.appender.stdout.layout = org.apache.log4j.PatternLayout</div><div class="line">#log4j.appender.stdout.layout.ConversionPattern = [%-5p] %d&#123;yyyy-MM-dd HH:mm:ss,SSS&#125; method:%l%n%m%n</div><div class="line">### 输出DEBUG 级别以上的日志到=E://logs/error.log ###</div><div class="line">log4j.appender.D = org.apache.log4j.DailyRollingFileAppender</div><div class="line">log4j.appender.D.File = $&#123;webapp.root1&#125;/WEB-INF/logs/log.log</div><div class="line">log4j.appender.D.Append = true</div><div class="line">log4j.appender.D.Threshold = INFO</div><div class="line">log4j.appender.D.layout = org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.D.layout.ConversionPattern = %-d&#123;yyyy-MM-dd HH:mm:ss&#125; [%X&#123;ip&#125;] [ %t:%r ] - [ %p ]  %m%n</div><div class="line">### 输出ERROR 级别以上的日志到=E://logs/error.log ###</div><div class="line">log4j.appender.E = org.apache.log4j.DailyRollingFileAppender</div><div class="line">log4j.appender.E.File =$&#123;webapp.root1&#125;/WEB-INF/logs/error.log</div><div class="line">log4j.appender.E.Append = true</div><div class="line">log4j.appender.E.Threshold = ERROR</div><div class="line">log4j.appender.E.layout = org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.E.layout.ConversionPattern = %-d&#123;yyyy-MM-dd HH:mm:ss&#125; [%X&#123;ip&#125;] [ %t:%r ] - [ %p ]  %m%n</div><div class="line">#log4j.rootLogger=INFO,CONSOLE,DAILY_ALL</div><div class="line">#console log</div><div class="line">#log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender</div><div class="line">#log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout</div><div class="line">#log4j.appender.CONSOLE.layout.ConversionPattern=%d&#123;yyyy-MM-dd HH:mm:ss&#125; [%t] %-5p %c - %m%n</div><div class="line">##all log</div><div class="line">#log4j.appender.DAILY_ALL=org.apache.log4j.DailyRollingFileAppender</div><div class="line">#log4j.appender.DAILY_ALL.layout=org.apache.log4j.PatternLayout</div><div class="line">#log4j.appender.DAILY_ALL.layout.ConversionPattern=&quot;%p %d&#123;yyyy-MM-dd HH:mm:ss&#125; %-50.50c(%L) - %m%n</div><div class="line">##$&#123;webapp.root&#125; == the path of your tomcat path</div><div class="line">#log4j.appender.DAILY_ALL.File=$&#123;webapp.root&#125;/WEB-INF/logs/app.log</div><div class="line">## General Apache libraries</div><div class="line">#log4j.logger.org.apache=WARN</div><div class="line">## Spring</div><div class="line">#log4j.logger.org.springframework=WARN</div><div class="line"># email</div><div class="line">log4j.logger.com.alexgaoyh.util.email=INFO, email</div><div class="line">log4j.appender.email=org.apache.log4j.DailyRollingFileAppender</div><div class="line">log4j.appender.email.layout=org.apache.log4j.PatternLayout</div><div class="line">log4j.appender.email.layout.ConversionPattern=&quot;%p %d&#123;yyyy-MM-dd HH:mm:ss&#125; %-50.50c(%L) - %m%n</div><div class="line">log4j.appender.email.File=$&#123;webapp.root1&#125;/WEB-INF/logs/email/email.log</div></pre></td></tr></table></figure>
+<h3 id="测试一下"><a href="#测试一下" class="headerlink" title="测试一下"></a>测试一下</h3><ul>
+<li>打开Android Studio 的Terminal</li>
+<li>输入./gradlew install</li>
+<li>如果成功就没问题了。</li>
+</ul>
+<h3 id="最后分享到github"><a href="#最后分享到github" class="headerlink" title="最后分享到github"></a>最后分享到github</h3><h3 id="release一个版本即可"><a href="#release一个版本即可" class="headerlink" title="release一个版本即可"></a>release一个版本即可</h3><h3 id="前往jitpack查看"><a href="#前往jitpack查看" class="headerlink" title="前往jitpack查看"></a>前往jitpack查看</h3><ul>
+<li>访问jitpack官网<br><a href="https://jitpack.io" target="_blank" rel="external">https://jitpack.io</a></li>
+<li>输入github仓库地址搜索</li>
+<li>使用方法该页面有说明</li>
+</ul>
+
   	</div>
 	  
 	  <div class="article-tags tags">
       
-        <a href="/tags/JavaEE/">JavaEE</a>
+        <a href="/tags/常识/">常识</a>
       
 	  </div>
     
@@ -186,7 +201,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'JavaEE-SpingMVC之log4j日志配置',
+		title: '小常识-Android Studio上传library到jitpack并带有中文文档注释',
 		tools: true
 	}
 </script>
