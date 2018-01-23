@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-22T01:22:47.484Z</updated>
+  <updated>2018-01-23T06:58:26.722Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>InteliJ IDEA插件开发-StringKiller</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/23/InteliJ-IDEA%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91-StringKiller/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/23/InteliJ-IDEA插件开发-StringKiller/</id>
+    <published>2018-01-23T06:09:18.000Z</published>
+    <updated>2018-01-23T06:58:26.722Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://github.com/zhouzhuo810/StringKiller&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github传送门&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;StringKiller&quot;&gt;&lt;a href=&quot;#StringKiller&quot; class=&quot;headerlink&quot; title=&quot;StringKiller&quot;&gt;&lt;/a&gt;StringKiller&lt;/h1&gt;&lt;p&gt;一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。&lt;/p&gt;
+&lt;h3 id=&quot;插件下载地址：点这里&quot;&gt;&lt;a href=&quot;#插件下载地址：点这里&quot; class=&quot;headerlink&quot; title=&quot;插件下载地址：点这里&quot;&gt;&lt;/a&gt;插件下载地址：&lt;a href=&quot;https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点这里&lt;/a&gt;&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="InteliJ IDEA" scheme="http://zhouzhuo810.github.io/categories/InteliJ-IDEA/"/>
+    
+    
+      <category term="InteliJ IDEA" scheme="http://zhouzhuo810.github.io/tags/InteliJ-IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>小常识-JDK环境变量配置</title>
@@ -451,26 +473,6 @@
     
     
       <category term="RxJava" scheme="http://zhouzhuo810.github.io/tags/RxJava/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-bugly集成</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/07/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-bugly%E9%9B%86%E6%88%90/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/07/Android常用代码-bugly集成/</id>
-    <published>2017-12-07T06:05:40.000Z</published>
-    <updated>2017-12-07T06:08:50.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;集成bugly&quot;&gt;&lt;a href=&quot;#集成bugly&quot; class=&quot;headerlink&quot; title=&quot;集成bugly&quot;&gt;&lt;/a&gt;集成bugly&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   

@@ -150,6 +150,53 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/06/06/Swift笔记-自动引用计数/">
+        Swift笔记-自动引用计数
+      </a>
+    </h2>
+    
+    <time>
+      6月 6, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Swift/">Swift</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Swift 使用自动引用计数（ARC）这一机制来跟踪和管理应用程序的内存<br>通常情况下我们不需要去手动释放内存，因为 ARC 会在类的实例不再被使用时，自动释放其占用的内存。<br>但在有些时候我们还是需要在代码中实现内存管理。</p>
+<h2 id="ARC-功能"><a href="#ARC-功能" class="headerlink" title="ARC 功能"></a>ARC 功能</h2><ul>
+<li>当每次使用 init() 方法创建一个类的新的实例的时候，ARC 会分配一大块内存用来储存实例的信息。</li>
+<li>内存中会包含实例的类型信息，以及这个实例所有相关属性的值。</li>
+<li>当实例不再被使用时，ARC 释放实例所占用的内存，并让释放的内存能挪作他用。</li>
+<li>为了确保使用中的实例不会被销毁，ARC 会跟踪和计算每一个实例正在被多少属性，常量和变量所引用。</li>
+<li>实例赋值给属性、常量或变量，它们都会创建此实例的强引用，只要强引用还在，实例是不允许被销毁的。</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2017/06/06/Swift笔记-自动引用计数/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Swift/">Swift</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/06/06/Swift笔记-可选链/">
         Swift笔记-可选链
       </a>
@@ -527,46 +574,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/06/05/Swift笔记-闭包/">
-        Swift笔记-闭包
-      </a>
-    </h2>
-    
-    <time>
-      6月 5, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Swift/">Swift</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="sorted-方法"><a href="#sorted-方法" class="headerlink" title="sorted 方法"></a>sorted 方法</h2><p>排序闭包函数类型需为(String, String) -&gt; Bool。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Cocoa</div><div class="line">  </div><div class="line"><span class="keyword">let</span> names = [<span class="string">"AT"</span>, <span class="string">"AE"</span>, <span class="string">"D"</span>, <span class="string">"S"</span>, <span class="string">"BE"</span>]</div><div class="line">  </div><div class="line"><span class="comment">// 使用普通函数(或内嵌函数)提供排序功能,闭包函数类型需为(String, String) -&gt; Bool。</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">backwards</span><span class="params">(s1: String, s2: String)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> s1 &gt; s2</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> reversed = names.sorted(by: backwards)</div><div class="line">  </div><div class="line"><span class="built_in">print</span>(reversed)</div></pre></td></tr></table></figure></p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/06/05/Swift笔记-闭包/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Swift/">Swift</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -638,6 +645,8 @@
     
         <li><a class="flat-box" href="/categories/IOS/"><div class='name'>IOS</div><div class='badget'>1</div></a></li>
     
+        <li><a class="flat-box" href="/categories/InteliJ-IDEA/"><div class='name'>InteliJ IDEA</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/Java工具类/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
@@ -673,7 +682,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 17px; color: #404040">常识</a> <a href="/tags/网页前端/" style="font-size: 14px; color: #808080">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 16px; color: #555">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/IOS/" style="font-size: 14px; color: #808080">IOS</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/常识/" style="font-size: 17px; color: #404040">常识</a> <a href="/tags/网页前端/" style="font-size: 14px; color: #808080">网页前端</a>
     </div>
 </div>
 
