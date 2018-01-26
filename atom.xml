@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-01-25T07:22:49.625Z</updated>
+  <updated>2018-01-26T01:24:58.994Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PhotoShop-图片太宽或太高切除中间部分</title>
+    <link href="http://zhouzhuo810.github.io/2018/01/26/PhotoShop-%E5%9B%BE%E7%89%87%E5%A4%AA%E5%AE%BD%E6%88%96%E5%A4%AA%E9%AB%98%E5%88%87%E9%99%A4%E4%B8%AD%E9%97%B4%E9%83%A8%E5%88%86/"/>
+    <id>http://zhouzhuo810.github.io/2018/01/26/PhotoShop-图片太宽或太高切除中间部分/</id>
+    <published>2018-01-26T01:20:11.000Z</published>
+    <updated>2018-01-26T01:24:58.994Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;矩形选框，选中头部，ctrl+j&lt;/li&gt;
+&lt;li&gt;矩形选框，选中尾部，ctrl+j&lt;/li&gt;
+&lt;li&gt;移动尾部
+    
+    </summary>
+    
+      <category term="PhotoShop" scheme="http://zhouzhuo810.github.io/categories/PhotoShop/"/>
+    
+    
+      <category term="PhotoShop" scheme="http://zhouzhuo810.github.io/tags/PhotoShop/"/>
+    
+  </entry>
   
   <entry>
     <title>前端-JQuery学习笔记</title>
@@ -462,30 +485,6 @@
     </summary>
     
       <category term="Android自定义控件" scheme="http://zhouzhuo810.github.io/categories/Android%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-onRestoreInstanceState类型强转报错</title>
-    <link href="http://zhouzhuo810.github.io/2017/12/21/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-onRestoreInstanceState%E7%B1%BB%E5%9E%8B%E5%BC%BA%E8%BD%AC%E6%8A%A5%E9%94%99/"/>
-    <id>http://zhouzhuo810.github.io/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/</id>
-    <published>2017-12-21T02:06:56.000Z</published>
-    <updated>2017-12-21T02:19:18.845Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;h3 id=&quot;层级关系&quot;&gt;&lt;a href=&quot;#层级关系&quot; class=&quot;headerlink&quot; title=&quot;层级关系&quot;&gt;&lt;/a&gt;层级关系&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;ViewPager+Indicator&lt;br&gt; -&amp;gt;Fragment&lt;pre&gt;&lt;code&gt; -&amp;gt;ViewPager+Indicator
--&amp;gt;Fragment
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
