@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://img.mukewang.com/5412b1140001f03809010640.jpg">
 <meta property="og:image" content="http://img.mukewang.com/5412b2d90001276908980347.jpg">
 <meta property="og:image" content="http://img.mukewang.com/543747c10001b14d19200943.jpg">
-<meta property="og:updated_time" content="2018-01-25T02:50:57.396Z">
+<meta property="og:updated_time" content="2018-01-26T02:53:50.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端-Bootstrap学习笔记">
 <meta name="twitter:description" content="作者 Twitter  功能 一个Web开发框架  下载 getbootstrap bootcss bootcnd">
@@ -268,7 +268,10 @@
 <ul>
 <li>分页绑定(js)<br><a href="https://github.com/esimakin/twbs-pagination" target="_blank" rel="external">twbs-pagination</a></li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#page-indicator'</span>).twbsPagination(&#123;</div><div class="line">    <span class="attr">totalPages</span>: data.totalPage,</div><div class="line">    <span class="attr">visiblePages</span>: <span class="number">10</span>,</div><div class="line">    <span class="attr">onPageClick</span>: <span class="function"><span class="keyword">function</span> (<span class="params">event, page</span>) </span>&#123;</div><div class="line">        getProjectList(userId, page);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#page-indicator"</span>).twbsPagination(<span class="string">"destroy"</span>);</div><div class="line">$(<span class="string">'#page-indicator'</span>).twbsPagination(&#123;</div><div class="line">    <span class="attr">totalPages</span>: data.totalPage,</div><div class="line">    <span class="attr">visiblePages</span>: <span class="number">10</span>,</div><div class="line">    <span class="attr">onPageClick</span>: <span class="function"><span class="keyword">function</span> (<span class="params">event, page</span>) </span>&#123;</div><div class="line">        getProjectList(userId, page);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>下拉选框(js和css)<br><a href="https://github.com/silviomoreto/bootstrap-select" target="_blank" rel="external">bootstrap-select</a><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">class</span>=<span class="string">"selectpicker"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Mustard<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Ketchup<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">option</span>&gt;</span>Barbecue<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure></li>
+</ul>
 
   	</div>
 	  
