@@ -155,6 +155,52 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">
+        Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常
+      </a>
+    </h2>
+    
+    <time>
+      2月 9, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> PopupWindow popupWindow = <span class="keyword">new</span> PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);</div><div class="line"><span class="comment">//... ...</span></div><div class="line">popupWindow.showAsDropDown(anchor);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>上述代码在7.0手机上不会在anchor下方弹出，而是在屏幕最上方弹出，7.0以下手机则没问题；<br>高度MATCH_PARENT时才会这样，WRAP_CONTENT时不会。</p>
+</blockquote>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><ul>
+<li>7.0系统的一个bug；</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/02/08/Android常用代码-EditText各种样式背景/">
         Android常用代码-EditText各种样式背景
       </a>
@@ -366,7 +412,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>14</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>15</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     

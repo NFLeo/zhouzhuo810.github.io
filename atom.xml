@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-02-08T02:00:15.650Z</updated>
+  <updated>2018-02-10T02:19:41.500Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常</title>
+    <link href="http://zhouzhuo810.github.io/2018/02/09/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-7-0%E7%B3%BB%E7%BB%9FPopupWindow-showAsDropDown-%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8/"/>
+    <id>http://zhouzhuo810.github.io/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/</id>
+    <published>2018-02-09T05:48:00.000Z</published>
+    <updated>2018-02-10T02:19:41.500Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; PopupWindow popupWindow = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//... ...&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;popupWindow.showAsDropDown(anchor);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述代码在7.0手机上不会在anchor下方弹出，而是在屏幕最上方弹出，7.0以下手机则没问题；&lt;br&gt;高度MATCH_PARENT时才会这样，WRAP_CONTENT时不会。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;7.0系统的一个bug；&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用代码-EditText各种样式背景</title>
@@ -468,37 +494,6 @@
     
     
       <category term="网页前端" scheme="http://zhouzhuo810.github.io/tags/%E7%BD%91%E9%A1%B5%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-一个TextView显示黑色标题和灰色内容</title>
-    <link href="http://zhouzhuo810.github.io/2018/01/05/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E4%B8%80%E4%B8%AATextView%E6%98%BE%E7%A4%BA%E9%BB%91%E8%89%B2%E6%A0%87%E9%A2%98%E5%92%8C%E7%81%B0%E8%89%B2%E5%86%85%E5%AE%B9/"/>
-    <id>http://zhouzhuo810.github.io/2018/01/05/Android常用代码-一个TextView显示黑色标题和灰色内容/</id>
-    <published>2018-01-05T05:54:09.000Z</published>
-    <updated>2018-01-05T05:59:43.566Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;标题黑色，内容灰色；&lt;/li&gt;
-&lt;li&gt;标题后紧跟内容；&lt;/li&gt;
-&lt;li&gt;内容换行后和标题对齐；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;两个TextView不能实现；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;可行方案&quot;&gt;&lt;a href=&quot;#可行方案&quot; class=&quot;headerlink&quot; title=&quot;可行方案&quot;&gt;&lt;/a&gt;可行方案&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;方案1：一个TextView，使用SpannableString&lt;/li&gt;
-&lt;li&gt;方案2：一个TextView，使用Html标签控制样式&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   

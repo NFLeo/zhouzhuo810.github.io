@@ -150,6 +150,52 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">
+        Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常
+      </a>
+    </h2>
+    
+    <time>
+      2月 9, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> PopupWindow popupWindow = <span class="keyword">new</span> PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);</div><div class="line"><span class="comment">//... ...</span></div><div class="line">popupWindow.showAsDropDown(anchor);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>上述代码在7.0手机上不会在anchor下方弹出，而是在屏幕最上方弹出，7.0以下手机则没问题；<br>高度MATCH_PARENT时才会这样，WRAP_CONTENT时不会。</p>
+</blockquote>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><ul>
+<li>7.0系统的一个bug；</li>
+</ul>
+
+    
+	  <div class="readmore">
+      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/02/08/Android常用代码-EditText各种样式背景/">
         Android常用代码-EditText各种样式背景
       </a>
@@ -340,11 +386,11 @@
 <h3 id="动画文件"><a href="#动画文件" class="headerlink" title="动画文件"></a>动画文件</h3><ul>
 <li>bottom_dialog_enter.xml</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/decelerate_interpolator"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">translate</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"400"</span></div><div class="line">        <span class="attr">android:fromYDelta</span>=<span class="string">"100%p"</span></div><div class="line">        <span class="attr">android:toYDelta</span>=<span class="string">"0"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">alpha</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"400"</span></div><div class="line">        <span class="attr">android:fromAlpha</span>=<span class="string">"0.0"</span></div><div class="line">        <span class="attr">android:toAlpha</span>=<span class="string">"1.0"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/decelerate_interpolator"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">translate</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"400"</span></div><div class="line">        <span class="attr">android:fromYDelta</span>=<span class="string">"100%p"</span></div><div class="line">        <span class="attr">android:toYDelta</span>=<span class="string">"0"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">alpha</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"400"</span></div><div class="line">        <span class="attr">android:fromAlpha</span>=<span class="string">"0.0"</span></div><div class="line">        <span class="attr">android:toAlpha</span>=<span class="string">"1.0"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></div></pre></td></tr></table></figure>
 <ul>
 <li>bottom_dialog_exit.xml</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/accelerate_interpolator"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">translate</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"300"</span></div><div class="line">        <span class="attr">android:fromYDelta</span>=<span class="string">"0"</span></div><div class="line">        <span class="attr">android:toYDelta</span>=<span class="string">"100%p"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">alpha</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"300"</span></div><div class="line">        <span class="attr">android:fromAlpha</span>=<span class="string">"1.0"</span></div><div class="line">        <span class="attr">android:toAlpha</span>=<span class="string">"0.0"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">set</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:interpolator</span>=<span class="string">"@android:anim/accelerate_interpolator"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">translate</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"300"</span></div><div class="line">        <span class="attr">android:fromYDelta</span>=<span class="string">"0"</span></div><div class="line">        <span class="attr">android:toYDelta</span>=<span class="string">"100%p"</span> /&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">alpha</span></span></div><div class="line">        <span class="attr">android:duration</span>=<span class="string">"300"</span></div><div class="line">        <span class="attr">android:fromAlpha</span>=<span class="string">"1.0"</span></div><div class="line">        <span class="attr">android:toAlpha</span>=<span class="string">"0.0"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">set</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="样式文件"><a href="#样式文件" class="headerlink" title="样式文件"></a>样式文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"ZzAnimationDialog"</span>&gt;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowEnterAnimation"</span>&gt;</span>@anim/bottom_dialog_enter<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:windowExitAnimation"</span>&gt;</span>@anim/bottom_dialog_exit<span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">View root = LayoutInflater.from(mContext).inflate(R.layout.dialog_login_more, null);</div><div class="line">ImageView ivClose = (ImageView) root.findViewById(R.id.iv_close);</div><div class="line">ivClose.setOnClickListener(new View.OnClickListener() &#123;</div><div class="line">    @Override</div><div class="line">    public void onClick(View v) &#123;</div><div class="line">        hideBottomDialog();</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">showBottomPopupWindow(findViewById(R.id.root), root, Color.TRANSPARENT, true, false, new PopupWindow.OnDismissListener() &#123;</div><div class="line">    @Override</div><div class="line">    public void onDismiss() &#123;</div><div class="line">  </div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
@@ -543,48 +589,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/01/23/InteliJ-IDEA插件开发-StringKiller/">
-        InteliJ IDEA插件开发-StringKiller
-      </a>
-    </h2>
-    
-    <time>
-      1月 23, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/InteliJ-IDEA/">InteliJ IDEA</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p><a href="https://github.com/zhouzhuo810/StringKiller" target="_blank" rel="external">Github传送门</a></p>
-<h1 id="StringKiller"><a href="#StringKiller" class="headerlink" title="StringKiller"></a>StringKiller</h1><p>一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。</p>
-<h3 id="插件下载地址：点这里"><a href="#插件下载地址：点这里" class="headerlink" title="插件下载地址：点这里"></a>插件下载地址：<a href="https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar" target="_blank" rel="external">点这里</a></h3>
-
-    
-	  <div class="readmore">
-      <a href="/2018/01/23/InteliJ-IDEA插件开发-StringKiller/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/InteliJ-IDEA/">InteliJ IDEA</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -641,7 +645,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>2</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>14</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>15</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
