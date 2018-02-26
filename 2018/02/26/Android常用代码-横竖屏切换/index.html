@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>InteliJ IDEA插件开发-StringKiller | zhouzhuo810</title>
+  <title>Android常用代码-横竖屏切换 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,19 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Github传送门 StringKiller一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。 插件下载地址：点这里">
-<meta name="keywords" content="InteliJ IDEA">
+  <meta name="description" content="自动切换 Android Manifest在需要切换的Activity中添加  12android:configChanges=&quot;orientation|keyboardHidden|layoutDirection|screenSize|screenLayout&quot;android:screenOrientation=&quot;sensor&quot;  res添加layout-land和layout-port文件夹，">
+<meta name="keywords" content="Android,IOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="InteliJ IDEA插件开发-StringKiller">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2018/01/23/InteliJ-IDEA插件开发-StringKiller/index.html">
+<meta property="og:title" content="Android常用代码-横竖屏切换">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/02/26/Android常用代码-横竖屏切换/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="Github传送门 StringKiller一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。 插件下载地址：点这里">
-<meta property="og:image" content="http://zhouzhuo810.github.io/images/stringkiller.gif">
-<meta property="og:updated_time" content="2018-01-23T06:58:26.722Z">
+<meta property="og:description" content="自动切换 Android Manifest在需要切换的Activity中添加  12android:configChanges=&quot;orientation|keyboardHidden|layoutDirection|screenSize|screenLayout&quot;android:screenOrientation=&quot;sensor&quot;  res添加layout-land和layout-port文件夹，">
+<meta property="og:updated_time" content="2018-02-26T08:23:42.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="InteliJ IDEA插件开发-StringKiller">
-<meta name="twitter:description" content="Github传送门 StringKiller一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。 插件下载地址：点这里">
-<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/stringkiller.gif">
+<meta name="twitter:title" content="Android常用代码-横竖屏切换">
+<meta name="twitter:description" content="自动切换 Android Manifest在需要切换的Activity中添加  12android:configChanges=&quot;orientation|keyboardHidden|layoutDirection|screenSize|screenLayout&quot;android:screenOrientation=&quot;sensor&quot;  res添加layout-land和layout-port文件夹，">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -145,66 +143,50 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-InteliJ-IDEA插件开发-StringKiller"
+        <article id="post-Android常用代码-横竖屏切换"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2018/01/23/InteliJ-IDEA插件开发-StringKiller/">
-    	InteliJ IDEA插件开发-StringKiller
+  	<a href="/2018/02/26/Android常用代码-横竖屏切换/">
+    	Android常用代码-横竖屏切换
     </a>
   </h2>
 	<time>
-	  1月 23, 2018
+	  2月 26, 2018
 	</time>
 	
-    
-    <div class='cats'>
-        <a href="/categories/InteliJ-IDEA/">InteliJ IDEA</a>
-    </div>
-
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#StringKiller"><span class="toc-number">1.</span> <span class="toc-text">StringKiller</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插件下载地址：点这里"><span class="toc-number">1.0.1.</span> <span class="toc-text">插件下载地址：点这里</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用场景"><span class="toc-number">1.1.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#功能特性"><span class="toc-number">1.2.</span> <span class="toc-text">功能特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例图片"><span class="toc-number">1.3.</span> <span class="toc-text">示例图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮箱"><span class="toc-number">1.4.</span> <span class="toc-text">邮箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#License"><span class="toc-number">1.5.</span> <span class="toc-text">License</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#自动切换"><span class="toc-number">1.</span> <span class="toc-text">自动切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手动切换"><span class="toc-number">2.</span> <span class="toc-text">手动切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意"><span class="toc-number">3.</span> <span class="toc-text">注意</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p><a href="https://github.com/zhouzhuo810/StringKiller" target="_blank" rel="external">Github传送门</a></p>
-<h1 id="StringKiller"><a href="#StringKiller" class="headerlink" title="StringKiller"></a>StringKiller</h1><p>一个简洁的Android Studio插件。用于一键将layout文件夹中的text字符串资源提取到strings.xml中。</p>
-<h3 id="插件下载地址：点这里"><a href="#插件下载地址：点这里" class="headerlink" title="插件下载地址：点这里"></a>插件下载地址：<a href="https://github.com/zhouzhuo810/StringKiller/blob/master/StringKiller.jar" target="_blank" rel="external">点这里</a></h3><a id="more"></a>
-<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>安卓开发过程中，大部分开发者为了偷懒，直接将字符串资源写在布局文件中，<br>这种方式主要有如下缺点：</p>
+    	<h3 id="自动切换"><a href="#自动切换" class="headerlink" title="自动切换"></a>自动切换</h3><ul>
+<li>Android Manifest在需要切换的Activity中添加</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">android:configChanges="orientation|keyboardHidden|layoutDirection|screenSize|screenLayout"</div><div class="line">android:screenOrientation="sensor"</div></pre></td></tr></table></figure>
 <ul>
-<li>导入工程中文容易出现乱码；</li>
-<li>国际化不利于统一翻译；</li>
-<li>修改字符串内容时不能快速定位;</li>
+<li><p>res添加layout-land和layout-port文件夹，分别放两套布局。</p>
+</li>
+<li><p>Activity代码中实现</p>
+</li>
 </ul>
-<p>因此，为了解决这一系列问题，本人开发了这个插件。</p>
-<h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><ul>
-<li>目前支持android:text和android:hint两个属性提取字符串。</li>
-<li>支持智能跳过@string/xxx.</li>
-<li>资源采用【”布局文件名称”+”text”/“hint_text”+序号】的命名方式，<br>如【@string/activity_main_text_0】代表activity_main.xml文件中<br>第1个android:text字符串资源。</li>
-<li>如果strings.xml文件中有内容，新提取的字符串会自动追加在后面，不会覆盖。</li>
-<li>默认快捷键：【Alt+3】</li>
-</ul>
-<h2 id="示例图片"><a href="#示例图片" class="headerlink" title="示例图片"></a>示例图片</h2><p><img src="../../../../images/stringkiller.gif" alt="图2"></p>
-<h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">如果有小伙伴对命名方式或功能有什么更好的想法，欢迎提建议。</div><div class="line">下面是我的邮箱：</div></pre></td></tr></table></figure>
-<p><a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#97;&#100;&#109;&#105;&#x6e;&#64;&#122;&#104;&#x6f;&#x75;&#122;&#x68;&#117;&#x6f;&#56;&#49;&#x30;&#46;&#x6d;&#x65;">&#97;&#100;&#109;&#105;&#x6e;&#64;&#122;&#104;&#x6f;&#x75;&#122;&#x68;&#117;&#x6f;&#56;&#49;&#x30;&#46;&#x6d;&#x65;</a></p>
-<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Copyright © zhouzhuo810</div><div class="line">  </div><div class="line">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</div><div class="line">you may not use this file except in compliance with the License.</div><div class="line">You may obtain a copy of the License at</div><div class="line">  </div><div class="line">   http://www.apache.org/licenses/LICENSE-2.0</div><div class="line">  </div><div class="line">Unless required by applicable law or agreed to in writing, software</div><div class="line">distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</div><div class="line">WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</div><div class="line">See the License for the specific language governing permissions and</div><div class="line">limitations under the License.</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onConfigurationChanged</span><span class="params">(Configuration newConfig)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onConfigurationChanged(newConfig);</div><div class="line">    <span class="keyword">if</span>(newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)&#123;</div><div class="line">        <span class="comment">//切换到竖屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="comment">//切换到横屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="手动切换"><a href="#手动切换" class="headerlink" title="手动切换"></a>手动切换</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">findViewById(R.id.btn_click).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;  </div><div class="line">  <span class="meta">@Override</span> </div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;   </div><div class="line">      <span class="comment">//判断当前屏幕方向  </span></div><div class="line">      <span class="keyword">if</span>(getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) &#123;     </div><div class="line">       <span class="comment">//切换竖屏   </span></div><div class="line">         MainActivity.<span class="keyword">this</span>.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);   </div><div class="line">      &#125;<span class="keyword">else</span>&#123;   </div><div class="line">         <span class="comment">//切换横屏     </span></div><div class="line">         MainActivity.<span class="keyword">this</span>.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);  </div><div class="line">      &#125; </div><div class="line">   &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote>
+<p>配置<code>android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;</code>，才不会销毁 activity，且只调用<code>onConfigurationChanged</code>方法。</p>
+</blockquote>
 
   	</div>
 	  
-	  <div class="article-tags tags">
-      
-        <a href="/tags/InteliJ-IDEA/">InteliJ IDEA</a>
-      
-	  </div>
-    
 	</section>
 	
 </article>
 <script>
 	window.subData = {
-		title: 'InteliJ IDEA插件开发-StringKiller',
+		title: 'Android常用代码-横竖屏切换',
 		tools: true
 	}
 </script>
