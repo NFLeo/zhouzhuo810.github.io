@@ -12,19 +12,19 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ZzImageBoxA powerful image container for adding and removing images. 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int pos">
+  <meta name="description" content="ZzImageBoxA powerful image container for adding and removing images. 传送门：https://github.com/zhouzhuo810/ZzImageBox 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addIm">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android自定义控件-ZzImageBox">
 <meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzImageBox/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="ZzImageBoxA powerful image container for adding and removing images. 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int pos">
-<meta property="og:image" content="http://zhouzhuo810.github.io/images/zzimagebox.gif">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.333Z">
+<meta property="og:description" content="ZzImageBoxA powerful image container for adding and removing images. 传送门：https://github.com/zhouzhuo810/ZzImageBox 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addIm">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/zz_image_box_demo.gif">
+<meta property="og:updated_time" content="2018-03-09T02:27:08.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android自定义控件-ZzImageBox">
-<meta name="twitter:description" content="ZzImageBoxA powerful image container for adding and removing images. 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int pos">
-<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/zzimagebox.gif">
+<meta name="twitter:description" content="ZzImageBoxA powerful image container for adding and removing images. 传送门：https://github.com/zhouzhuo810/ZzImageBox 功能简介：1.支持添加、删除、默认图片的配置； 2.支持最大行数限制； 3.支持每行数量修改； 4.支持添加、删除、图片点击回调接口。 5.支持Box的添加(.addIm">
+<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/zz_image_box_demo.gif">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -165,27 +165,37 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ZzImageBox"><span class="toc-number">1.</span> <span class="toc-text">ZzImageBox</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能简介："><span class="toc-number">1.0.1.</span> <span class="toc-text">功能简介：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradle"><span class="toc-number">1.0.2.</span> <span class="toc-text">Gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven"><span class="toc-number">1.0.3.</span> <span class="toc-text">Maven</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-does-it-look-like"><span class="toc-number">1.1.</span> <span class="toc-text">What does it look like?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-use-it"><span class="toc-number">1.2.</span> <span class="toc-text">How to use it ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性说明："><span class="toc-number">1.3.</span> <span class="toc-text">属性说明：</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ZzImageBox"><span class="toc-number">1.</span> <span class="toc-text">ZzImageBox</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能简介："><span class="toc-number">1.0.1.</span> <span class="toc-text">功能简介：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gradle"><span class="toc-number">1.0.2.</span> <span class="toc-text">Gradle</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-does-it-look-like"><span class="toc-number">1.1.</span> <span class="toc-text">What does it look like?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-use-it"><span class="toc-number">1.2.</span> <span class="toc-text">How to use it ?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意："><span class="toc-number">1.2.0.1.</span> <span class="toc-text">注意：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性说明："><span class="toc-number">1.3.</span> <span class="toc-text">属性说明：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更新日志"><span class="toc-number">1.3.1.</span> <span class="toc-text">更新日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#License"><span class="toc-number">1.3.2.</span> <span class="toc-text">License</span></a></li></ol></li></ol></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
     	<h1 id="ZzImageBox"><a href="#ZzImageBox" class="headerlink" title="ZzImageBox"></a>ZzImageBox</h1><p>A powerful image container for adding and removing images.</p>
+<p>传送门：<a href="https://github.com/zhouzhuo810/ZzImageBox" target="_blank" rel="external">https://github.com/zhouzhuo810/ZzImageBox</a></p>
 <h3 id="功能简介："><a href="#功能简介：" class="headerlink" title="功能简介："></a>功能简介：</h3><p>1.支持添加、删除、默认图片的配置；</p>
 <p>2.支持最大行数限制；</p>
 <p>3.支持每行数量修改；</p>
 <p>4.支持添加、删除、图片点击回调接口。</p>
 <p>5.支持Box的添加(.addImage(String imagePath))和删除(.removeImage(int position))；</p>
-<p>6.支持加载本地图片(使用方法.addImage(String imagePath))；</p>
-<p>7.支持左右margin设置。</p>
-<h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzimagebox:zz-image-box:1.0.4&apos;</div></pre></td></tr></table></figure>
+<p>6.支持加载本地和网络图片(使用方法<code>.addImage(String url)</code>)；</p>
+<p>7.支持自定义图片加载框架(使用<code>.setOnlineImageLoader(ZzImageBox.OnlineImageLoader listener)</code>,<br>如果有网络图片必须使用此方法);</p>
+<p>8.支持左右margin设置。</p>
 <a id="more"></a>
-<h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>me.zhouzhuo.zzimagebox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zz-image-box<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="What-does-it-look-like"><a href="#What-does-it-look-like" class="headerlink" title="What does it look like?"></a>What does it look like?</h2><p><img src="../../../../images/zzimagebox.gif" alt="zzimagebox"></p>
-<h2 id="How-to-use-it"><a href="#How-to-use-it" class="headerlink" title="How to use it ?"></a>How to use it ?</h2><p>xml:</p>
+<h3 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzimagebox:zz-image-box:1.0.6&apos;</div></pre></td></tr></table></figure>
+<p>内部依赖项说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.android.support:recyclerview-v7:27.0.1&apos;</div></pre></td></tr></table></figure></p>
+<p>也就是说添加ZzImageBox同时会添加RecyclerView包。</p>
+<h2 id="What-does-it-look-like"><a href="#What-does-it-look-like" class="headerlink" title="What does it look like?"></a>What does it look like?</h2><p><img src="../../../../images/zz_image_box_demo.gif" alt="图1"></p>
+<h2 id="How-to-use-it"><a href="#How-to-use-it" class="headerlink" title="How to use it ?"></a>How to use it ?</h2><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ul>
+<li>为了保证图片是正方形，需要保证ZzImageBox水平方向是填满屏幕的，也就是说父容器不能有padding和margin。</li>
+<li>ZzImageBox的marginLeft属性使用zib_left_margin代替；</li>
+<li>ZzImageBox的marginRight属性使用zib_right_margin代替；</li>
+<li>如果不需要显示添加图片，可以设置zib_img_add为透明颜色；</li>
+<li>加载网络图片必须添加<code>.setOnlineImageLoader();</code>方法，<br>在<code>onLoadImage(ImageView iv, String url)</code>中自行使用Glide等框架加载；</li>
+</ul>
+<p>xml:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">me.zhouzhuo.zzimagebox.ZzImageBox</span></span></div><div class="line">    <span class="attr">android:id</span>=<span class="string">"@+id/zz_image_box"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">app:zib_left_margin</span>=<span class="string">"20dp"</span></div><div class="line">    <span class="attr">app:zib_right_margin</span>=<span class="string">"20dp"</span></div><div class="line">    <span class="attr">app:zib_img_padding</span>=<span class="string">"5dp"</span></div><div class="line">    <span class="attr">app:zib_img_size_one_line</span>=<span class="string">"4"</span></div><div class="line">    <span class="attr">app:zib_max_line</span>=<span class="string">"3"</span></div><div class="line">    <span class="attr">app:zib_img_deletable</span>=<span class="string">"true"</span></div><div class="line">    <span class="attr">app:zib_img_add</span>=<span class="string">"@drawable/iv_add"</span></div><div class="line">    <span class="attr">app:zib_img_default</span>=<span class="string">"@drawable/iv_default"</span></div><div class="line">    <span class="attr">app:zib_img_delete</span>=<span class="string">"@drawable/iv_delete"</span></div><div class="line">    /&gt;</div></pre></td></tr></table></figure>
 <p>java:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> ZzImageBox imageBox = (ZzImageBox) findViewById(R.id.zz_image_box);</div><div class="line">imageBox.setOnImageClickListener(<span class="keyword">new</span> ZzImageBox.OnImageClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onImageClick</span><span class="params">(<span class="keyword">int</span> position, String filePath)</span> </span>&#123;</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"image clicked:"</span> + position + <span class="string">","</span> + filePath);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDeleteClick</span><span class="params">(<span class="keyword">int</span> position, String filePath)</span> </span>&#123;</div><div class="line">        imageBox.removeImage(position);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"delete clicked:"</span> + position + <span class="string">","</span> + filePath);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"all images\n"</span>+imageBox.getAllImages().toString());</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAddClick</span><span class="params">()</span> </span>&#123;</div><div class="line">        imageBox.addImage(<span class="keyword">null</span>);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"add clicked"</span>);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"all images\n"</span>+imageBox.getAllImages().toString());</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="属性说明："><a href="#属性说明：" class="headerlink" title="属性说明："></a>属性说明：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;declare-styleable name=&quot;ZzImageBox&quot;&gt;</div><div class="line">    &lt;attr name=&quot;zib_max_line&quot; format=&quot;integer&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_size_one_line&quot; format=&quot;integer&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_padding&quot; format=&quot;dimension|reference&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_default&quot; format=&quot;color|reference&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_delete&quot; format=&quot;color|reference&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_add&quot; format=&quot;color|reference&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_img_deletable&quot; format=&quot;boolean&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_left_margin&quot; format=&quot;dimension|reference&quot; /&gt;</div><div class="line">    &lt;attr name=&quot;zib_right_margin&quot; format=&quot;dimension|reference&quot; /&gt;</div><div class="line">&lt;/declare-styleable&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> ZzImageBox imageBox = (ZzImageBox) findViewById(R.id.zz_image_box);</div><div class="line"><span class="comment">//如果需要加载网络图片，添加此监听。</span></div><div class="line">imageBox.setOnlineImageLoader(<span class="keyword">new</span> ZzImageBox.OnlineImageLoader() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadImage</span><span class="params">(ImageView iv, String url)</span> </span>&#123;</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"url="</span> + url);</div><div class="line">        Glide.with(MainActivity.<span class="keyword">this</span>).load(url).into(iv);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">imageBox.setOnImageClickListener(<span class="keyword">new</span> ZzImageBox.OnImageClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onImageClick</span><span class="params">(<span class="keyword">int</span> position, String filePath)</span> </span>&#123;</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"image clicked:"</span> + position + <span class="string">","</span> + filePath);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDeleteClick</span><span class="params">(<span class="keyword">int</span> position, String filePath)</span> </span>&#123;</div><div class="line">        imageBox.removeImage(position);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"delete clicked:"</span> + position + <span class="string">","</span> + filePath);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"all images\n"</span>+imageBox.getAllImages().toString());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAddClick</span><span class="params">()</span> </span>&#123;</div><div class="line">        imageBox.addImage(<span class="keyword">null</span>);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"add clicked"</span>);</div><div class="line">        Log.d(<span class="string">"ZzImageBox"</span>, <span class="string">"all images\n"</span>+imageBox.getAllImages().toString());</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="属性说明："><a href="#属性说明：" class="headerlink" title="属性说明："></a>属性说明：</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">"ZzImageBox"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_max_line"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_size_one_line"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_padding"</span> <span class="attr">format</span>=<span class="string">"dimension|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_default"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_delete"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_add"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_img_deletable"</span> <span class="attr">format</span>=<span class="string">"boolean"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_left_margin"</span> <span class="attr">format</span>=<span class="string">"dimension|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zib_right_margin"</span> <span class="attr">format</span>=<span class="string">"dimension|reference"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -212,21 +222,18 @@
 </tr>
 <tr>
 <td style="text-align:left">zib_img_default</td>
-<td style="text-align:left">drawable</td>
-<td style="text-align:left">color</td>
-<td>默认图片资源id</td>
+<td style="text-align:left">drawable/color</td>
+<td style="text-align:left">默认图片资源id</td>
 </tr>
 <tr>
 <td style="text-align:left">zib_img_delete</td>
-<td style="text-align:left">drawable</td>
-<td style="text-align:left">color</td>
-<td>删除图片资源id</td>
+<td style="text-align:left">drawable/color</td>
+<td style="text-align:left">删除图片资源id</td>
 </tr>
 <tr>
 <td style="text-align:left">zib_img_add</td>
-<td style="text-align:left">drawable</td>
-<td style="text-align:left">color</td>
-<td>添加图片资源id</td>
+<td style="text-align:left">drawable/color</td>
+<td style="text-align:left">添加图片资源id</td>
 </tr>
 <tr>
 <td style="text-align:left">zib_img_deletable</td>
@@ -245,7 +252,41 @@
 </tr>
 </tbody>
 </table>
-
+<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><blockquote>
+<p>v1.0.6</p>
+</blockquote>
+<ul>
+<li>支持动态设置左间距，使用<code>setLeftMarginInPixel()</code>方法；</li>
+<li>支持动态设置右边距，使用<code>setRightMarginInPixel()</code>方法；</li>
+<li>支持动态设置图片间距，使用<code>setImagePadding()</code>方法；</li>
+<li>支持动态设置单行图片数量，使用<code>setImageSizeOneLine()</code>方法；</li>
+<li>更新RecyclerView版本到<code>com.android.support:recyclerview-v7:27.0.1</code>。</li>
+</ul>
+<blockquote>
+<p>v1.0.5</p>
+</blockquote>
+<ul>
+<li>支持加载网络图片；</li>
+</ul>
+<blockquote>
+<p>v1.0.4</p>
+</blockquote>
+<ul>
+<li>点击图片返回图片对象，用于适应转场动画。</li>
+</ul>
+<blockquote>
+<p>v1.0.3</p>
+</blockquote>
+<ul>
+<li>新增zib_left_margin和zib_right_margin设置左右外间距属性。</li>
+</ul>
+<blockquote>
+<p>v1.0.2</p>
+</blockquote>
+<ul>
+<li>首次提交。</li>
+</ul>
+<h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Copyright © zhouzhuo810</div><div class="line">  </div><div class="line">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</div><div class="line">you may not use this file except in compliance with the License.</div><div class="line">You may obtain a copy of the License at</div><div class="line">  </div><div class="line">   http://www.apache.org/licenses/LICENSE-2.0</div><div class="line">  </div><div class="line">Unless required by applicable law or agreed to in writing, software</div><div class="line">distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</div><div class="line">WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</div><div class="line">See the License for the specific language governing permissions and</div><div class="line">limitations under the License.</div></pre></td></tr></table></figure>
   	</div>
 	  
 	  <div class="article-tags tags">
