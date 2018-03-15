@@ -3,6 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题]]></title>
+      <url>/2018/03/15/Android-TV%E5%BC%80%E5%8F%91-RecyclerView%E5%88%B7%E6%96%B0%E7%84%A6%E7%82%B9%E4%B8%A2%E5%A4%B1%E4%BB%A5%E5%8F%8A%E5%B1%80%E9%83%A8%E5%88%B7%E6%96%B0%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><blockquote>
+<p>使用GridLayoutManager时，多选的情况下，点击item刷新后，焦点被抢问题；</p>
+</blockquote>
+<ul>
+<li>解决方式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">holder.setText(R.id.tv_name, data.get(position).getcName())</div><div class="line">        .setChecked(R.id.cb_choose, data.get(position).isChoosed())</div><div class="line">        .setOnClickListener(R.id.ll_cb, <span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">                data.get(position).setChoosed(!data.get(position).isChoosed());</div><div class="line">                notifyItemChanged(position); <span class="comment">//关键代码</span></div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<h3 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h3><blockquote>
+<p>在问题1解决后，手机上没问题，电视上会出现牵连闪烁问题，就是点击某一行的某一个item，该行最左边一个item也会跟着闪烁一下；</p>
+</blockquote>
+<ul>
+<li>解决方式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//关闭闪烁动画</span></div><div class="line">((SimpleItemAnimator)rv.getItemAnimator()).setSupportsChangeAnimations(<span class="keyword">false</span>);</div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> Android-TV开发 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Android-TV开发 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android常用代码-横竖屏切换]]></title>
       <url>/2018/02/26/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E6%A8%AA%E7%AB%96%E5%B1%8F%E5%88%87%E6%8D%A2/</url>
       <content type="html"><![CDATA[<h3 id="自动切换"><a href="#自动切换" class="headerlink" title="自动切换"></a>自动切换</h3><ul>
@@ -455,7 +488,7 @@
 </ul>
 <h2 id="示例图片"><a href="#示例图片" class="headerlink" title="示例图片"></a>示例图片</h2><p><img src="../../../../images/stringkiller.gif" alt="图2"></p>
 <h2 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">如果有小伙伴对命名方式或功能有什么更好的想法，欢迎提建议。</div><div class="line">下面是我的邮箱：</div></pre></td></tr></table></figure>
-<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x61;&#x64;&#x6d;&#x69;&#x6e;&#64;&#122;&#104;&#111;&#x75;&#122;&#x68;&#x75;&#x6f;&#x38;&#49;&#48;&#46;&#109;&#x65;">&#x61;&#x64;&#x6d;&#x69;&#x6e;&#64;&#122;&#104;&#111;&#x75;&#122;&#x68;&#x75;&#x6f;&#x38;&#49;&#48;&#46;&#109;&#x65;</a></p>
+<p><a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x61;&#100;&#x6d;&#105;&#x6e;&#64;&#122;&#x68;&#111;&#117;&#x7a;&#x68;&#117;&#111;&#56;&#49;&#x30;&#46;&#x6d;&#x65;">&#x61;&#100;&#x6d;&#105;&#x6e;&#64;&#122;&#x68;&#111;&#117;&#x7a;&#x68;&#117;&#111;&#56;&#49;&#x30;&#46;&#x6d;&#x65;</a></p>
 <h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Copyright © zhouzhuo810</div><div class="line">  </div><div class="line">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</div><div class="line">you may not use this file except in compliance with the License.</div><div class="line">You may obtain a copy of the License at</div><div class="line">  </div><div class="line">   http://www.apache.org/licenses/LICENSE-2.0</div><div class="line">  </div><div class="line">Unless required by applicable law or agreed to in writing, software</div><div class="line">distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</div><div class="line">WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</div><div class="line">See the License for the specific language governing permissions and</div><div class="line">limitations under the License.</div></pre></td></tr></table></figure>
 ]]></content>
       
