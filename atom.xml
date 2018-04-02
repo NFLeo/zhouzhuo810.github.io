@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-03-20T06:32:51.204Z</updated>
+  <updated>2018-04-02T02:14:02.226Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android-8.0新特性-服务启动问题</title>
+    <link href="http://zhouzhuo810.github.io/2018/04/02/Android-8-0%E6%96%B0%E7%89%B9%E6%80%A7-%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2018/04/02/Android-8-0新特性-服务启动问题/</id>
+    <published>2018-04-02T01:55:05.000Z</published>
+    <updated>2018-04-02T02:14:02.226Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Android 8.0 启动后台service 出错 IllegalStateException: Not al
+    
+    </summary>
+    
+      <category term="Android版本特性" scheme="http://zhouzhuo810.github.io/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android常用代码-自定义View和ViewGroup</title>
@@ -476,29 +497,6 @@
     
     
       <category term="Python" scheme="http://zhouzhuo810.github.io/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小常识-让服务器通过公网IP连接远程桌面</title>
-    <link href="http://zhouzhuo810.github.io/2018/01/12/%E5%B0%8F%E5%B8%B8%E8%AF%86-%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91IP%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/"/>
-    <id>http://zhouzhuo810.github.io/2018/01/12/小常识-让服务器通过公网IP连接远程桌面/</id>
-    <published>2018-01-12T09:24:45.000Z</published>
-    <updated>2018-01-12T09:40:50.772Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;路由器添加端口映射3389&lt;/li&gt;
-&lt;li&gt;windows用户设置登陆密码&lt;/li&gt;
-&lt;li&gt;设置自动登陆&lt;a
-    
-    </summary>
-    
-      <category term="常识" scheme="http://zhouzhuo810.github.io/categories/%E5%B8%B8%E8%AF%86/"/>
-    
-    
-      <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
     
   </entry>
   
