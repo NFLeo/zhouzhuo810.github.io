@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-04-02T02:14:02.226Z</updated>
+  <updated>2018-04-09T08:16:49.984Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用代码-渐变背景色shape</title>
+    <link href="http://zhouzhuo810.github.io/2018/04/09/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E6%B8%90%E5%8F%98%E8%83%8C%E6%99%AF%E8%89%B2shape/"/>
+    <id>http://zhouzhuo810.github.io/2018/04/09/Android常用代码-渐变背景色shape/</id>
+    <published>2018-04-09T08:15:05.000Z</published>
+    <updated>2018-04-09T08:16:49.984Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;关键代码&quot;&gt;&lt;a href=&quot;#关键代码&quot; class=&quot;headerlink&quot; title=&quot;关键代码&quot;&gt;&lt;/a&gt;关键代码&lt;/h3&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android-8.0新特性-服务启动问题</title>
@@ -467,36 +487,6 @@
     
     
       <category term="常识" scheme="http://zhouzhuo810.github.io/tags/%E5%B8%B8%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python-修改hosts文件</title>
-    <link href="http://zhouzhuo810.github.io/2018/01/18/Python-%E4%BF%AE%E6%94%B9hosts%E6%96%87%E4%BB%B6/"/>
-    <id>http://zhouzhuo810.github.io/2018/01/18/Python-修改hosts文件/</id>
-    <published>2018-01-18T09:32:53.000Z</published>
-    <updated>2018-01-18T09:40:27.856Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;准备&quot;&gt;&lt;a href=&quot;#准备&quot; class=&quot;headerlink&quot; title=&quot;准备&quot;&gt;&lt;/a&gt;准备&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Window 7/8/10&lt;/li&gt;
-&lt;li&gt;Node.js环境&lt;/li&gt;
-&lt;li&gt;Python环境&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;requests插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;pip install requests&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;beautifulsoup4插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;pip install beautifulsoup4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="http://zhouzhuo810.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://zhouzhuo810.github.io/tags/Python/"/>
     
   </entry>
   
