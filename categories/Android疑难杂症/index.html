@@ -154,6 +154,82 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">
+        Android疑难杂症-自定义RecyclerView的LayoutManager
+      </a>
+    </h2>
+    
+    <time>
+      4月 13, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="禁用RecyclerView手动滑动功能；"><a href="#禁用RecyclerView手动滑动功能；" class="headerlink" title="禁用RecyclerView手动滑动功能；"></a>禁用RecyclerView手动滑动功能；</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlanDateRecyclerView</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs, <span class="keyword">int</span> defStyle)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs, defStyle);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">        setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/04/13/Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题/">
+        Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题
+      </a>
+    </h2>
+    
+    <time>
+      4月 13, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="终极解决方案"><a href="#终极解决方案" class="headerlink" title="终极解决方案"></a>终极解决方案</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line">  </div><div class="line"><span class="keyword">import</span> zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;</div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by zhouzhuo810 on 2018/4/11.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NoConflictViewPager</span> <span class="keyword">extends</span> <span class="title">ZzViewPager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">canScroll</span><span class="params">(View v, <span class="keyword">boolean</span> checkV, <span class="keyword">int</span> dx, <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">    	<span class="comment">//这里添加冲突的控件类型</span></div><div class="line">        <span class="keyword">if</span> (v <span class="keyword">instanceof</span> PickerView) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.canScroll(v, checkV, dx, x, y);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">
         Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常
       </a>
@@ -480,76 +556,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">
-        Android疑难杂症-根据资源名称获取资源Id
-      </a>
-    </h2>
-    
-    <time>
-      10月 4, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Resources resources = context.getResources();</div><div class="line"><span class="keyword">int</span> id= getResources().getIdentifier(<span class="string">"图标名称(不带后缀)"</span>, <span class="string">"drawable"</span>, <span class="string">"包名"</span>);</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">Read More</a>
-    </div>
-    
-    
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/09/30/Android支付宝支付-返回签名错误问题/">
-        Android支付宝支付-返回签名错误问题
-      </a>
-    </h2>
-    
-    <time>
-      9月 30, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"><a href="#首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。" class="headerlink" title="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"></a>首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。</h3><h3 id="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；"><a href="#其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；" class="headerlink" title="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；"></a>其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；</h3><h3 id="最后，沙箱环境是否注释。"><a href="#最后，沙箱环境是否注释。" class="headerlink" title="最后，沙箱环境是否注释。"></a>最后，沙箱环境是否注释。</h3>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -600,7 +606,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>17</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>18</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>3</div></a></li>
     
@@ -608,11 +614,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>15</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>17</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>7</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>8</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     

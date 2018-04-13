@@ -154,6 +154,76 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">
+        Android疑难杂症-根据资源名称获取资源Id
+      </a>
+    </h2>
+    
+    <time>
+      10月 4, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Resources resources = context.getResources();</div><div class="line"><span class="keyword">int</span> id= getResources().getIdentifier(<span class="string">"图标名称(不带后缀)"</span>, <span class="string">"drawable"</span>, <span class="string">"包名"</span>);</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">Read More</a>
+    </div>
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/09/30/Android支付宝支付-返回签名错误问题/">
+        Android支付宝支付-返回签名错误问题
+      </a>
+    </h2>
+    
+    <time>
+      9月 30, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"><a href="#首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。" class="headerlink" title="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"></a>首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。</h3><h3 id="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；"><a href="#其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；" class="headerlink" title="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；"></a>其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；</h3><h3 id="最后，沙箱环境是否注释。"><a href="#最后，沙箱环境是否注释。" class="headerlink" title="最后，沙箱环境是否注释。"></a>最后，沙箱环境是否注释。</h3>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/09/30/Android微信支付返回-1问题解决/">
         Android微信支付返回-1问题解决
       </a>
@@ -323,8 +393,8 @@
   <section class="meta">
     
     <h2 class="title">
-      <a href="/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/">
-        Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
+      <a href="/2017/06/13/Android疑难杂症-自定义ViewGroup的一些问题/">
+        Android疑难杂症-自定义ViewGroup的一些问题
       </a>
     </h2>
     
@@ -339,11 +409,18 @@
 
   </section>
   <section class="article typo">
-	  <p>解决方法：</p>
+	  <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><blockquote>
+<p>自定义ViewGroup添加TextView的Gravity失效</p>
+</blockquote>
+<p>解决方法：</p>
 <p>在addView()之前</p>
 <p>添加如下代码</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),</div><div class="line">        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));</div></pre></td></tr></table></figure>
 
+    
+	  <div class="readmore">
+      <a href="/2017/06/13/Android疑难杂症-自定义ViewGroup的一些问题/">Read More</a>
+    </div>
     
     
     
@@ -407,7 +484,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>17</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>18</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>3</div></a></li>
     
@@ -415,11 +492,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>15</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>17</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>7</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>8</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     

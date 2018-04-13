@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效 | zhouzhuo810</title>
+  <title>Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解决方法： 在addView()之前 添加如下代码 12mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));">
+  <meta name="description" content="终极解决方案123456789101112131415161718192021222324252627import android.content.Context;import android.util.AttributeSet;import android.view.View;  import zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;  /">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/index.html">
+<meta property="og:title" content="Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/04/13/Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="解决方法： 在addView()之前 添加如下代码 12mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.295Z">
+<meta property="og:description" content="终极解决方案123456789101112131415161718192021222324252627import android.content.Context;import android.util.AttributeSet;import android.view.View;  import zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;  /">
+<meta property="og:updated_time" content="2018-04-13T05:05:32.061Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效">
-<meta name="twitter:description" content="解决方法： 在addView()之前 添加如下代码 12mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));">
+<meta name="twitter:title" content="Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题">
+<meta name="twitter:description" content="终极解决方案123456789101112131415161718192021222324252627import android.content.Context;import android.util.AttributeSet;import android.view.View;  import zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;  /">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,17 +143,17 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效"
+        <article id="post-Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/06/13/Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效/">
-    	Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效
+  	<a href="/2018/04/13/Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题/">
+    	Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题
     </a>
   </h2>
 	<time>
-	  6月 13, 2017
+	  4月 13, 2018
 	</time>
 	
     
@@ -163,14 +163,11 @@
 
 	</section>
 	
-		<section class="toc-wrapper"></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#终极解决方案"><span class="toc-number">1.</span> <span class="toc-text">终极解决方案</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>解决方法：</p>
-<p>在addView()之前</p>
-<p>添加如下代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),</div><div class="line">        View.MeasureSpec.makeMeasureSpec(mHeight, View.MeasureSpec.EXACTLY));</div></pre></td></tr></table></figure>
+    	<h2 id="终极解决方案"><a href="#终极解决方案" class="headerlink" title="终极解决方案"></a>终极解决方案</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line">  </div><div class="line"><span class="keyword">import</span> zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;</div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by zhouzhuo810 on 2018/4/11.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NoConflictViewPager</span> <span class="keyword">extends</span> <span class="title">ZzViewPager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">canScroll</span><span class="params">(View v, <span class="keyword">boolean</span> checkV, <span class="keyword">int</span> dx, <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">    	<span class="comment">//这里添加冲突的控件类型</span></div><div class="line">        <span class="keyword">if</span> (v <span class="keyword">instanceof</span> PickerView) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.canScroll(v, checkV, dx, x, y);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
   	</div>
 	  
 	  <div class="article-tags tags">
@@ -184,7 +181,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Android疑难杂症-自定义ViewGroup添加TextView的Gravity失效',
+		title: 'Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题',
 		tools: true
 	}
 </script>
@@ -225,7 +222,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>17</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>18</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>3</div></a></li>
     
@@ -233,11 +230,11 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>15</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>17</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>7</div></a></li>
+        <li><a class="flat-box" href="/categories/Android自定义控件/"><div class='name'>Android自定义控件</div><div class='badget'>8</div></a></li>
     
         <li><a class="flat-box" href="/categories/Git常见问题/"><div class='name'>Git常见问题</div><div class='badget'>1</div></a></li>
     
