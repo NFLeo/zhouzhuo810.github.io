@@ -19,7 +19,7 @@
 <meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/13/Android疑难杂症-自定义ViewGroup的一些问题/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
 <meta property="og:description" content="问题1 自定义ViewGroup添加TextView的Gravity失效  解决方法： 在addView()之前 添加如下代码 12mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),        View.MeasureSpec.makeMeasureSpec(mHeight,">
-<meta property="og:updated_time" content="2018-04-13T05:14:52.184Z">
+<meta property="og:updated_time" content="2018-04-26T06:44:55.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android疑难杂症-自定义ViewGroup的一些问题">
 <meta name="twitter:description" content="问题1 自定义ViewGroup添加TextView的Gravity失效  解决方法： 在addView()之前 添加如下代码 12mTextView.measure(View.MeasureSpec.makeMeasureSpec(mWidth, View.MeasureSpec.EXACTLY),        View.MeasureSpec.makeMeasureSpec(mHeight,">
@@ -179,7 +179,14 @@
 <p>自定义ViewGroup调用<code>setMeasuredDimension(mWidth, mHeight);</code>后，TextView不更新边框</p>
 </blockquote>
 <p>解决方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tv.setText(<span class="string">"xxx"</span>);</div><div class="line">tv.requestLayout();</div></pre></td></tr></table></figure>
+<ul>
+<li>ViewGroup中</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</div><div class="line">    setMeasuredDimension(mWidth, mHeight);</div><div class="line">   	<span class="comment">//关键代码</span></div><div class="line">    itemView.measure(MeasureSpec.makeMeasureSpec(mWidth, MeasureSpec.EXACTLY),</div><div class="line">            MeasureSpec.makeMeasureSpec(mHeight, MeasureSpec.EXACTLY));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>修改TextView的地方</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tv.setText(<span class="string">"xxx"</span>);</div><div class="line"><span class="comment">//关键代码</span></div><div class="line">tv.requestLayout();</div></pre></td></tr></table></figure>
 
   	</div>
 	  
