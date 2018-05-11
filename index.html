@@ -150,6 +150,43 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/05/11/JavaEE-使用javaemail发送邮件/">
+        JavaEE-使用javaemail发送邮件
+      </a>
+    </h2>
+    
+    <time>
+      5月 11, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/SpringMVC/">SpringMVC</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="pom"><a href="#pom" class="headerlink" title="pom"></a>pom</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.sun.mail<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.mail<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.6.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="使用163邮箱发送邮件"><a href="#使用163邮箱发送邮件" class="headerlink" title="使用163邮箱发送邮件"></a>使用163邮箱发送邮件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> javamail;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Properties;</div><div class="line">  </div><div class="line"><span class="keyword">import</span> javax.mail.Authenticator;</div><div class="line"><span class="keyword">import</span> javax.mail.Message;</div><div class="line"><span class="keyword">import</span> javax.mail.MessagingException;</div><div class="line"><span class="keyword">import</span> javax.mail.PasswordAuthentication;</div><div class="line"><span class="keyword">import</span> javax.mail.Session;</div><div class="line"><span class="keyword">import</span> javax.mail.Transport;</div><div class="line"><span class="keyword">import</span> javax.mail.Message.RecipientType;</div><div class="line"><span class="keyword">import</span> javax.mail.internet.AddressException;</div><div class="line"><span class="keyword">import</span> javax.mail.internet.InternetAddress;</div><div class="line"><span class="keyword">import</span> javax.mail.internet.MimeMessage;</div><div class="line">  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mail163Test</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">        <span class="comment">//0.1 确定连接位置</span></div><div class="line">        Properties props = <span class="keyword">new</span> Properties();</div><div class="line">        <span class="comment">//获取163邮箱smtp服务器的地址，</span></div><div class="line">        props.setProperty(<span class="string">"mail.host"</span>, <span class="string">"smtp.163.com"</span>);</div><div class="line">        <span class="comment">//是否进行权限验证。</span></div><div class="line">        props.setProperty(<span class="string">"mail.smtp.auth"</span>, <span class="string">"true"</span>);</div><div class="line">        </div><div class="line">        </div><div class="line">        <span class="comment">//0.2确定权限（账号和密码）</span></div><div class="line">        Authenticator authenticator = <span class="keyword">new</span> Authenticator() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> PasswordAuthentication <span class="title">getPasswordAuthentication</span><span class="params">()</span> </span>&#123;</div><div class="line">                <span class="comment">//填写自己的163邮箱的登录帐号和授权密码，授权密码的获取，在后面会进行讲解。</span></div><div class="line">                <span class="keyword">return</span> <span class="keyword">new</span> PasswordAuthentication(<span class="string">"163邮箱的帐号"</span>,<span class="string">"授权码"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">  </div><div class="line">        <span class="comment">//1 获得连接</span></div><div class="line">        <span class="comment">/**</span></div><div class="line">         * props：包含配置信息的对象，Properties类型</div><div class="line">         *         配置邮箱服务器地址、配置是否进行权限验证(帐号密码验证)等</div><div class="line">         * </div><div class="line">         * authenticator：确定权限(帐号和密码)        </div><div class="line">         * </div><div class="line">         * 所以就要在上面构建这两个对象。</div><div class="line">         */</div><div class="line">        </div><div class="line">        Session session = Session.getDefaultInstance(props, authenticator);</div><div class="line">  </div><div class="line">        </div><div class="line">        <span class="comment">//2 创建消息</span></div><div class="line">        Message message = <span class="keyword">new</span> MimeMessage(session);</div><div class="line">        <span class="comment">// 2.1 发件人        xxx@163.com 我们自己的邮箱地址，就是名称</span></div><div class="line">        message.setFrom(<span class="keyword">new</span> InternetAddress(<span class="string">"xxx@163.com"</span>));</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * 2.2 收件人 </div><div class="line">         *         第一个参数：</div><div class="line">         *             RecipientType.TO    代表收件人 </div><div class="line">         *             RecipientType.CC    抄送</div><div class="line">         *             RecipientType.BCC    暗送</div><div class="line">         *         比如A要给B发邮件，但是A觉得有必要给要让C也看看其内容，就在给B发邮件时，</div><div class="line">         *         将邮件内容抄送给C，那么C也能看到其内容了，但是B也能知道A给C抄送过该封邮件</div><div class="line">         *         而如果是暗送(密送)给C的话，那么B就不知道A给C发送过该封邮件。</div><div class="line">         *     第二个参数</div><div class="line">         *         收件人的地址，或者是一个Address[]，用来装抄送或者暗送人的名单。或者用来群发。可以是相同邮箱服务器的，也可以是不同的</div><div class="line">         *         这里我们发送给我们的qq邮箱</div><div class="line">         */</div><div class="line">        message.setRecipient(RecipientType.TO, <span class="keyword">new</span> InternetAddress(<span class="string">"526745683@qq.com"</span>));</div><div class="line">        <span class="comment">// 2.3 主题（标题）</span></div><div class="line">        message.setSubject(<span class="string">"邮件的标题"</span>);</div><div class="line">        <span class="comment">// 2.4 正文</span></div><div class="line">        String str = <span class="string">"李四： &lt;br/&gt;"</span> +</div><div class="line">                        <span class="string">"您好，您在本论坛注册用户，点击下面url进行激活&lt;br/&gt;"</span> +</div><div class="line">                        <span class="string">"http://ww......&lt;br/&gt;"</span> +</div><div class="line">                        <span class="string">"如果不能点击，请复制直接激活&lt;br/&gt;"</span> +</div><div class="line">                        <span class="string">"如果不是本人，请删除邮件"</span>;</div><div class="line">        <span class="comment">//设置编码，防止发送的内容中文乱码。</span></div><div class="line">        message.setContent(str, <span class="string">"text/html;charset=UTF-8"</span>);</div><div class="line">        </div><div class="line">        </div><div class="line">        <span class="comment">//3发送消息</span></div><div class="line">        Transport.send(message);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/JavaEE/">JavaEE</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/04/13/Android自定义控件-仿星空散点图/">
         Android自定义控件-仿星空散点图
       </a>
@@ -528,56 +565,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/02/26/Android常用代码-横竖屏切换/">
-        Android常用代码-横竖屏切换
-      </a>
-    </h2>
-    
-    <time>
-      2月 26, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="自动切换"><a href="#自动切换" class="headerlink" title="自动切换"></a>自动切换</h3><ul>
-<li>Android Manifest在需要切换的Activity中添加</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">android:configChanges="orientation|keyboardHidden|layoutDirection|screenSize|screenLayout"</div><div class="line">android:screenOrientation="sensor"</div></pre></td></tr></table></figure>
-<ul>
-<li><p>res添加layout-land和layout-port文件夹，分别放两套布局。</p>
-</li>
-<li><p>Activity代码中实现</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onConfigurationChanged</span><span class="params">(Configuration newConfig)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onConfigurationChanged(newConfig);</div><div class="line">    <span class="keyword">if</span>(newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)&#123;</div><div class="line">        <span class="comment">//切换到竖屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="comment">//切换到横屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/02/26/Android常用代码-横竖屏切换/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -660,7 +647,7 @@
     
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>4</div></a></li>
+        <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>5</div></a></li>
     
         <li><a class="flat-box" href="/categories/Swift/"><div class='name'>Swift</div><div class='badget'>22</div></a></li>
     
@@ -685,7 +672,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 16.57px; color: #494949">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 14.86px; color: #6e6e6e">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18.29px; color: #252525">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 14.86px; color: #6e6e6e">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19.14px; color: #121212">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 14.86px; color: #6e6e6e">iOS</a> <a href="/tags/常识/" style="font-size: 17.43px; color: #373737">常识</a> <a href="/tags/网页前端/" style="font-size: 15.71px; color: #5b5b5b">网页前端</a>
     </div>
 </div>
 
