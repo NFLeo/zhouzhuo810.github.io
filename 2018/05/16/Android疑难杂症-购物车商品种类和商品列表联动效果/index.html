@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: Android | zhouzhuo810</title>
+  <title>Android疑难杂症-购物车商品种类和商品列表联动效果 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,16 +12,19 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="周卓的github博客">
-<meta name="keywords" content="Android,IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhouzhuo810">
-<meta property="og:url" content="http://zhouzhuo810.github.io/tags/Android/index.html">
+  <meta name="description" content="说明 基于BaseRecyclerViewAdapterHelper  1compile &amp;apos;com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30&amp;apos; 实体类123456789101112131415161718192021222324252627282930313233343536373839404142434445464">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android疑难杂症-购物车商品种类和商品列表联动效果">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/05/16/Android疑难杂症-购物车商品种类和商品列表联动效果/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="周卓的github博客">
+<meta property="og:description" content="说明 基于BaseRecyclerViewAdapterHelper  1compile &amp;apos;com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30&amp;apos; 实体类123456789101112131415161718192021222324252627282930313233343536373839404142434445464">
+<meta property="og:image" content="http://zhouzhuo810.github.io/images/shop_car.gif">
+<meta property="og:updated_time" content="2018-05-16T06:34:11.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhouzhuo810">
-<meta name="twitter:description" content="周卓的github博客">
+<meta name="twitter:title" content="Android疑难杂症-购物车商品种类和商品列表联动效果">
+<meta name="twitter:description" content="说明 基于BaseRecyclerViewAdapterHelper  1compile &amp;apos;com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30&amp;apos; 实体类123456789101112131415161718192021222324252627282930313233343536373839404142434445464">
+<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/shop_car.gif">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -142,35 +145,31 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Android'}
-  </script>
-
-<section class="post-list">
+        <article id="post-Android疑难杂症-购物车商品种类和商品列表联动效果"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2018/05/16/Android疑难杂症-购物车商品种类和商品列表联动效果/">
+    	Android疑难杂症-购物车商品种类和商品列表联动效果
+    </a>
+  </h2>
+	<time>
+	  5月 16, 2018
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/05/16/Android疑难杂症-购物车商品种类和商品列表联动效果/">
-        Android疑难杂症-购物车商品种类和商品列表联动效果
-      </a>
-    </h2>
-    
-    <time>
-      5月 16, 2018
-    </time>
-		
     
     <div class='cats'>
         <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><blockquote>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实体类"><span class="toc-number">2.</span> <span class="toc-text">实体类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#菜单adapter"><span class="toc-number">3.</span> <span class="toc-text">菜单adapter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#菜单点击监听"><span class="toc-number">4.</span> <span class="toc-text">菜单点击监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#菜单adapter-1"><span class="toc-number">5.</span> <span class="toc-text">菜单adapter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内容滚动监听"><span class="toc-number">6.</span> <span class="toc-text">内容滚动监听</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据模拟与填充"><span class="toc-number">7.</span> <span class="toc-text">数据模拟与填充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图"><span class="toc-number">8.</span> <span class="toc-text">效果图</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><blockquote>
 <p>基于BaseRecyclerViewAdapterHelper</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30&apos;</div></pre></td></tr></table></figure>
@@ -182,417 +181,23 @@
 <h3 id="数据模拟与填充"><a href="#数据模拟与填充" class="headerlink" title="数据模拟与填充"></a>数据模拟与填充</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//关闭闪烁动画</span></div><div class="line">((SimpleItemAnimator) rvContent.getItemAnimator()).setSupportsChangeAnimations(<span class="keyword">false</span>);</div><div class="line">((SimpleItemAnimator) rvShopCar.getItemAnimator()).setSupportsChangeAnimations(<span class="keyword">false</span>);</div><div class="line">  </div><div class="line">String[] names = &#123;</div><div class="line">        <span class="string">"我的最爱"</span>,</div><div class="line">        <span class="string">"饼干"</span>,</div><div class="line">        <span class="string">"饮料"</span>,</div><div class="line">        <span class="string">"方便面"</span>,</div><div class="line">        <span class="string">"水果"</span></div><div class="line">&#125;;</div><div class="line">  </div><div class="line">String[] shops = &#123;</div><div class="line">        <span class="string">"可口可乐330ml"</span>,</div><div class="line">        <span class="string">"Dole都乐菲律宾高地蕉"</span>,</div><div class="line">        <span class="string">"奥利奥夹心饼干"</span>,</div><div class="line">        <span class="string">"可口可乐330ml"</span>,</div><div class="line">        <span class="string">"Dole都乐菲律宾高地蕉"</span>,</div><div class="line">        <span class="string">"奥利奥夹心饼干"</span>,</div><div class="line">        <span class="string">"可口可乐330ml"</span>,</div><div class="line">        <span class="string">"Dole都乐菲律宾高地蕉"</span></div><div class="line">&#125;;</div><div class="line">  </div><div class="line">List&lt;CateEntity&gt; cates = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; names.length; i++) &#123;</div><div class="line">    CateEntity entity = <span class="keyword">new</span> CateEntity();</div><div class="line">    entity.setName(names[i]);</div><div class="line">    entity.setChoose(i == <span class="number">0</span>);</div><div class="line">    cates.add(entity);</div><div class="line">    List&lt;CateEntity.ContentEntity&gt; contents = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i1 = <span class="number">0</span>; i1 &lt; shops.length; i1++) &#123;</div><div class="line">        CateEntity.ContentEntity contentEntity = <span class="keyword">new</span> CateEntity.ContentEntity();</div><div class="line">        contentEntity.setName(shops[i1]);</div><div class="line">        contentEntity.setPrice(<span class="number">4f</span>);</div><div class="line">        contents.add(contentEntity);</div><div class="line">    &#125;</div><div class="line">    entity.setContents(contents);</div><div class="line">&#125;</div><div class="line">cateRvAdapter.updateAll(cates);</div><div class="line">  </div><div class="line">List&lt;MultiItemEntity&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cates.size(); i++) &#123;</div><div class="line">    CateEntity entity = cates.get(i);</div><div class="line">    <span class="comment">//设置GroupPosition</span></div><div class="line">    entity.setIndex(i);</div><div class="line">    <span class="comment">//这个必须加！！！，不然刷新数据会重复添加。</span></div><div class="line">    <span class="keyword">if</span> (entity.getSubItems() != <span class="keyword">null</span>) &#123;</div><div class="line">        entity.getSubItems().clear();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (entity.getContents() != <span class="keyword">null</span>) &#123;</div><div class="line">        <span class="keyword">for</span> (CateEntity.ContentEntity contentEntity : entity.getContents()) &#123;</div><div class="line">            <span class="comment">//设置GroupPosition</span></div><div class="line">            contentEntity.setIndex(i);</div><div class="line">            entity.addSubItem(contentEntity);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    list.add(entity);</div><div class="line">&#125;</div><div class="line">contentRvAdapter.setNewData(list);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cates.size(); i++) &#123;</div><div class="line">    <span class="comment">//注意！！！，这里如果adapter添加了n个header则i+n。</span></div><div class="line">    contentRvAdapter.collapse(i + <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line">contentRvAdapter.expandAll();</div></pre></td></tr></table></figure>
 <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="../../../../images/shop_car.gif" alt="demo"></p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/Android/">Android</a>
       
 	  </div>
     
-  </section>
+	</section>
+	
 </article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android自定义控件-仿星空散点图/">
-        Android自定义控件-仿星空散点图
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android自定义控件/">Android自定义控件</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="../../../../images/starbglayout.png" alt="图1"></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">"StartBgView"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"sbv_bg_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"sbv_star_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"sbv_star_qty"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/13/Android自定义控件-仿星空散点图/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">
-        Android疑难杂症-自定义RecyclerView的LayoutManager
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="禁用RecyclerView手动滑动功能；"><a href="#禁用RecyclerView手动滑动功能；" class="headerlink" title="禁用RecyclerView手动滑动功能；"></a>禁用RecyclerView手动滑动功能；</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlanDateRecyclerView</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs, <span class="keyword">int</span> defStyle)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs, defStyle);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">        setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题/">
-        Android疑难杂证-解决ViewPager和Fragment中水平滑动控件冲突问题
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="终极解决方案"><a href="#终极解决方案" class="headerlink" title="终极解决方案"></a>终极解决方案</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line">  </div><div class="line"><span class="keyword">import</span> zhouzhuo810.me.zzandframe.ui.widget.ZzViewPager;</div><div class="line">  </div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by zhouzhuo810 on 2018/4/11.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NoConflictViewPager</span> <span class="keyword">extends</span> <span class="title">ZzViewPager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NoConflictViewPager</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">canScroll</span><span class="params">(View v, <span class="keyword">boolean</span> checkV, <span class="keyword">int</span> dx, <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">    	<span class="comment">//这里添加冲突的控件类型</span></div><div class="line">        <span class="keyword">if</span> (v <span class="keyword">instanceof</span> PickerView) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.canScroll(v, checkV, dx, x, y);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android常用代码-再按一次退出App/">
-        Android常用代码-再按一次退出App
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (isExit) &#123;</div><div class="line">        finish();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        isExit = <span class="keyword">true</span>;</div><div class="line">        ToastUtils.showCustomBgToast(getString(R.string.press_angin_exit_text));</div><div class="line">        <span class="keyword">new</span> Timer().schedule(<span class="keyword">new</span> TimerTask() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                isExit = <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;, <span class="number">2000</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/09/Android常用代码-渐变背景色shape/">
-        Android常用代码-渐变背景色shape
-      </a>
-    </h2>
-    
-    <time>
-      4月 9, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">shape</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></div><div class="line">    <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">gradient</span></span></div><div class="line">        <span class="attr">android:angle</span>=<span class="string">"90"</span></div><div class="line">        <span class="attr">android:endColor</span>=<span class="string">"#3A559B"</span></div><div class="line">        <span class="attr">android:startColor</span>=<span class="string">"#5c7bbb"</span> /&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/02/Android-8-0新特性-服务启动问题/">
-        Android-8.0新特性-服务启动问题
-      </a>
-    </h2>
-    
-    <time>
-      4月 2, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android版本特性/">Android版本特性</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><ul>
-<li>Android 8.0 启动后台service 出错 IllegalStateException: Not allowed to start service Intent</li>
-</ul>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><ul>
-<li>极光推送老版本sdk启动推送服务未兼容8.0才出现的问题；</li>
-</ul>
-<blockquote>
-<p>Android O对应用在后台运行时可以执行的操作施加了限制，称为后台执行限制（Background Execution Limits），这可以大大减少应用的内存使用和耗电量，提高用户体验。后台执行限制分为两个部分：后台服务限制（Background Service Limitations）、广播限制（BroadcastLimitations）。</p>
-</blockquote>
-<h3 id="本案例解决方式"><a href="#本案例解决方式" class="headerlink" title="本案例解决方式"></a>本案例解决方式</h3><ul>
-<li>更新极光推送sdk就好了。</li>
-</ul>
-<h3 id="其他解决方式"><a href="#其他解决方式" class="headerlink" title="其他解决方式"></a>其他解决方式</h3><blockquote>
-<p>如果自己启动服务遇到此问题，可以这样解决</p>
-</blockquote>
-<ol>
-<li>修改启动方式</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">    context.startForegroundService(intent);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    context.startService(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2.并且在service里再调用startForeground方法，不然就会出现ANR</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">context.startForeground(SERVICE_ID, builder.getNotification());</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/03/20/Android常用代码-自定义View和ViewGroup/">
-        Android常用代码-自定义View和ViewGroup
-      </a>
-    </h2>
-    
-    <time>
-      3月 20, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h1 id="一、自定义View"><a href="#一、自定义View" class="headerlink" title="一、自定义View"></a>一、自定义View</h1><h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><ul>
-<li>以ZzHorizontalProgressBar为例</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//attrs.xml</div><div class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">"ZzHorizontalProgressBar"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--大小--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_padding"</span> <span class="attr">format</span>=<span class="string">"dimension"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--颜色--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_bg_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_pb_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_second_pb_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--整数--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_max"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_progress"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_second_progress"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--布尔--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_show_second_progress"</span> <span class="attr">format</span>=<span class="string">"boolean"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--枚举--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_show_second_point_shape"</span> <span class="attr">format</span>=<span class="string">"enum"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">"point"</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">"line"</span> <span class="attr">value</span>=<span class="string">"1"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">attr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/03/20/Android常用代码-自定义View和ViewGroup/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/02/26/Android常用代码-横竖屏切换/">
-        Android常用代码-横竖屏切换
-      </a>
-    </h2>
-    
-    <time>
-      2月 26, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="自动切换"><a href="#自动切换" class="headerlink" title="自动切换"></a>自动切换</h3><ul>
-<li>Android Manifest在需要切换的Activity中添加</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">android:configChanges="orientation|keyboardHidden|layoutDirection|screenSize|screenLayout"</div><div class="line">android:screenOrientation="sensor"</div></pre></td></tr></table></figure>
-<ul>
-<li><p>res添加layout-land和layout-port文件夹，分别放两套布局。</p>
-</li>
-<li><p>Activity代码中实现</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onConfigurationChanged</span><span class="params">(Configuration newConfig)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onConfigurationChanged(newConfig);</div><div class="line">    <span class="keyword">if</span>(newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)&#123;</div><div class="line">        <span class="comment">//切换到竖屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="comment">//切换到横屏</span></div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/02/26/Android常用代码-横竖屏切换/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">
-        Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常
-      </a>
-    </h2>
-    
-    <time>
-      2月 9, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> PopupWindow popupWindow = <span class="keyword">new</span> PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);</div><div class="line"><span class="comment">//... ...</span></div><div class="line">popupWindow.showAsDropDown(anchor);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>上述代码在7.0手机上不会在anchor下方弹出，而是在屏幕最上方弹出，7.0以下手机则没问题；<br>高度MATCH_PARENT时才会这样，WRAP_CONTENT时不会。</p>
-</blockquote>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><ul>
-<li>7.0系统的一个bug；</li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-</section>
-
-
-  <nav id="page-nav">
-    
-    
-    <a class="next" rel="next" href="/tags/Android/page/2/">
-      <span class="text">Next</span>
-      <span class="icon icon-chevron-right"></span>
-    </a>
-    
-  </nav>
-  
+<script>
+	window.subData = {
+		title: 'Android疑难杂症-购物车商品种类和商品列表联动效果',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>

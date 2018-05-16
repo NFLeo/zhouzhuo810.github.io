@@ -150,6 +150,55 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/03/15/Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题/">
+        Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题
+      </a>
+    </h2>
+    
+    <time>
+      3月 15, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android-TV开发/">Android-TV开发</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><blockquote>
+<p>使用GridLayoutManager时，多选的情况下，点击item刷新后，焦点被抢问题；</p>
+</blockquote>
+<ul>
+<li>解决方式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">holder.setText(R.id.tv_name, data.get(position).getcName())</div><div class="line">        .setChecked(R.id.cb_choose, data.get(position).isChoosed())</div><div class="line">        .setOnClickListener(R.id.ll_cb, <span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">                data.get(position).setChoosed(!data.get(position).isChoosed());</div><div class="line">                notifyItemChanged(position); <span class="comment">//关键代码</span></div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
+<h3 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h3><blockquote>
+<p>在问题1解决后，手机上没问题，电视上会出现牵连闪烁问题，就是点击某一行的某一个item，该行最左边一个item也会跟着闪烁一下；</p>
+</blockquote>
+<ul>
+<li>解决方式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//关闭闪烁动画</span></div><div class="line">((SimpleItemAnimator)rv.getItemAnimator()).setSupportsChangeAnimations(<span class="keyword">false</span>);</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android-TV开发/">Android-TV开发</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/02/26/Android常用代码-横竖屏切换/">
         Android常用代码-横竖屏切换
       </a>
@@ -537,46 +586,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/01/25/前端-JQuery学习笔记/">
-        前端-JQuery学习笔记
-      </a>
-    </h2>
-    
-    <time>
-      1月 25, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/网页前端/">网页前端</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="checkbox类型的input的取值、赋值和监听"><a href="#checkbox类型的input的取值、赋值和监听" class="headerlink" title="checkbox类型的input的取值、赋值和监听"></a>checkbox类型的input的取值、赋值和监听</h3><p>插件推荐：<a href="https://github.com/flatlogic/awesome-bootstrap-checkbox" target="_blank" rel="external">https://github.com/flatlogic/awesome-bootstrap-checkbox</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//全选逻辑</span></div><div class="line">$(<span class="string">"#checkbox-all"</span>).change(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">//是否选中</span></div><div class="line">    <span class="keyword">var</span> isCheck = $(<span class="keyword">this</span>).is(<span class="string">':checked'</span>);</div><div class="line">    <span class="comment">//jquery1.6之后使用.prop而不是.attr来选中或取消选中</span></div><div class="line">    $(<span class="string">".checkbox-child"</span>).prop(<span class="string">"checked"</span>, isCheck);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-
-    
-	  <div class="readmore">
-      <a href="/2018/01/25/前端-JQuery学习笔记/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/网页前端/">网页前端</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -640,7 +649,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>17</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>18</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
