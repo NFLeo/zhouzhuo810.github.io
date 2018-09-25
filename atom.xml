@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-05-17T01:27:05.541Z</updated>
+  <updated>2018-09-25T02:46:34.841Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidStudio技巧-发布library到jitpack并带注释</title>
+    <link href="http://zhouzhuo810.github.io/2018/09/25/AndroidStudio%E6%8A%80%E5%B7%A7-%E5%8F%91%E5%B8%83library%E5%88%B0jitpack%E5%B9%B6%E5%B8%A6%E6%B3%A8%E9%87%8A/"/>
+    <id>http://zhouzhuo810.github.io/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/</id>
+    <published>2018-09-25T02:37:40.000Z</published>
+    <updated>2018-09-25T02:46:34.841Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在project的build-gralde中添加classpath&quot;&gt;&lt;a href=&quot;#在project的build-gralde中添加classpath&quot; class=&quot;headerlink&quot; title=&quot;在project的build.gralde中添加classpath&quot;&gt;&lt;/a&gt;在project的build.gralde中添加classpath&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;classpath &amp;apos;com.github.dcendents:android-maven-gradle-plugin:2.1&amp;apos;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;在library的build-gradle中添加&quot;&gt;&lt;a href=&quot;#在library的build-gradle中添加&quot; class=&quot;headerlink&quot; title=&quot;在library的build.gradle中添加&quot;&gt;&lt;/a&gt;在library的build.gradle中添加&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;apply plugin: &amp;apos;com.github.dcendents.android-maven&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//&amp;#123;github用户名&amp;#125;改为自己github的用户名&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;group=&amp;apos;com.github.&amp;#123;github用户名&amp;#125;&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//添加下面这些才会有文档注释。&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// build a jar with source files&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;task sourcesJar(type: Jar) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    from android.sourceSets.main.java.srcDirs&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    classifier = &amp;apos;sources&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;task javadoc(type: Javadoc) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    failOnError  false&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    source = android.sourceSets.main.java.sourceFiles&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    classpath += configurations.compile&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// build a jar with javadoc&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;task javadocJar(type: Jar, dependsOn: javadoc) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    classifier = &amp;apos;javadoc&amp;apos;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    from javadoc.destinationDir&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;artifacts &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    archives sourcesJar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    archives javadocJar&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Android疑难杂症-购物车商品种类和商品列表联动效果</title>
@@ -439,29 +460,6 @@
     
     
       <category term="iOS" scheme="http://zhouzhuo810.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PhotoShop-图片太宽或太高切除中间部分</title>
-    <link href="http://zhouzhuo810.github.io/2018/01/26/PhotoShop-%E5%9B%BE%E7%89%87%E5%A4%AA%E5%AE%BD%E6%88%96%E5%A4%AA%E9%AB%98%E5%88%87%E9%99%A4%E4%B8%AD%E9%97%B4%E9%83%A8%E5%88%86/"/>
-    <id>http://zhouzhuo810.github.io/2018/01/26/PhotoShop-图片太宽或太高切除中间部分/</id>
-    <published>2018-01-26T01:20:11.000Z</published>
-    <updated>2018-01-26T01:24:58.994Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;矩形选框，选中头部，ctrl+j&lt;/li&gt;
-&lt;li&gt;矩形选框，选中尾部，ctrl+j&lt;/li&gt;
-&lt;li&gt;移动尾部
-    
-    </summary>
-    
-      <category term="PhotoShop" scheme="http://zhouzhuo810.github.io/categories/PhotoShop/"/>
-    
-    
-      <category term="PhotoShop" scheme="http://zhouzhuo810.github.io/tags/PhotoShop/"/>
     
   </entry>
   

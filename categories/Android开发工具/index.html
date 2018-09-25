@@ -154,6 +154,47 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/">
+        AndroidStudio技巧-发布library到jitpack并带注释
+      </a>
+    </h2>
+    
+    <time>
+      9月 25, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="在project的build-gralde中添加classpath"><a href="#在project的build-gralde中添加classpath" class="headerlink" title="在project的build.gralde中添加classpath"></a>在project的build.gralde中添加classpath</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath &apos;com.github.dcendents:android-maven-gradle-plugin:2.1&apos;</div></pre></td></tr></table></figure>
+<h2 id="在library的build-gradle中添加"><a href="#在library的build-gradle中添加" class="headerlink" title="在library的build.gradle中添加"></a>在library的build.gradle中添加</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.github.dcendents.android-maven&apos;</div><div class="line">  </div><div class="line">//&#123;github用户名&#125;改为自己github的用户名</div><div class="line">group=&apos;com.github.&#123;github用户名&#125;&apos;</div><div class="line">  </div><div class="line">//...</div><div class="line">  </div><div class="line">//添加下面这些才会有文档注释。</div><div class="line">  </div><div class="line">// build a jar with source files</div><div class="line">task sourcesJar(type: Jar) &#123;</div><div class="line">    from android.sourceSets.main.java.srcDirs</div><div class="line">    classifier = &apos;sources&apos;</div><div class="line">&#125;</div><div class="line">  </div><div class="line">task javadoc(type: Javadoc) &#123;</div><div class="line">    failOnError  false</div><div class="line">    source = android.sourceSets.main.java.sourceFiles</div><div class="line">    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))</div><div class="line">    classpath += configurations.compile</div><div class="line">&#125;</div><div class="line">  </div><div class="line">// build a jar with javadoc</div><div class="line">task javadocJar(type: Jar, dependsOn: javadoc) &#123;</div><div class="line">    classifier = &apos;javadoc&apos;</div><div class="line">    from javadoc.destinationDir</div><div class="line">&#125;</div><div class="line">  </div><div class="line">artifacts &#123;</div><div class="line">    archives sourcesJar</div><div class="line">    archives javadocJar</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/01/12/AndroidStudio技巧-多文件替换字符串/">
         AndroidStudio技巧-多文件替换字符串
       </a>
@@ -329,7 +370,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>18</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>3</div></a></li>
+        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     
