@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-09-25T02:46:34.841Z</updated>
+  <updated>2018-10-18T06:56:39.008Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android常用代码-阿里云推送</title>
+    <link href="http://zhouzhuo810.github.io/2018/10/18/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E9%98%BF%E9%87%8C%E4%BA%91%E6%8E%A8%E9%80%81/"/>
+    <id>http://zhouzhuo810.github.io/2018/10/18/Android常用代码-阿里云推送/</id>
+    <published>2018-10-18T06:21:19.000Z</published>
+    <updated>2018-10-18T06:56:39.008Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;集成依赖&quot;&gt;&lt;a href=&quot;#集成依赖&quot; class=&quot;headerlink&quot; title=&quot;集成依赖&quot;&gt;&lt;/a&gt;集成依赖&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+    
+    </summary>
+    
+      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>AndroidStudio技巧-发布library到jitpack并带注释</title>
@@ -436,30 +456,6 @@
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS-Github常用控件收藏</title>
-    <link href="http://zhouzhuo810.github.io/2018/01/26/iOS-Github%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6%E6%94%B6%E8%97%8F/"/>
-    <id>http://zhouzhuo810.github.io/2018/01/26/iOS-Github常用控件收藏/</id>
-    <published>2018-01-26T13:34:43.000Z</published>
-    <updated>2018-01-26T13:51:19.966Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;不求多，但求精。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;一、特殊需求&quot;&gt;&lt;a href=&quot;#一、特殊需求&quot; class=&quot;headerlink&quot; title=&quot;一、特殊需求&quot;&gt;&lt;/a&gt;一、特殊需求&lt;/h2&gt;&lt;h3 id=&quot;多层列表&quot;&gt;&lt;a href=&quot;#多层列表&quot; class=&quot;headerlink&quot; title=&quot;多层列表&quot;&gt;&lt;/a&gt;多层列表&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Augustyniak/RATreeView&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Augustyniak/RATreeView&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-    
-    </summary>
-    
-      <category term="iOS" scheme="http://zhouzhuo810.github.io/categories/iOS/"/>
-    
-    
-      <category term="iOS" scheme="http://zhouzhuo810.github.io/tags/iOS/"/>
     
   </entry>
   
