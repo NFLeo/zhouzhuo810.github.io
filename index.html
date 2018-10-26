@@ -150,6 +150,49 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/10/26/Android-8-0新特性-通知通道配置/">
+        Android-8.0新特性-通知通道配置
+      </a>
+    </h2>
+    
+    <time>
+      10月 26, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <blockquote>
+<p>Android 8.0开始发送通知需要配置渠道id；</p>
+</blockquote>
+<h3 id="Application-onCreate-中配置"><a href="#Application-onCreate-中配置" class="headerlink" title="Application#onCreate()中配置"></a>Application#onCreate()中配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//8.0</span></div><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">    <span class="comment">// 通知渠道的id</span></div><div class="line">    String id = <span class="string">"你的渠道id"</span>;</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的名字.</span></div><div class="line">    CharSequence name = getString(R.string.app_name);</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的描述</span></div><div class="line">    String description = getString(R.string.app_push_message_hint);</div><div class="line">    <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_HIGH;</div><div class="line">    NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, importance);</div><div class="line">    mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);</div><div class="line">    <span class="comment">// 配置通知渠道的属性</span></div><div class="line">    mChannel.setDescription(description);</div><div class="line">    <span class="comment">// 设置通知出现时的闪灯（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableLights(<span class="keyword">true</span>);</div><div class="line">    mChannel.setLightColor(Color.RED);</div><div class="line">    mChannel.setSound(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_zz_four), <span class="keyword">null</span>);</div><div class="line">    <span class="comment">// 设置通知出现时的震动（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableVibration(<span class="keyword">true</span>);</div><div class="line">    mChannel.setVibrationPattern(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;);</div><div class="line">    <span class="comment">//最后在notificationmanager中创建该通知渠道</span></div><div class="line">    <span class="keyword">if</span> (mNotificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">        mNotificationManager.createNotificationChannel(mChannel);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/10/26/Android-8-0新特性-通知通道配置/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/10/18/Android常用代码-阿里云推送/">
         Android常用代码-阿里云推送
       </a>
@@ -168,9 +211,11 @@
   <section class="article typo">
 	  <h3 id="集成依赖"><a href="#集成依赖" class="headerlink" title="集成依赖"></a>集成依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">implementation &apos;com.aliyun.ams:alicloud-android-push:3.1.2&apos;</div></pre></td></tr></table></figure>
 <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 初始化云推送通道</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initCloudChannel</span><span class="params">(Context applicationContext)</span> </span>&#123;</div><div class="line"> </div><div class="line">    <span class="comment">//8.0</span></div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">        <span class="comment">// 通知渠道的id</span></div><div class="line">        String id = <span class="string">"1"</span>;</div><div class="line">        <span class="comment">// 用户可以看到的通知渠道的名字.</span></div><div class="line">        CharSequence name = <span class="string">"测试渠道名"</span>;</div><div class="line">        <span class="comment">// 用户可以看到的通知渠道的描述</span></div><div class="line">        String description = <span class="string">"测试渠道描述"</span>;</div><div class="line">        <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_HIGH;</div><div class="line">        NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, importance);</div><div class="line">        mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);</div><div class="line">        <span class="comment">// 配置通知渠道的属性</span></div><div class="line">        mChannel.setDescription(description);</div><div class="line">        <span class="comment">// 设置通知出现时的闪灯（如果 android 设备支持的话）</span></div><div class="line">        mChannel.enableLights(<span class="keyword">true</span>);</div><div class="line">        mChannel.setLightColor(Color.RED);</div><div class="line">        mChannel.setSound(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_four), <span class="keyword">null</span>);</div><div class="line">        <span class="comment">// 设置通知出现时的震动（如果 android 设备支持的话）</span></div><div class="line">        mChannel.enableVibration(<span class="keyword">true</span>);</div><div class="line">        mChannel.setVibrationPattern(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span> , <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;);</div><div class="line">        <span class="comment">//最后在notificationmanager中创建该通知渠道</span></div><div class="line">        <span class="keyword">if</span> (mNotificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">            mNotificationManager.createNotificationChannel(mChannel);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    PushServiceFactory.init(applicationContext);</div><div class="line">    CloudPushService pushService = PushServiceFactory.getCloudPushService();</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.O) &#123;</div><div class="line">        pushService.setNotificationSoundFilePath(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_four).toString());</div><div class="line">    &#125;</div><div class="line">    pushService.register(applicationContext, <span class="keyword">new</span> CommonCallback() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(String response)</span> </span>&#123;</div><div class="line">            Log.d(TAG, <span class="string">"init cloudchannel success"</span>);</div><div class="line">            pushService.turnOnPushChannel(<span class="keyword">null</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailed</span><span class="params">(String errorCode, String errorMessage)</span> </span>&#123;</div><div class="line">            Log.d(TAG, <span class="string">"init cloudchannel failed -- errorcode:"</span> + errorCode + <span class="string">" -- errorMessage:"</span> + errorMessage);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta-data</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">"com.alibaba.app.appkey"</span></div><div class="line">    <span class="attr">android:value</span>=<span class="string">"你的appKey"</span>/&gt; <span class="comment">&lt;!-- 请填写你自己的- appKey --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta-data</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">"com.alibaba.app.appsecret"</span></div><div class="line">    <span class="attr">android:value</span>=<span class="string">"你的appSecret"</span>/&gt; <span class="comment">&lt;!-- 请填写你自己的appSecret --&gt;</span></div><div class="line"><span class="comment">&lt;!-- 消息接收监听器 （用户可自主扩展） --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">receiver</span></span></div><div class="line">    <span class="attr">android:name</span>=<span class="string">".common.receiver.MyMessageReceiver"</span></div><div class="line">    <span class="attr">android:exported</span>=<span class="string">"false"</span>&gt; <span class="comment">&lt;!-- 为保证receiver安全，建议设置不可导出，如需对其他应用开放可通过android：permission进行限制 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.alibaba.push2.action.NOTIFICATION_OPENED"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.alibaba.push2.action.NOTIFICATION_REMOVED"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"com.alibaba.sdk.android.push.RECEIVE"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">receiver</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyMessageReceiver</span> <span class="keyword">extends</span> <span class="title">MessageReceiver</span> </span>&#123;</div><div class="line">    <span class="comment">// 消息接收部分的LOG_TAG</span></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String REC_TAG = <span class="string">"receiver"</span>;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNotification</span><span class="params">(Context context, String title, String summary, Map&lt;String, String&gt; extraMap)</span> </span>&#123;</div><div class="line">        <span class="comment">// TODO 处理推送通知</span></div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"Receive notification, title: "</span> + title + <span class="string">", summary: "</span> + summary + <span class="string">", extraMap: "</span> + extraMap);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(Context context, CPushMessage cPushMessage)</span> </span>&#123;</div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"onMessage, messageId: "</span> + cPushMessage.getMessageId() + <span class="string">", title: "</span> + cPushMessage.getTitle() + <span class="string">", content:"</span> + cPushMessage.getContent());</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNotificationOpened</span><span class="params">(Context context, String title, String summary, String extraMap)</span> </span>&#123;</div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"onNotificationOpened, title: "</span> + title + <span class="string">", summary: "</span> + summary + <span class="string">", extraMap:"</span> + extraMap);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNotificationClickedWithNoAction</span><span class="params">(Context context, String title, String summary, String extraMap)</span> </span>&#123;</div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"onNotificationClickedWithNoAction, title: "</span> + title + <span class="string">", summary: "</span> + summary + <span class="string">", extraMap:"</span> + extraMap);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNotificationReceivedInApp</span><span class="params">(Context context, String title, String summary, Map&lt;String, String&gt; extraMap, <span class="keyword">int</span> openType, String openActivity, String openUrl)</span> </span>&#123;</div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"onNotificationReceivedInApp, title: "</span> + title + <span class="string">", summary: "</span> + summary + <span class="string">", extraMap:"</span> + extraMap + <span class="string">", openType:"</span> + openType + <span class="string">", openActivity:"</span> + openActivity + <span class="string">", openUrl:"</span> + openUrl);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onNotificationRemoved</span><span class="params">(Context context, String messageId)</span> </span>&#123;</div><div class="line">        Log.e(<span class="string">"MyMessageReceiver"</span>, <span class="string">"onNotificationRemoved"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
+    
+	  <div class="readmore">
+      <a href="/2018/10/18/Android常用代码-阿里云推送/">Read More</a>
+    </div>
     
     
     
@@ -206,6 +251,8 @@
   </section>
   <section class="article typo">
 	  <h2 id="在project的build-gralde中添加classpath"><a href="#在project的build-gralde中添加classpath" class="headerlink" title="在project的build.gralde中添加classpath"></a>在project的build.gralde中添加classpath</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath &apos;com.github.dcendents:android-maven-gradle-plugin:2.1&apos;</div></pre></td></tr></table></figure>
+<p>注意：如果没有加<code>google()</code>，必须加上这个，并且buildscript和allprojects都得加上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        google()</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:3.1.2&apos;</div><div class="line">        classpath &apos;com.github.dcendents:android-maven-gradle-plugin:2.1&apos;</div><div class="line"></div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        google()</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="在library的build-gradle中添加"><a href="#在library的build-gradle中添加" class="headerlink" title="在library的build.gradle中添加"></a>在library的build.gradle中添加</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.github.dcendents.android-maven&apos;</div><div class="line">  </div><div class="line">//&#123;github用户名&#125;改为自己github的用户名</div><div class="line">group=&apos;com.github.&#123;github用户名&#125;&apos;</div><div class="line">  </div><div class="line">//...</div><div class="line">  </div><div class="line">//添加下面这些才会有文档注释。</div><div class="line">  </div><div class="line">// build a jar with source files</div><div class="line">task sourcesJar(type: Jar) &#123;</div><div class="line">    from android.sourceSets.main.java.srcDirs</div><div class="line">    classifier = &apos;sources&apos;</div><div class="line">&#125;</div><div class="line">  </div><div class="line">task javadoc(type: Javadoc) &#123;</div><div class="line">    failOnError  false</div><div class="line">    source = android.sourceSets.main.java.sourceFiles</div><div class="line">    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))</div><div class="line">    classpath += configurations.compile</div><div class="line">&#125;</div><div class="line">  </div><div class="line">// build a jar with javadoc</div><div class="line">task javadocJar(type: Jar, dependsOn: javadoc) &#123;</div><div class="line">    classifier = &apos;javadoc&apos;</div><div class="line">    from javadoc.destinationDir</div><div class="line">&#125;</div><div class="line">  </div><div class="line">artifacts &#123;</div><div class="line">    archives sourcesJar</div><div class="line">    archives javadocJar</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
     
@@ -495,62 +542,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/02/Android-8-0新特性-服务启动问题/">
-        Android-8.0新特性-服务启动问题
-      </a>
-    </h2>
-    
-    <time>
-      4月 2, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android版本特性/">Android版本特性</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><ul>
-<li>Android 8.0 启动后台service 出错 IllegalStateException: Not allowed to start service Intent</li>
-</ul>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><ul>
-<li>极光推送老版本sdk启动推送服务未兼容8.0才出现的问题；</li>
-</ul>
-<blockquote>
-<p>Android O对应用在后台运行时可以执行的操作施加了限制，称为后台执行限制（Background Execution Limits），这可以大大减少应用的内存使用和耗电量，提高用户体验。后台执行限制分为两个部分：后台服务限制（Background Service Limitations）、广播限制（BroadcastLimitations）。</p>
-</blockquote>
-<h3 id="本案例解决方式"><a href="#本案例解决方式" class="headerlink" title="本案例解决方式"></a>本案例解决方式</h3><ul>
-<li>更新极光推送sdk就好了。</li>
-</ul>
-<h3 id="其他解决方式"><a href="#其他解决方式" class="headerlink" title="其他解决方式"></a>其他解决方式</h3><blockquote>
-<p>如果自己启动服务遇到此问题，可以这样解决</p>
-</blockquote>
-<ol>
-<li>修改启动方式</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">    context.startForegroundService(intent);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    context.startService(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2.并且在service里再调用startForeground方法，不然就会出现ANR</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">context.startForeground(SERVICE_ID, builder.getNotification());</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -607,7 +598,7 @@
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>18</div></a></li>
     

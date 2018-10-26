@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Android自定义控件-ZzWeatherView | zhouzhuo810</title>
+  <title>Android-8.0新特性-通知通道配置 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,20 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
+  <meta name="description" content="Android 8.0开始发送通知需要配置渠道id；  Application#onCreate()中配置1234567891011121314151617181920212223242526//8.0if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.O) &amp;#123;    NotificationManager mNotification">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android自定义控件-ZzWeatherView">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/14/Android自定义控件-ZzWeatherView/index.html">
+<meta property="og:title" content="Android-8.0新特性-通知通道配置">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/10/26/Android-8-0新特性-通知通道配置/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
-<meta property="og:image" content="http://zhouzhuo810.github.io/images/curve.png">
-<meta property="og:image" content="http://zhouzhuo810.github.io/images/disc.jpg">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.340Z">
+<meta property="og:description" content="Android 8.0开始发送通知需要配置渠道id；  Application#onCreate()中配置1234567891011121314151617181920212223242526//8.0if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.O) &amp;#123;    NotificationManager mNotification">
+<meta property="og:updated_time" content="2018-10-26T03:23:11.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android自定义控件-ZzWeatherView">
-<meta name="twitter:description" content="ZzWeatherView一个现实天气的控件 Gradle1compile &amp;apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&amp;apos;">
-<meta name="twitter:image" content="http://zhouzhuo810.github.io/images/curve.png">
+<meta name="twitter:title" content="Android-8.0新特性-通知通道配置">
+<meta name="twitter:description" content="Android 8.0开始发送通知需要配置渠道id；  Application#onCreate()中配置1234567891011121314151617181920212223242526//8.0if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.O) &amp;#123;    NotificationManager mNotification">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -146,51 +143,36 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-Android自定义控件-ZzWeatherView"
+        <article id="post-Android-8-0新特性-通知通道配置"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/06/14/Android自定义控件-ZzWeatherView/">
-    	Android自定义控件-ZzWeatherView
+  	<a href="/2018/10/26/Android-8-0新特性-通知通道配置/">
+    	Android-8.0新特性-通知通道配置
     </a>
   </h2>
 	<time>
-	  6月 14, 2017
+	  10月 26, 2018
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/Android自定义控件/">Android自定义控件</a>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ZzWeatherView"><span class="toc-number">1.</span> <span class="toc-text">ZzWeatherView</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle"><span class="toc-number">1.1.</span> <span class="toc-text">Gradle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用法简介"><span class="toc-number">1.2.</span> <span class="toc-text">用法简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#drawable-scroll-bar-thumb-xml"><span class="toc-number">1.2.1.</span> <span class="toc-text">drawable/scroll_bar_thumb.xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新日志"><span class="toc-number">1.2.2.</span> <span class="toc-text">更新日志</span></a></li></ol></li></ol></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Application-onCreate-中配置"><span class="toc-number">1.</span> <span class="toc-text">Application#onCreate()中配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发送通知"><span class="toc-number">2.</span> <span class="toc-text">发送通知</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<h1 id="ZzWeatherView"><a href="#ZzWeatherView" class="headerlink" title="ZzWeatherView"></a>ZzWeatherView</h1><p>一个现实天气的控件</p>
-<h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;me.zhouzhuo.zzweatherview:zz-weather-view:1.0.2&apos;</div></pre></td></tr></table></figure>
+    	<blockquote>
+<p>Android 8.0开始发送通知需要配置渠道id；</p>
+</blockquote>
+<h3 id="Application-onCreate-中配置"><a href="#Application-onCreate-中配置" class="headerlink" title="Application#onCreate()中配置"></a>Application#onCreate()中配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//8.0</span></div><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">    <span class="comment">// 通知渠道的id</span></div><div class="line">    String id = <span class="string">"你的渠道id"</span>;</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的名字.</span></div><div class="line">    CharSequence name = getString(R.string.app_name);</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的描述</span></div><div class="line">    String description = getString(R.string.app_push_message_hint);</div><div class="line">    <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_HIGH;</div><div class="line">    NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, importance);</div><div class="line">    mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);</div><div class="line">    <span class="comment">// 配置通知渠道的属性</span></div><div class="line">    mChannel.setDescription(description);</div><div class="line">    <span class="comment">// 设置通知出现时的闪灯（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableLights(<span class="keyword">true</span>);</div><div class="line">    mChannel.setLightColor(Color.RED);</div><div class="line">    mChannel.setSound(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_zz_four), <span class="keyword">null</span>);</div><div class="line">    <span class="comment">// 设置通知出现时的震动（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableVibration(<span class="keyword">true</span>);</div><div class="line">    mChannel.setVibrationPattern(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;);</div><div class="line">    <span class="comment">//最后在notificationmanager中创建该通知渠道</span></div><div class="line">    <span class="keyword">if</span> (mNotificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">        mNotificationManager.createNotificationChannel(mChannel);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>效果图如下：</p>
-<p><img src="../../../../images/curve.png" width="400px"><br><img src="../../../../images/disc.jpg" width="400px"></p>
-<h2 id="用法简介"><a href="#用法简介" class="headerlink" title="用法简介"></a>用法简介</h2><p>1）布局</p>
-<h3 id="drawable-scroll-bar-thumb-xml"><a href="#drawable-scroll-bar-thumb-xml" class="headerlink" title="drawable/scroll_bar_thumb.xml"></a>drawable/scroll_bar_thumb.xml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">shape</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">gradient</span> <span class="attr">android:startColor</span>=<span class="string">"#33999999"</span> <span class="attr">android:endColor</span>=<span class="string">"#80aaaaaa"</span></span></div><div class="line">        <span class="attr">android:angle</span>=<span class="string">"0"</span>/&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"6dp"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">me.zhouzhuo.zzweatherview.ZzWeatherView</span></span></div><div class="line">    <span class="attr">android:id</span>=<span class="string">"@+id/weather_view"</span></div><div class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">    <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">    <span class="attr">android:scrollbarThumbHorizontal</span>=<span class="string">"@drawable/scroll_bar_thumb"</span></div><div class="line">    <span class="attr">android:scrollbarTrackHorizontal</span>=<span class="string">"@drawable/scroll_bar_thumb"</span></div><div class="line">    <span class="attr">android:scrollbarSize</span>=<span class="string">"4dp"</span></div><div class="line">    <span class="attr">android:background</span>=<span class="string">"#333"</span></div><div class="line">    &gt;</div><div class="line"><span class="tag">&lt;/<span class="name">me.zhouzhuo.zzweatherview.ZzWeatherView</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>2）java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">ZzWeatherView weatherView = (ZzWeatherView) findViewById(R.id.weather_view);</div><div class="line">  </div><div class="line"><span class="comment">//填充天气数据</span></div><div class="line">weatherView.setList(generateData());</div><div class="line">  </div><div class="line"><span class="comment">//画折线</span></div><div class="line">weatherView.setLineType(ZzWeatherView.LINE_TYPE_DISCOUNT);</div><div class="line"><span class="comment">//画曲线(不够圆滑希望有更好的建议联系我(Email:admin@zhouzhuo810.me))</span></div><div class="line"><span class="comment">//weatherView.setLineType(ZzWeatherView.LINE_TYPE_CURVE);</span></div><div class="line">  </div><div class="line"><span class="comment">//设置线宽</span></div><div class="line">weatherView.setLineWidth(<span class="number">6f</span>);</div><div class="line">  </div><div class="line">  </div><div class="line"><span class="comment">//设置一屏幕显示几列(最少3列)</span></div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    weatherView.setColumnNumber(<span class="number">5</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div><div class="line">  </div><div class="line"><span class="comment">//设置白天和晚上线条的颜色</span></div><div class="line">weatherView.setDayAndNightLineColor(Color.BLUE, Color.RED);</div><div class="line">  </div><div class="line">  </div><div class="line"><span class="comment">//点击某一列</span></div><div class="line">weatherView.setOnWeatherItemClickListener(<span class="keyword">new</span> ZzWeatherView.OnWeatherItemClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemClick</span><span class="params">(WeatherItemView itemView, <span class="keyword">int</span> position, WeatherModel weatherModel)</span> </span>&#123;</div><div class="line">        Toast.makeText(MainActivity.<span class="keyword">this</span>, position+<span class="string">""</span>, Toast.LENGTH_SHORT).show();</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//数据源</span></div><div class="line">  WeatherModel model = <span class="keyword">new</span> WeatherModel();</div><div class="line">        model.setDate(<span class="string">"12/07"</span>);<span class="comment">//日期</span></div><div class="line">        model.setWeek(<span class="string">"昨天"</span>);  <span class="comment">//星期</span></div><div class="line">        model.setDayWeather(<span class="string">"大雪"</span>); <span class="comment">//白天天气</span></div><div class="line">        model.setDayTemp(<span class="number">11</span>); <span class="comment">//白天温度</span></div><div class="line">        model.setNightTemp(<span class="number">5</span>); <span class="comment">//夜晚温度</span></div><div class="line">        model.setNightWeather(<span class="string">"晴"</span>); <span class="comment">//夜晚天气</span></div><div class="line">        model.setWindOrientation(<span class="string">"西南风"</span>); <span class="comment">//风向</span></div><div class="line">        model.setWindLevel(<span class="string">"3级"</span>); <span class="comment">//</span></div><div class="line">        model.setAirLevel(AirLevel.EXCELLENT); <span class="comment">//空气质量</span></div></pre></td></tr></table></figure>
-<h3 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h3><p>v 1.0.2</p>
-<ul>
-<li>添加设置曲线颜色方法；</li>
-<li>添加设置列的数量方法；</li>
-</ul>
-<p>v 1.0.1</p>
-<ul>
-<li>修复曲线不圆滑问题；</li>
-</ul>
-
+<h3 id="发送通知"><a href="#发送通知" class="headerlink" title="发送通知"></a>发送通知</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//发送通知则需要使用渠道id</span></div><div class="line">    Intent it = <span class="keyword">new</span> Intent(context, MemoListActivity.class);</div><div class="line">    PendingIntent pi = PendingIntent.getActivity(context, <span class="number">0</span>, it, PendingIntent.FLAG_CANCEL_CURRENT);</div><div class="line">    Resources res = context.getResources();</div><div class="line">    Bitmap bmp = BitmapFactory.decodeResource(res, R.mipmap.ic_launcher);</div><div class="line">    NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">    <span class="comment">//定义notification</span></div><div class="line">    NotificationCompat.Builder builder = <span class="keyword">new</span> NotificationCompat.Builder(context, <span class="string">"你的渠道id"</span>);</div><div class="line">    builder.setContentTitle(<span class="string">"备忘录通知"</span>)</div><div class="line">        .setSmallIcon(R.mipmap.ic_launcher)</div><div class="line">        .setLargeIcon(bmp)</div><div class="line">        .setContentText(content + <span class="string">""</span>)</div><div class="line">        .setTicker(<span class="string">"备忘录通知"</span>)</div><div class="line">        .setSound(Uri.parse(<span class="string">"android.resource://您的包名/"</span> + R.raw.hint))</div><div class="line">        .setVibrate(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;)</div><div class="line">        <span class="comment">// 单机 面板自动取消通知</span></div><div class="line">        .setAutoCancel(<span class="keyword">true</span>)</div><div class="line">        .setContentIntent(pi);</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (notificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">        notificationManager.notify(<span class="number">1</span>, builder.build());<span class="comment">// 通过管理器发送通知（通知的id，Notification对象）</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
   	</div>
 	  
 	  <div class="article-tags tags">
@@ -204,7 +186,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Android自定义控件-ZzWeatherView',
+		title: 'Android-8.0新特性-通知通道配置',
 		tools: true
 	}
 </script>

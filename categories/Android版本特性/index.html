@@ -154,6 +154,49 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/10/26/Android-8-0新特性-通知通道配置/">
+        Android-8.0新特性-通知通道配置
+      </a>
+    </h2>
+    
+    <time>
+      10月 26, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android版本特性/">Android版本特性</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <blockquote>
+<p>Android 8.0开始发送通知需要配置渠道id；</p>
+</blockquote>
+<h3 id="Application-onCreate-中配置"><a href="#Application-onCreate-中配置" class="headerlink" title="Application#onCreate()中配置"></a>Application#onCreate()中配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//8.0</span></div><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">    NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">    <span class="comment">// 通知渠道的id</span></div><div class="line">    String id = <span class="string">"你的渠道id"</span>;</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的名字.</span></div><div class="line">    CharSequence name = getString(R.string.app_name);</div><div class="line">    <span class="comment">// 用户可以看到的通知渠道的描述</span></div><div class="line">    String description = getString(R.string.app_push_message_hint);</div><div class="line">    <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_HIGH;</div><div class="line">    NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, importance);</div><div class="line">    mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);</div><div class="line">    <span class="comment">// 配置通知渠道的属性</span></div><div class="line">    mChannel.setDescription(description);</div><div class="line">    <span class="comment">// 设置通知出现时的闪灯（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableLights(<span class="keyword">true</span>);</div><div class="line">    mChannel.setLightColor(Color.RED);</div><div class="line">    mChannel.setSound(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_zz_four), <span class="keyword">null</span>);</div><div class="line">    <span class="comment">// 设置通知出现时的震动（如果 android 设备支持的话）</span></div><div class="line">    mChannel.enableVibration(<span class="keyword">true</span>);</div><div class="line">    mChannel.setVibrationPattern(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;);</div><div class="line">    <span class="comment">//最后在notificationmanager中创建该通知渠道</span></div><div class="line">    <span class="keyword">if</span> (mNotificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">        mNotificationManager.createNotificationChannel(mChannel);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/10/26/Android-8-0新特性-通知通道配置/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/04/02/Android-8-0新特性-服务启动问题/">
         Android-8.0新特性-服务启动问题
       </a>
@@ -333,7 +376,7 @@
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>3</div></a></li>
+        <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>18</div></a></li>
     
