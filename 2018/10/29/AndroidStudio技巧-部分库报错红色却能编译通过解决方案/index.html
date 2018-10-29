@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Android 6.0新特性-动态权限申请 | zhouzhuo810</title>
+  <title>AndroidStudio技巧-部分库报错红色却能编译通过解决方案 | zhouzhuo810</title>
   <meta name="description" content="周卓的github博客" />
   <meta name="keywords" content="Android,IOS" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,17 +12,17 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="alternate" href="/atom.xml" title="zhouzhuo810">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android 6.0之后，部分权限需要动态申请。但是AndroidManifest.xml文件中同样需要申明。 常见处理方式请求权限1234567891011121314if (Build.VERSION.SDK_INT &amp;gt; 22) &amp;#123;     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRI">
+  <meta name="description" content="方案1（推荐）1.删除.gradle和.idea文件夹；2.重启项目； 方案2File-&amp;gt;Invalidate Caches/Restart">
 <meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android 6.0新特性-动态权限申请">
-<meta property="og:url" content="http://zhouzhuo810.github.io/2017/06/14/Android-6-0新特性-动态权限申请/index.html">
+<meta property="og:title" content="AndroidStudio技巧-部分库报错红色却能编译通过解决方案">
+<meta property="og:url" content="http://zhouzhuo810.github.io/2018/10/29/AndroidStudio技巧-部分库报错红色却能编译通过解决方案/index.html">
 <meta property="og:site_name" content="zhouzhuo810">
-<meta property="og:description" content="Android 6.0之后，部分权限需要动态申请。但是AndroidManifest.xml文件中同样需要申明。 常见处理方式请求权限1234567891011121314if (Build.VERSION.SDK_INT &amp;gt; 22) &amp;#123;     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRI">
-<meta property="og:updated_time" content="2017-10-04T07:37:34.213Z">
+<meta property="og:description" content="方案1（推荐）1.删除.gradle和.idea文件夹；2.重启项目； 方案2File-&amp;gt;Invalidate Caches/Restart">
+<meta property="og:updated_time" content="2018-10-29T08:57:37.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 6.0新特性-动态权限申请">
-<meta name="twitter:description" content="Android 6.0之后，部分权限需要动态申请。但是AndroidManifest.xml文件中同样需要申明。 常见处理方式请求权限1234567891011121314if (Build.VERSION.SDK_INT &amp;gt; 22) &amp;#123;     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRI">
+<meta name="twitter:title" content="AndroidStudio技巧-部分库报错红色却能编译通过解决方案">
+<meta name="twitter:description" content="方案1（推荐）1.删除.gradle和.idea文件夹；2.重启项目； 方案2File-&amp;gt;Invalidate Caches/Restart">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -143,36 +143,32 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-Android-6-0新特性-动态权限申请"
+        <article id="post-AndroidStudio技巧-部分库报错红色却能编译通过解决方案"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2017/06/14/Android-6-0新特性-动态权限申请/">
-    	Android 6.0新特性-动态权限申请
+  	<a href="/2018/10/29/AndroidStudio技巧-部分库报错红色却能编译通过解决方案/">
+    	AndroidStudio技巧-部分库报错红色却能编译通过解决方案
     </a>
   </h2>
 	<time>
-	  6月 14, 2017
+	  10月 29, 2018
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/Android版本特性/">Android版本特性</a>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见处理方式"><span class="toc-number">1.</span> <span class="toc-text">常见处理方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#请求权限"><span class="toc-number">1.1.</span> <span class="toc-text">请求权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Activity必须implements-ActivityCompat-OnRequestPermissionsResultCallback"><span class="toc-number">1.2.</span> <span class="toc-text">Activity必须implements ActivityCompat.OnRequestPermissionsResultCallback</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理请求结果"><span class="toc-number">1.3.</span> <span class="toc-text">处理请求结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用RxPermission-推荐"><span class="toc-number">2.</span> <span class="toc-text">使用RxPermission(推荐)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用AndPermission"><span class="toc-number">3.</span> <span class="toc-text">使用AndPermission</span></a></li></ol></section>
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方案1（推荐）"><span class="toc-number">1.</span> <span class="toc-text">方案1（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案2"><span class="toc-number">2.</span> <span class="toc-text">方案2</span></a></li></ol></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Android 6.0之后，部分权限需要动态申请。<br>但是AndroidManifest.xml文件中同样需要申明。</p>
-<h2 id="常见处理方式"><a href="#常见处理方式" class="headerlink" title="常见处理方式"></a>常见处理方式</h2><h3 id="请求权限"><a href="#请求权限" class="headerlink" title="请求权限"></a>请求权限</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt; <span class="number">22</span>) &#123;</div><div class="line">     <span class="keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">         <span class="keyword">if</span> (!ActivityCompat.shouldShowRequestPermissionRationale(<span class="keyword">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE)) &#123;</div><div class="line">             Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"这里提示用户进入设置界面开启权限"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">         &#125; <span class="keyword">else</span> &#123;</div><div class="line">             <span class="comment">//Request</span></div><div class="line">             ActivityCompat.requestPermissions(MainActivity.<span class="keyword">this</span>, <span class="keyword">new</span> String[] &#123;Manifest.permission.WRITE_EXTERNAL_STORAGE&#125;, <span class="number">0x01</span>);</div><div class="line">         &#125;</div><div class="line">     &#125; <span class="keyword">else</span> &#123;</div><div class="line">         <span class="comment">//Allow...</span></div><div class="line">     &#125;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">     <span class="comment">//Allow...</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="Activity必须implements-ActivityCompat-OnRequestPermissionsResultCallback"><a href="#Activity必须implements-ActivityCompat-OnRequestPermissionsResultCallback" class="headerlink" title="Activity必须implements ActivityCompat.OnRequestPermissionsResultCallback"></a>Activity必须implements ActivityCompat.OnRequestPermissionsResultCallback</h3><h3 id="处理请求结果"><a href="#处理请求结果" class="headerlink" title="处理请求结果"></a>处理请求结果</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(<span class="keyword">int</span> requestCode, @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onRequestPermissionsResult(requestCode, permissions, grantResults);</div><div class="line">    <span class="keyword">if</span> (requestCode == <span class="number">0x01</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (grantResults.length &gt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="keyword">if</span> (grantResults[<span class="number">0</span>] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">                Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"Allow"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">                <span class="comment">//allow...</span></div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">"Deny"</span>, Toast.LENGTH_SHORT).show();</div><div class="line">                <span class="comment">//deny...</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="使用RxPermission-推荐"><a href="#使用RxPermission-推荐" class="headerlink" title="使用RxPermission(推荐)"></a>使用RxPermission(推荐)</h2><p><a href="https://github.com/tbruyelle/RxPermissions" target="_blank" rel="external">查看Github</a></p>
-<h2 id="使用AndPermission"><a href="#使用AndPermission" class="headerlink" title="使用AndPermission"></a>使用AndPermission</h2><p><a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="external">查看Github</a></p>
+    	<h3 id="方案1（推荐）"><a href="#方案1（推荐）" class="headerlink" title="方案1（推荐）"></a>方案1（推荐）</h3><p>1.删除.gradle和.idea文件夹；<br>2.重启项目；</p>
+<h3 id="方案2"><a href="#方案2" class="headerlink" title="方案2"></a>方案2</h3><p>File-&gt;Invalidate Caches/Restart</p>
 
   	</div>
 	  
@@ -187,7 +183,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Android 6.0新特性-动态权限申请',
+		title: 'AndroidStudio技巧-部分库报错红色却能编译通过解决方案',
 		tools: true
 	}
 </script>
