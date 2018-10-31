@@ -155,6 +155,46 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/10/31/Android常用代码-读取联系人/">
+        Android常用代码-读取联系人
+      </a>
+    </h2>
+    
+    <time>
+      10月 31, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="AndroidManifest-xml添加权限"><a href="#AndroidManifest-xml添加权限" class="headerlink" title="AndroidManifest.xml添加权限"></a>AndroidManifest.xml添加权限</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_CONTACTS"</span>/&gt;</span></div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/10/31/Android常用代码-读取联系人/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/10/29/AndroidStudio技巧-部分库报错红色却能编译通过解决方案/">
         AndroidStudio技巧-部分库报错红色却能编译通过解决方案
       </a>
@@ -513,42 +553,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android常用代码-再按一次退出App/">
-        Android常用代码-再按一次退出App
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onBackPressed</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (isExit) &#123;</div><div class="line">        finish();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        isExit = <span class="keyword">true</span>;</div><div class="line">        ToastUtils.showCustomBgToast(getString(R.string.press_angin_exit_text));</div><div class="line">        <span class="keyword">new</span> Timer().schedule(<span class="keyword">new</span> TimerTask() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">                isExit = <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;, <span class="number">2000</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -600,7 +604,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>19</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>20</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>5</div></a></li>
     
