@@ -154,6 +154,43 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/10/31/Android常用代码-颜色透明度百分比和十六进制对照表/">
+        Android常用代码-颜色透明度百分比和十六进制对照表
+      </a>
+    </h2>
+    
+    <time>
+      10月 31, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="对照表"><a href="#对照表" class="headerlink" title="对照表"></a>对照表</h3><p><img src="../../../../images/alpha_table.jpg" width="700px"></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/10/31/Android常用代码-读取联系人/">
         Android常用代码-读取联系人
       </a>
@@ -521,46 +558,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/01/30/Android常用代码-底部弹出PopupWindow/">
-        Android常用代码-底部弹出PopupWindow
-      </a>
-    </h2>
-    
-    <time>
-      1月 30, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 显示自定义底部弹出PopupWindow</div><div class="line"> *</div><div class="line"> * <span class="doctag">@param</span> parent            传根布局就好了</div><div class="line"> * <span class="doctag">@param</span> contentView       PopupWindow内容</div><div class="line"> * <span class="doctag">@param</span> bgColor           背景颜色(窗体变暗效果)</div><div class="line"> * <span class="doctag">@param</span> focusable         是否点击空白区域取消(非全屏时可以)和返回键关闭</div><div class="line"> * <span class="doctag">@param</span> fullScreen        是否全屏</div><div class="line"> * <span class="doctag">@param</span> onDismissListener 取消监听</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showBottomPopupWindow</span><span class="params">(View parent, View contentView, <span class="keyword">int</span> bgColor, <span class="keyword">boolean</span> focusable, <span class="keyword">boolean</span> fullScreen, PopupWindow.OnDismissListener onDismissListener)</span> </span>&#123;</div><div class="line">    hideBottomDialog();</div><div class="line">    AutoUtils.auto(contentView);</div><div class="line">    popupWindow = <span class="keyword">new</span> PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, fullScreen ? ViewGroup.LayoutParams.MATCH_PARENT : ViewGroup.LayoutParams.WRAP_CONTENT);</div><div class="line">    popupWindow.setContentView(contentView);</div><div class="line">    <span class="comment">// 设置弹出窗体可点击</span></div><div class="line">    popupWindow.setFocusable(focusable);</div><div class="line">    <span class="comment">// 设置弹出窗体的背景</span></div><div class="line">    popupWindow.setBackgroundDrawable(<span class="keyword">new</span> ColorDrawable(bgColor));</div><div class="line">    <span class="keyword">if</span> (onDismissListener != <span class="keyword">null</span>) &#123;</div><div class="line">        popupWindow.setOnDismissListener(onDismissListener);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//设置弹出窗体显示时的动画，从底部向上弹出</span></div><div class="line">    popupWindow.setAnimationStyle(R.style.ZzAnimationDialog);</div><div class="line">    popupWindow.showAtLocation(parent, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 隐藏自定义底部弹出PopupWindow</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">hideBottomDialog</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (popupWindow != <span class="keyword">null</span>) &#123;</div><div class="line">        popupWindow.dismiss();</div><div class="line">        popupWindow = <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/01/30/Android常用代码-底部弹出PopupWindow/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -611,7 +608,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用demo/"><div class='name'>Android常用demo</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>20</div></a></li>
+        <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>21</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>5</div></a></li>
     
