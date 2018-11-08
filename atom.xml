@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-11-04T12:48:27.117Z</updated>
+  <updated>2018-11-08T01:54:12.060Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidStudio技巧-关闭全局代理</title>
+    <link href="http://zhouzhuo810.github.io/2018/11/08/AndroidStudio%E6%8A%80%E5%B7%A7-%E5%85%B3%E9%97%AD%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/"/>
+    <id>http://zhouzhuo810.github.io/2018/11/08/AndroidStudio技巧-关闭全局代理/</id>
+    <published>2018-11-08T01:42:28.000Z</published>
+    <updated>2018-11-08T01:54:12.060Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;../../../../images/proxy.png&quot; width=&quot;700px&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;根源&quot;
+    
+    </summary>
+    
+      <category term="Android开发工具" scheme="http://zhouzhuo810.github.io/categories/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-编辑器vi的使用</title>
+    <link href="http://zhouzhuo810.github.io/2018/11/08/Linux-%E7%BC%96%E8%BE%91%E5%99%A8vi%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://zhouzhuo810.github.io/2018/11/08/Linux-编辑器vi的使用/</id>
+    <published>2018-11-08T01:34:41.000Z</published>
+    <updated>2018-11-08T01:41:07.927Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;进入vi编辑器&quot;&gt;&lt;a href=&quot;#进入vi编辑器&quot; class=&quot;headerlink&quot; title=&quot;进入vi编辑器&quot;&gt;&lt;/a&gt;进入vi编辑器&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://zhouzhuo810.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://zhouzhuo810.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>小常识-移动硬盘文件或目录损坏且无法读取</title>
@@ -399,62 +440,6 @@
     
     
       <category term="Android-TV开发" scheme="http://zhouzhuo810.github.io/tags/Android-TV%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-横竖屏切换</title>
-    <link href="http://zhouzhuo810.github.io/2018/02/26/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E6%A8%AA%E7%AB%96%E5%B1%8F%E5%88%87%E6%8D%A2/"/>
-    <id>http://zhouzhuo810.github.io/2018/02/26/Android常用代码-横竖屏切换/</id>
-    <published>2018-02-26T08:00:01.000Z</published>
-    <updated>2018-02-26T08:27:11.582Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;自动切换&quot;&gt;&lt;a href=&quot;#自动切换&quot; class=&quot;headerlink&quot; title=&quot;自动切换&quot;&gt;&lt;/a&gt;自动切换&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Android Manifest在需要切换的Activity中添加&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;android:configChanges=&quot;orientation|keyboardHidden|layoutDirection|screenSize|screenLayout&quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;android:screenOrientation=&quot;sensor&quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;res添加layout-land和layout-port文件夹，分别放两套布局。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Activity代码中实现&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;onConfigurationChanged&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Configuration newConfig)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt;.onConfigurationChanged(newConfig);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(newConfig.orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//切换到竖屏&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        setContentView(R.layout.activity_main);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//切换到横屏&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        setContentView(R.layout.activity_main);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android疑难杂症-7.0系统PopupWindow#showAsDropDown()显示异常</title>
-    <link href="http://zhouzhuo810.github.io/2018/02/09/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-7-0%E7%B3%BB%E7%BB%9FPopupWindow-showAsDropDown-%E6%98%BE%E7%A4%BA%E5%BC%82%E5%B8%B8/"/>
-    <id>http://zhouzhuo810.github.io/2018/02/09/Android疑难杂症-7-0系统PopupWindow-showAsDropDown-显示异常/</id>
-    <published>2018-02-09T05:48:00.000Z</published>
-    <updated>2018-02-10T02:19:41.500Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; PopupWindow popupWindow = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//... ...&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;popupWindow.showAsDropDown(anchor);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;blockquote&gt;
-&lt;p&gt;上述代码在7.0手机上不会在anchor下方弹出，而是在屏幕最上方弹出，7.0以下手机则没问题；&lt;br&gt;高度MATCH_PARENT时才会这样，WRAP_CONTENT时不会。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;原因&quot;&gt;&lt;a href=&quot;#原因&quot; class=&quot;headerlink&quot; title=&quot;原因&quot;&gt;&lt;/a&gt;原因&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;7.0系统的一个bug；&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
     
   </entry>
   

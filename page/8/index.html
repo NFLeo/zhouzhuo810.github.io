@@ -150,6 +150,76 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">
+        Android疑难杂症-根据资源名称获取资源Id
+      </a>
+    </h2>
+    
+    <time>
+      10月 4, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Resources resources = context.getResources();</div><div class="line"><span class="keyword">int</span> id= getResources().getIdentifier(<span class="string">"图标名称(不带后缀)"</span>, <span class="string">"drawable"</span>, <span class="string">"包名"</span>);</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2017/10/04/Android疑难杂症-根据资源名称获取资源Id/">Read More</a>
+    </div>
+    
+    
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2017/09/30/Android支付宝支付-返回签名错误问题/">
+        Android支付宝支付-返回签名错误问题
+      </a>
+    </h2>
+    
+    <time>
+      9月 30, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"><a href="#首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。" class="headerlink" title="首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。"></a>首先，检查服务端公钥是否为支付宝公钥。（不是App公钥）。</h3><h3 id="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；"><a href="#其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配-推荐RSA2-；" class="headerlink" title="其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；"></a>其次，检查服务端APP私钥是否和支付宝平台的APP公钥匹配(推荐RSA2)；</h3><h3 id="最后，沙箱环境是否注释。"><a href="#最后，沙箱环境是否注释。" class="headerlink" title="最后，沙箱环境是否注释。"></a>最后，沙箱环境是否注释。</h3>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/09/30/Android微信支付返回-1问题解决/">
         Android微信支付返回-1问题解决
       </a>
@@ -478,88 +548,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/18/JavaEE-使用itext生成PDF总结/">
-        JavaEE-使用itext生成PDF总结
-      </a>
-    </h2>
-    
-    <time>
-      8月 18, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/SpringMVC/">SpringMVC</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="添加pom依赖"><a href="#添加pom依赖" class="headerlink" title="添加pom依赖"></a>添加pom依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- pdf start--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itextpdf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>itextpdf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itextpdf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>itext-asian<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- pdf end --&gt;</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/08/18/JavaEE-使用itext生成PDF总结/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/JavaEE/">JavaEE</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/08/10/PHP-多文件上传接口实现/">
-        PHP-多文件上传接口实现
-      </a>
-    </h2>
-    
-    <time>
-      8月 10, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/PHP/">PHP</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>想测试多文件上传功能；</p>
-<p>使用PHP接口模拟一个接口非常方便；</p>
-<p>PHP多文件上传接收接口示例：</p>
-
-    
-	  <div class="readmore">
-      <a href="/2017/08/10/PHP-多文件上传接口实现/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/PHP/">PHP</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -617,7 +605,7 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>21</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>5</div></a></li>
+        <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>6</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
     
@@ -634,6 +622,8 @@
         <li><a class="flat-box" href="/categories/InteliJ-IDEA/"><div class='name'>InteliJ IDEA</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Java工具类/"><div class='name'>Java工具类</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/Markdown/"><div class='name'>Markdown</div><div class='badget'>1</div></a></li>
     
@@ -672,7 +662,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 
