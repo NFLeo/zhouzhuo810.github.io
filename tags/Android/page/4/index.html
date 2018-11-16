@@ -154,6 +154,44 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2017/12/07/Android常用代码-bugly集成/">
+        Android常用代码-bugly集成
+      </a>
+    </h2>
+    
+    <time>
+      12月 7, 2017
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="集成bugly"><a href="#集成bugly" class="headerlink" title="集成bugly"></a>集成bugly</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//bugly</div><div class="line">implementation &apos;com.tencent.bugly:crashreport:2.6.6&apos;</div></pre></td></tr></table></figure>
+<h2 id="Application的onCreate方法中初始化"><a href="#Application的onCreate方法中初始化" class="headerlink" title="Application的onCreate方法中初始化"></a>Application的onCreate方法中初始化</h2><h3 id="不带X5内核"><a href="#不带X5内核" class="headerlink" title="不带X5内核"></a>不带X5内核</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    CrashReport.initCrashReport(<span class="keyword">this</span>, <span class="string">"你的appID"</span>, <span class="keyword">false</span>);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="带X5内核"><a href="#带X5内核" class="headerlink" title="带X5内核"></a>带X5内核</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*bugly+x5内核*/</span></div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    CrashReport.UserStrategy strategy = <span class="keyword">new</span> CrashReport.UserStrategy(<span class="keyword">this</span>);</div><div class="line">    strategy.setCrashHandleCallback(<span class="keyword">new</span> CrashReport.CrashHandleCallback() &#123;</div><div class="line">        <span class="function"><span class="keyword">public</span> Map <span class="title">onCrashHandleStart</span><span class="params">(<span class="keyword">int</span> crashType, String errorType, String errorMessage, String errorStack)</span> </span>&#123;</div><div class="line">            LinkedHashMap map = <span class="keyword">new</span> LinkedHashMap();</div><div class="line">            String x5CrashInfo = com.tencent.smtt.sdk.WebView.getCrashExtraMessage(GFApplication.<span class="keyword">this</span>);</div><div class="line">            map.put(<span class="string">"x5crashInfo"</span>, x5CrashInfo);</div><div class="line">            <span class="keyword">return</span> map;</div><div class="line">        &#125;</div><div class="line">  </div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="keyword">public</span> <span class="keyword">byte</span>[] onCrashHandleStart2GetExtraDatas(<span class="keyword">int</span> crashType, String errorType, String errorMessage, String errorStack) &#123;</div><div class="line">            <span class="keyword">try</span> &#123;</div><div class="line">                <span class="keyword">return</span> <span class="string">"Extra data."</span>.getBytes(<span class="string">"UTF-8"</span>);</div><div class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    CrashReport.initCrashReport(<span class="keyword">this</span>, <span class="string">"你的appID"</span>, <span class="keyword">false</span>, strategy);</div><div class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">    e.printStackTrace();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2017/12/07/Android签名打包-多渠道打包/">
         Android签名打包-多渠道打包
       </a>
@@ -538,47 +576,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">
-        Android常用代码-微信QQ分享文件
-      </a>
-    </h2>
-    
-    <time>
-      10月 17, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>不使用SDK实现QQ和微信文件与文字的分享。</p>
-<h3 id="QQ分享文件"><a href="#QQ分享文件" class="headerlink" title="QQ分享文件"></a>QQ分享文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">private void shareFileToQQ(File file) throws Exception&#123;</div><div class="line">    Intent share = new Intent(Intent.ACTION_SEND);</div><div class="line">    ComponentName component = new ComponentName(&quot;com.tencent.mobileqq&quot;, &quot;com.tencent.mobileqq.activity.JumpActivity&quot;);</div><div class="line">    share.setComponent(component);</div><div class="line">    Uri uri = null;</div><div class="line">    if (Build.VERSION.SDK_INT &gt; 23) &#123;</div><div class="line">        uri = FileProvider.getUriForFile(getActivity(),</div><div class="line">                BuildConfig.APPLICATION_ID + &quot;.fileProvider&quot;,</div><div class="line">                file);</div><div class="line">    &#125; else &#123;</div><div class="line">        uri = Uri.fromFile(file);</div><div class="line">    &#125;</div><div class="line">    share.putExtra(Intent.EXTRA_STREAM, uri);</div><div class="line">    share.setType(&quot;*/*&quot;);</div><div class="line">    startActivity(Intent.createChooser(share, &quot;发送&quot;));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2017/10/17/Android常用代码-微信QQ分享文件和文字/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -636,6 +633,8 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>21</div></a></li>
     
+        <li><a class="flat-box" href="/categories/Android常见Exception/"><div class='name'>Android常见Exception</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>6</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
@@ -666,6 +665,8 @@
     
         <li><a class="flat-box" href="/categories/RxJava/"><div class='name'>RxJava</div><div class='badget'>2</div></a></li>
     
+        <li><a class="flat-box" href="/categories/RxJava2/"><div class='name'>RxJava2</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>5</div></a></li>
@@ -693,7 +694,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/RxJava2/" style="font-size: 14px; color: #808080">RxJava2</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 

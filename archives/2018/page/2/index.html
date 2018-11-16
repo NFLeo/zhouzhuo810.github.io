@@ -155,6 +155,93 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/">
+        AndroidStudio技巧-发布library到jitpack并带注释
+      </a>
+    </h2>
+    
+    <time>
+      9月 25, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android开发工具/">Android开发工具</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h2 id="在project的build-gralde中添加classpath"><a href="#在project的build-gralde中添加classpath" class="headerlink" title="在project的build.gralde中添加classpath"></a>在project的build.gralde中添加classpath</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">classpath &apos;com.github.dcendents:android-maven-gradle-plugin:2.1&apos;</div></pre></td></tr></table></figure>
+<p>注意：如果没有加<code>google()</code>，必须加上这个，并且buildscript和allprojects都得加上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        google()</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:3.1.2&apos;</div><div class="line">        classpath &apos;com.github.dcendents:android-maven-gradle-plugin:2.1&apos;</div><div class="line"></div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line">    repositories &#123;</div><div class="line">        google()</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="在library的build-gradle中添加"><a href="#在library的build-gradle中添加" class="headerlink" title="在library的build.gradle中添加"></a>在library的build.gradle中添加</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">apply plugin: &apos;com.github.dcendents.android-maven&apos;</div><div class="line">  </div><div class="line">//&#123;github用户名&#125;改为自己github的用户名</div><div class="line">group=&apos;com.github.&#123;github用户名&#125;&apos;</div><div class="line">  </div><div class="line">//...</div><div class="line">  </div><div class="line">//添加下面这些才会有文档注释。</div><div class="line">  </div><div class="line">// build a jar with source files</div><div class="line">task sourcesJar(type: Jar) &#123;</div><div class="line">    from android.sourceSets.main.java.srcDirs</div><div class="line">    classifier = &apos;sources&apos;</div><div class="line">&#125;</div><div class="line">  </div><div class="line">task javadoc(type: Javadoc) &#123;</div><div class="line">    failOnError  false</div><div class="line">    source = android.sourceSets.main.java.sourceFiles</div><div class="line">    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))</div><div class="line">    classpath += configurations.compile</div><div class="line">&#125;</div><div class="line">  </div><div class="line">// build a jar with javadoc</div><div class="line">task javadocJar(type: Jar, dependsOn: javadoc) &#123;</div><div class="line">    classifier = &apos;javadoc&apos;</div><div class="line">    from javadoc.destinationDir</div><div class="line">&#125;</div><div class="line">  </div><div class="line">artifacts &#123;</div><div class="line">    archives sourcesJar</div><div class="line">    archives javadocJar</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/05/16/Android疑难杂症-购物车商品种类和商品列表联动效果/">
+        Android疑难杂症-购物车商品种类和商品列表联动效果
+      </a>
+    </h2>
+    
+    <time>
+      5月 16, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><blockquote>
+<p>基于BaseRecyclerViewAdapterHelper</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30&apos;</div></pre></td></tr></table></figure>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="../../../../images/shop_car.gif" alt="demo"></p>
+
+    
+	  <div class="readmore">
+      <a href="/2018/05/16/Android疑难杂症-购物车商品种类和商品列表联动效果/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/05/11/JavaEE-使用javaemail发送邮件/">
         JavaEE-使用javaemail发送邮件
       </a>
@@ -475,101 +562,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/03/15/Android-TV开发-使用OkHttp定时请求网络数据不刷新问题/">
-        Android-TV开发-使用OkHttp定时请求网络数据不刷新问题
-      </a>
-    </h2>
-    
-    <time>
-      3月 15, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android-TV开发/">Android-TV开发</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><ul>
-<li>电视APP某个页面需要每隔若干秒刷新一次数据；</li>
-<li>但是，刷新一定时间后数据不更新了，电视网络没问题；</li>
-<li>并且，使用电视的清理APP缓存功能后，会刷新；</li>
-<li>而且，隔一段时间后又出现此问题了。</li>
-</ul>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> KqApi <span class="title">getDefaultApi</span><span class="params">()</span> </span>&#123;</div><div class="line">        String serverIp = KqSharedUtil.getServerIp();</div><div class="line">        <span class="keyword">if</span> (api0 == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">synchronized</span> (Api.class) &#123;</div><div class="line">                <span class="keyword">if</span> (api0 == <span class="keyword">null</span>) &#123;</div><div class="line">                    File cache = KqApplication.getINSTANCE().getCacheDir();</div><div class="line"><span class="comment">/*                    HttpLoggingInterceptor logging = new HttpLoggingInterceptor();</span></div><div class="line">                    logging.setLevel(HttpLoggingInterceptor.Level.BASIC);</div><div class="line">                    HttpLoggingInterceptor logging1 = new HttpLoggingInterceptor();</div><div class="line">                    logging1.setLevel(HttpLoggingInterceptor.Level.BODY);*/</div><div class="line">                    OkHttpClient client = <span class="keyword">new</span> OkHttpClient.Builder()</div><div class="line">                            .cache(<span class="keyword">new</span> Cache(cache, <span class="number">1024</span>))</div><div class="line">                            .readTimeout(<span class="number">20</span>, TimeUnit.SECONDS)</div><div class="line">                            .writeTimeout(<span class="number">20</span>, TimeUnit.SECONDS)</div><div class="line">                            .connectTimeout(<span class="number">10</span>, TimeUnit.SECONDS)</div><div class="line">                            <span class="comment">//！！！关键代码，强制不使用缓存</span></div><div class="line">                            .addNetworkInterceptor(<span class="keyword">new</span> Interceptor() &#123;</div><div class="line">                                <span class="meta">@Override</span></div><div class="line">                                <span class="function"><span class="keyword">public</span> Response <span class="title">intercept</span><span class="params">(Chain chain)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">                                    Request request = chain.request().newBuilder()</div><div class="line">                                            .cacheControl(<span class="keyword">new</span> CacheControl.Builder().noCache().build())</div><div class="line">                                            .build();</div><div class="line">                                    <span class="keyword">return</span> chain.proceed(request);</div><div class="line">                                &#125;</div><div class="line">                            &#125;)</div><div class="line"><span class="comment">//                            .addInterceptor(logging)</span></div><div class="line"><span class="comment">//                            .addInterceptor(logging1)</span></div><div class="line">                            .build();</div><div class="line"></div><div class="line">                    Retrofit retrofit = <span class="keyword">new</span> Retrofit.Builder()</div><div class="line">                            .client(client)</div><div class="line">                            .addConverterFactory(GsonConverterFactory.create())<span class="comment">//添加 json 转换器</span></div><div class="line">                            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())<span class="comment">//添加 RxJava 适配器</span></div><div class="line">                            .baseUrl(serverIp)</div><div class="line">                            .build();</div><div class="line">                    api0 = retrofit.create(KqApi.class);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> api0;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/03/15/Android-TV开发-使用OkHttp定时请求网络数据不刷新问题/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android-TV开发/">Android-TV开发</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/03/15/Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题/">
-        Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题
-      </a>
-    </h2>
-    
-    <time>
-      3月 15, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android-TV开发/">Android-TV开发</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h3><blockquote>
-<p>使用GridLayoutManager时，多选的情况下，点击item刷新后，焦点被抢问题；</p>
-</blockquote>
-<ul>
-<li>解决方式</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">holder.setText(R.id.tv_name, data.get(position).getcName())</div><div class="line">        .setChecked(R.id.cb_choose, data.get(position).isChoosed())</div><div class="line">        .setOnClickListener(R.id.ll_cb, <span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">                data.get(position).setChoosed(!data.get(position).isChoosed());</div><div class="line">                notifyItemChanged(position); <span class="comment">//关键代码</span></div><div class="line">            &#125;</div><div class="line">        &#125;);</div></pre></td></tr></table></figure>
-<h3 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h3><blockquote>
-<p>在问题1解决后，手机上没问题，电视上会出现牵连闪烁问题，就是点击某一行的某一个item，该行最左边一个item也会跟着闪烁一下；</p>
-</blockquote>
-<ul>
-<li>解决方式</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//关闭闪烁动画</span></div><div class="line">((SimpleItemAnimator)rv.getItemAnimator()).setSupportsChangeAnimations(<span class="keyword">false</span>);</div></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android-TV开发/">Android-TV开发</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -628,6 +620,8 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>21</div></a></li>
     
+        <li><a class="flat-box" href="/categories/Android常见Exception/"><div class='name'>Android常见Exception</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>6</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
@@ -658,6 +652,8 @@
     
         <li><a class="flat-box" href="/categories/RxJava/"><div class='name'>RxJava</div><div class='badget'>2</div></a></li>
     
+        <li><a class="flat-box" href="/categories/RxJava2/"><div class='name'>RxJava2</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>5</div></a></li>
@@ -685,7 +681,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/RxJava2/" style="font-size: 14px; color: #808080">RxJava2</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 

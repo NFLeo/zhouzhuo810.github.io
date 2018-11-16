@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-11-08T01:54:12.060Z</updated>
+  <updated>2018-11-16T07:33:20.850Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidException-常见Exception汇总</title>
+    <link href="http://zhouzhuo810.github.io/2018/11/16/AndroidException-%E5%B8%B8%E8%A7%81Exception%E6%B1%87%E6%80%BB/"/>
+    <id>http://zhouzhuo810.github.io/2018/11/16/AndroidException-常见Exception汇总/</id>
+    <published>2018-11-16T07:20:34.000Z</published>
+    <updated>2018-11-16T07:33:20.850Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Invoke-customs are only supported starting with android 0 –min-api 26&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt; 	//build.gradle&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;android &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	//... ...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    android &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        compileOptions &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            sourceCompatibility JavaVersion.VERSION_1_8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            targetCompatibility JavaVersion.VERSION_1_8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android常见Exception" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E8%A7%81Exception/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RxJava2-监听EditText变化并查询数据库并更新UI</title>
+    <link href="http://zhouzhuo810.github.io/2018/11/16/RxJava2-%E7%9B%91%E5%90%ACEditText%E5%8F%98%E5%8C%96%E5%B9%B6%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B9%B6%E6%9B%B4%E6%96%B0UI/"/>
+    <id>http://zhouzhuo810.github.io/2018/11/16/RxJava2-监听EditText变化并查询数据库并更新UI/</id>
+    <published>2018-11-16T07:04:03.000Z</published>
+    <updated>2018-11-16T07:22:13.130Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
+    
+    </summary>
+    
+      <category term="RxJava2" scheme="http://zhouzhuo810.github.io/categories/RxJava2/"/>
+    
+    
+      <category term="RxJava2" scheme="http://zhouzhuo810.github.io/tags/RxJava2/"/>
+    
+  </entry>
   
   <entry>
     <title>AndroidStudio技巧-关闭全局代理</title>
@@ -392,54 +435,6 @@
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android-TV开发-使用OkHttp定时请求网络数据不刷新问题</title>
-    <link href="http://zhouzhuo810.github.io/2018/03/15/Android-TV%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8OkHttp%E5%AE%9A%E6%97%B6%E8%AF%B7%E6%B1%82%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%88%B7%E6%96%B0%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2018/03/15/Android-TV开发-使用OkHttp定时请求网络数据不刷新问题/</id>
-    <published>2018-03-15T03:16:30.000Z</published>
-    <updated>2018-03-15T03:33:16.173Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;电视APP某个页面需要每隔若干秒刷新一次数据；&lt;/li&gt;
-&lt;li&gt;但是，刷新一定时间后数据不更新了，电视网络没问题；&lt;/li&gt;
-&lt;li&gt;并且，使用电视的清理APP缓存功能后，会刷新；&lt;/li&gt;
-&lt;li&gt;而且，隔一段时间后又出现此问题了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot; title=&quot;解决办法&quot;&gt;&lt;/a&gt;解决办法&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;41&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; KqApi &lt;span class=&quot;title&quot;&gt;getDefaultApi&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        String serverIp = KqSharedUtil.getServerIp();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (api0 == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;synchronized&lt;/span&gt; (Api.class) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (api0 == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    File cache = KqApplication.getINSTANCE().getCacheDir();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*                    HttpLoggingInterceptor logging = new HttpLoggingInterceptor();&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    logging.setLevel(HttpLoggingInterceptor.Level.BASIC);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    HttpLoggingInterceptor logging1 = new HttpLoggingInterceptor();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    logging1.setLevel(HttpLoggingInterceptor.Level.BODY);*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    OkHttpClient client = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; OkHttpClient.Builder()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .cache(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Cache(cache, &lt;span class=&quot;number&quot;&gt;1024&lt;/span&gt;))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .readTimeout(&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, TimeUnit.SECONDS)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .writeTimeout(&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;, TimeUnit.SECONDS)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .connectTimeout(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, TimeUnit.SECONDS)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            &lt;span class=&quot;comment&quot;&gt;//！！！关键代码，强制不使用缓存&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .addNetworkInterceptor(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Interceptor() &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                &lt;span class=&quot;meta&quot;&gt;@Override&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; Response &lt;span class=&quot;title&quot;&gt;intercept&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(Chain chain)&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;throws&lt;/span&gt; IOException &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                    Request request = chain.request().newBuilder()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                            .cacheControl(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; CacheControl.Builder().noCache().build())&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                            .build();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; chain.proceed(request);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//                            .addInterceptor(logging)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//                            .addInterceptor(logging1)&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .build();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    Retrofit retrofit = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Retrofit.Builder()&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .client(client)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .addConverterFactory(GsonConverterFactory.create())&lt;span class=&quot;comment&quot;&gt;//添加 json 转换器&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())&lt;span class=&quot;comment&quot;&gt;//添加 RxJava 适配器&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .baseUrl(serverIp)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                            .build();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                    api0 = retrofit.create(KqApi.class);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;                &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;            &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; api0;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android-TV开发" scheme="http://zhouzhuo810.github.io/categories/Android-TV%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android-TV开发" scheme="http://zhouzhuo810.github.io/tags/Android-TV%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题</title>
-    <link href="http://zhouzhuo810.github.io/2018/03/15/Android-TV%E5%BC%80%E5%8F%91-RecyclerView%E5%88%B7%E6%96%B0%E7%84%A6%E7%82%B9%E4%B8%A2%E5%A4%B1%E4%BB%A5%E5%8F%8A%E5%B1%80%E9%83%A8%E5%88%B7%E6%96%B0%E9%97%AE%E9%A2%98/"/>
-    <id>http://zhouzhuo810.github.io/2018/03/15/Android-TV开发-RecyclerView刷新焦点丢失以及局部刷新问题/</id>
-    <published>2018-03-15T02:59:07.000Z</published>
-    <updated>2018-03-15T03:05:42.965Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;问题1&quot;&gt;&lt;a href=&quot;#问题1&quot; class=&quot;headerlink&quot; title=&quot;问题1&quot;&gt;&lt;/a&gt;问题1&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;使用GridLayoutManager时，多选的情况下，点击item刷新后，焦点被抢问题；&lt;/p&gt;
-&lt;/b
-    
-    </summary>
-    
-      <category term="Android-TV开发" scheme="http://zhouzhuo810.github.io/categories/Android-TV%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android-TV开发" scheme="http://zhouzhuo810.github.io/tags/Android-TV%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   

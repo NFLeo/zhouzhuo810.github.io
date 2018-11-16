@@ -154,6 +154,49 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/11/16/AndroidException-常见Exception汇总/">
+        AndroidException-常见Exception汇总
+      </a>
+    </h2>
+    
+    <time>
+      11月 16, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常见Exception/">Android常见Exception</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <blockquote>
+<p>Invoke-customs are only supported starting with android 0 –min-api 26</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> 	//build.gradle</div><div class="line">android &#123;</div><div class="line">	//... ...</div><div class="line">    android &#123;</div><div class="line">        compileOptions &#123;</div><div class="line">            sourceCompatibility JavaVersion.VERSION_1_8</div><div class="line">            targetCompatibility JavaVersion.VERSION_1_8</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/11/16/AndroidException-常见Exception汇总/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/11/08/AndroidStudio技巧-关闭全局代理/">
         AndroidStudio技巧-关闭全局代理
       </a>
@@ -517,46 +560,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">
-        Android疑难杂症-自定义RecyclerView的LayoutManager
-      </a>
-    </h2>
-    
-    <time>
-      4月 13, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h3 id="禁用RecyclerView手动滑动功能；"><a href="#禁用RecyclerView手动滑动功能；" class="headerlink" title="禁用RecyclerView手动滑动功能；"></a>禁用RecyclerView手动滑动功能；</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlanDateRecyclerView</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PlanDateRecyclerView</span><span class="params">(Context context, @Nullable AttributeSet attrs, <span class="keyword">int</span> defStyle)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs, defStyle);</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">        setOnTouchListener(<span class="keyword">new</span> OnTouchListener() &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouch</span><span class="params">(View v, MotionEvent event)</span> </span>&#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/13/Android疑难杂症-自定义RecyclerView的LayoutManager/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -609,6 +612,8 @@
     
         <li><a class="flat-box" href="/categories/Android常用代码/"><div class='name'>Android常用代码</div><div class='badget'>21</div></a></li>
     
+        <li><a class="flat-box" href="/categories/Android常见Exception/"><div class='name'>Android常见Exception</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/Android开发工具/"><div class='name'>Android开发工具</div><div class='badget'>6</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android开源控件/"><div class='name'>Android开源控件</div><div class='badget'>3</div></a></li>
@@ -639,6 +644,8 @@
     
         <li><a class="flat-box" href="/categories/RxJava/"><div class='name'>RxJava</div><div class='badget'>2</div></a></li>
     
+        <li><a class="flat-box" href="/categories/RxJava2/"><div class='name'>RxJava2</div><div class='badget'>1</div></a></li>
+    
         <li><a class="flat-box" href="/categories/SQL/"><div class='name'>SQL</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/SpringMVC/"><div class='name'>SpringMVC</div><div class='badget'>5</div></a></li>
@@ -666,7 +673,7 @@
 <div class="m_widget tagcloud">
     <div class="header">标签</div>
     <div class='content'>
-        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
+        <a href="/tags/ACM/" style="font-size: 17px; color: #404040">ACM</a> <a href="/tags/Android/" style="font-size: 20px; color: #000">Android</a> <a href="/tags/Android-TV开发/" style="font-size: 15px; color: #6b6b6b">Android-TV开发</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/InteliJ-IDEA/" style="font-size: 14px; color: #808080">InteliJ IDEA</a> <a href="/tags/JavaEE/" style="font-size: 18px; color: #2b2b2b">JavaEE</a> <a href="/tags/Linux/" style="font-size: 14px; color: #808080">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #808080">Markdown</a> <a href="/tags/PHP/" style="font-size: 14px; color: #808080">PHP</a> <a href="/tags/PhotoShop/" style="font-size: 14px; color: #808080">PhotoShop</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/RxJava/" style="font-size: 15px; color: #6b6b6b">RxJava</a> <a href="/tags/RxJava2/" style="font-size: 14px; color: #808080">RxJava2</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Swift/" style="font-size: 19px; color: #151515">Swift</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/iOS/" style="font-size: 15px; color: #6b6b6b">iOS</a> <a href="/tags/常识/" style="font-size: 18px; color: #2b2b2b">常识</a> <a href="/tags/网页前端/" style="font-size: 16px; color: #555">网页前端</a>
     </div>
 </div>
 
