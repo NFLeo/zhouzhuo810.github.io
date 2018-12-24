@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhouzhuo810.github.io/"/>
-  <updated>2018-11-16T07:33:20.850Z</updated>
+  <updated>2018-12-24T07:12:44.109Z</updated>
   <id>http://zhouzhuo810.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android疑难杂症-X5内核播放视频全屏问题</title>
+    <link href="http://zhouzhuo810.github.io/2018/12/24/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87-X5%E5%86%85%E6%A0%B8%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E5%85%A8%E5%B1%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://zhouzhuo810.github.io/2018/12/24/Android疑难杂症-X5内核播放视频全屏问题/</id>
+    <published>2018-12-24T07:09:15.000Z</published>
+    <updated>2018-12-24T07:12:44.109Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;直接上代码&quot;&gt;&lt;a href=&quot;#直接上代码&quot; class=&quot;headerlink&quot; title=&quot;直接上代码&quot;&gt;&lt;/a&gt;直接上代码&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;activity&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;android:name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;.ui.act.community.WebActivity&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;android:configChanges&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;keyboardHidden|keyboard|layoutDirection|screenLayout|screenSize|touchscreen|orientation&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;android:launchMode&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;singleTop&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;android:windowSoftInputMode&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;adjustNothing|stateAlwaysHidden&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attr&quot;&gt;android:screenOrientation&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;sensor&quot;&lt;/span&gt;/&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android疑难杂症" scheme="http://zhouzhuo810.github.io/categories/Android%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>AndroidException-常见Exception汇总</title>
@@ -409,29 +429,6 @@
     </summary>
     
       <category term="Android版本特性" scheme="http://zhouzhuo810.github.io/categories/Android%E7%89%88%E6%9C%AC%E7%89%B9%E6%80%A7/"/>
-    
-    
-      <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android常用代码-自定义View和ViewGroup</title>
-    <link href="http://zhouzhuo810.github.io/2018/03/20/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81-%E8%87%AA%E5%AE%9A%E4%B9%89View%E5%92%8CViewGroup/"/>
-    <id>http://zhouzhuo810.github.io/2018/03/20/Android常用代码-自定义View和ViewGroup/</id>
-    <published>2018-03-20T04:11:09.000Z</published>
-    <updated>2018-04-18T02:21:50.100Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;一、自定义View&quot;&gt;&lt;a href=&quot;#一、自定义View&quot; class=&quot;headerlink&quot; title=&quot;一、自定义View&quot;&gt;&lt;/a&gt;一、自定义View&lt;/h1&gt;&lt;h2 id=&quot;自定义属性&quot;&gt;&lt;a href=&quot;#自定义属性&quot; class=&quot;headerlink&quot; title=&quot;自定义属性&quot;&gt;&lt;/a&gt;自定义属性&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;以ZzHorizontalProgressBar为例&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//attrs.xml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;declare-styleable&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ZzHorizontalProgressBar&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--大小--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_padding&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;dimension&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--颜色--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_bg_color&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;color|reference&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_pb_color&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;color|reference&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_second_pb_color&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;color|reference&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--整数--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_max&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;integer&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_progress&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;integer&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_second_progress&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;integer&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--布尔--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_show_second_progress&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;boolean&quot;&lt;/span&gt; /&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--枚举--&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;zpb_show_second_point_shape&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;format&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;enum&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;point&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;name&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;line&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;value&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;1&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;attr&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;declare-styleable&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android常用代码" scheme="http://zhouzhuo810.github.io/categories/Android%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
     
       <category term="Android" scheme="http://zhouzhuo810.github.io/tags/Android/"/>

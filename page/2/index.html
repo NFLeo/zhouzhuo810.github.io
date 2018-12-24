@@ -150,6 +150,47 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/10/18/Android常用代码-阿里云推送/">
+        Android常用代码-阿里云推送
+      </a>
+    </h2>
+    
+    <time>
+      10月 18, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="集成依赖"><a href="#集成依赖" class="headerlink" title="集成依赖"></a>集成依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">implementation &apos;com.aliyun.ams:alicloud-android-push:3.1.2&apos;</div></pre></td></tr></table></figure>
+<h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 初始化云推送通道</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initCloudChannel</span><span class="params">(Context applicationContext)</span> </span>&#123;</div><div class="line"> </div><div class="line">    <span class="comment">//8.0</span></div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) &#123;</div><div class="line">        NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);</div><div class="line">        <span class="comment">// 通知渠道的id</span></div><div class="line">        String id = <span class="string">"1"</span>;</div><div class="line">        <span class="comment">// 用户可以看到的通知渠道的名字.</span></div><div class="line">        CharSequence name = <span class="string">"测试渠道名"</span>;</div><div class="line">        <span class="comment">// 用户可以看到的通知渠道的描述</span></div><div class="line">        String description = <span class="string">"测试渠道描述"</span>;</div><div class="line">        <span class="keyword">int</span> importance = NotificationManager.IMPORTANCE_HIGH;</div><div class="line">        NotificationChannel mChannel = <span class="keyword">new</span> NotificationChannel(id, name, importance);</div><div class="line">        mChannel.setLockscreenVisibility(Notification.VISIBILITY_PUBLIC);</div><div class="line">        <span class="comment">// 配置通知渠道的属性</span></div><div class="line">        mChannel.setDescription(description);</div><div class="line">        <span class="comment">// 设置通知出现时的闪灯（如果 android 设备支持的话）</span></div><div class="line">        mChannel.enableLights(<span class="keyword">true</span>);</div><div class="line">        mChannel.setLightColor(Color.RED);</div><div class="line">        mChannel.setSound(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_four), <span class="keyword">null</span>);</div><div class="line">        <span class="comment">// 设置通知出现时的震动（如果 android 设备支持的话）</span></div><div class="line">        mChannel.enableVibration(<span class="keyword">true</span>);</div><div class="line">        mChannel.setVibrationPattern(<span class="keyword">new</span> <span class="keyword">long</span>[]&#123;<span class="number">100</span>, <span class="number">200</span> , <span class="number">300</span>, <span class="number">400</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">400</span>&#125;);</div><div class="line">        <span class="comment">//最后在notificationmanager中创建该通知渠道</span></div><div class="line">        <span class="keyword">if</span> (mNotificationManager != <span class="keyword">null</span>) &#123;</div><div class="line">            mNotificationManager.createNotificationChannel(mChannel);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    PushServiceFactory.init(applicationContext);</div><div class="line">    CloudPushService pushService = PushServiceFactory.getCloudPushService();</div><div class="line">    <span class="keyword">if</span> (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.O) &#123;</div><div class="line">        pushService.setNotificationSoundFilePath(Uri.parse(<span class="string">"android.resource://"</span> + BaseUtil.getPackageInfo(BaseUtil.getApp()).packageName + <span class="string">"/"</span> + R.raw.hint_four).toString());</div><div class="line">    &#125;</div><div class="line">    pushService.register(applicationContext, <span class="keyword">new</span> CommonCallback() &#123;</div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSuccess</span><span class="params">(String response)</span> </span>&#123;</div><div class="line">            Log.d(TAG, <span class="string">"init cloudchannel success"</span>);</div><div class="line">            pushService.turnOnPushChannel(<span class="keyword">null</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailed</span><span class="params">(String errorCode, String errorMessage)</span> </span>&#123;</div><div class="line">            Log.d(TAG, <span class="string">"init cloudchannel failed -- errorcode:"</span> + errorCode + <span class="string">" -- errorMessage:"</span> + errorMessage);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/10/18/Android常用代码-阿里云推送/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/09/25/AndroidStudio技巧-发布library到jitpack并带注释/">
         AndroidStudio技巧-发布library到jitpack并带注释
       </a>
@@ -514,49 +555,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/03/20/Android常用代码-自定义View和ViewGroup/">
-        Android常用代码-自定义View和ViewGroup
-      </a>
-    </h2>
-    
-    <time>
-      3月 20, 2018
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android常用代码/">Android常用代码</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h1 id="一、自定义View"><a href="#一、自定义View" class="headerlink" title="一、自定义View"></a>一、自定义View</h1><h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><ul>
-<li>以ZzHorizontalProgressBar为例</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//attrs.xml</div><div class="line"><span class="tag">&lt;<span class="name">declare-styleable</span> <span class="attr">name</span>=<span class="string">"ZzHorizontalProgressBar"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--大小--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_padding"</span> <span class="attr">format</span>=<span class="string">"dimension"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--颜色--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_bg_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_pb_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_second_pb_color"</span> <span class="attr">format</span>=<span class="string">"color|reference"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--整数--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_max"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_progress"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_second_progress"</span> <span class="attr">format</span>=<span class="string">"integer"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--布尔--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_show_second_progress"</span> <span class="attr">format</span>=<span class="string">"boolean"</span> /&gt;</span></div><div class="line">    <span class="comment">&lt;!--枚举--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"zpb_show_second_point_shape"</span> <span class="attr">format</span>=<span class="string">"enum"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">"point"</span> <span class="attr">value</span>=<span class="string">"0"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">enum</span> <span class="attr">name</span>=<span class="string">"line"</span> <span class="attr">value</span>=<span class="string">"1"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">attr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">declare-styleable</span>&gt;</span></div></pre></td></tr></table></figure>
-
-    
-	  <div class="readmore">
-      <a href="/2018/03/20/Android常用代码-自定义View和ViewGroup/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -622,7 +620,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>4</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>18</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>19</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     

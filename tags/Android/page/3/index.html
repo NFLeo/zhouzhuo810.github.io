@@ -154,6 +154,46 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/02/08/Android常用代码-发送验证码倒计时/">
+        Android常用代码-发送验证码倒计时
+      </a>
+    </h2>
+    
+    <time>
+      2月 8, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Android常用代码/">Android常用代码</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h3 id="使用RxJava优雅的实现"><a href="#使用RxJava优雅的实现" class="headerlink" title="使用RxJava优雅的实现"></a>使用RxJava优雅的实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">btnVerifyCode.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</div><div class="line">        btnVerifyCode.setEnabled(<span class="keyword">false</span>);</div><div class="line">        Observable.interval(<span class="number">0</span>, <span class="number">1</span>, TimeUnit.SECONDS)</div><div class="line">                .observeOn(AndroidSchedulers.mainThread())</div><div class="line">                .subscribeOn(AndroidSchedulers.mainThread())</div><div class="line">                .limit(<span class="number">31</span>)</div><div class="line">                .map(<span class="keyword">new</span> Func1&lt;Long, Long&gt;() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> Long <span class="title">call</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                        <span class="keyword">return</span> <span class="number">30</span> - aLong;</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">                .doOnSubscribe(<span class="keyword">new</span> Action0() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">                        btnVerifyCode.setEnabled(<span class="keyword">false</span>);</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">                .doOnCompleted(<span class="keyword">new</span> Action0() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span> </span>&#123;</div><div class="line">                        btnVerifyCode.setEnabled(<span class="keyword">true</span>);</div><div class="line">                        btnVerifyCode.setText(<span class="string">"重新发送"</span>);</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">                .subscribe(<span class="keyword">new</span> Action1&lt;Long&gt;() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Long aLong)</span> </span>&#123;</div><div class="line">                        btnVerifyCode.setText(<span class="string">"重新发送（"</span>+aLong + <span class="string">" s ）"</span>);</div><div class="line">                    &#125;</div><div class="line">                &#125;, <span class="keyword">new</span> Action1&lt;Throwable&gt;() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Throwable throwable)</span> </span>&#123;</div><div class="line">                        ToastUtils.showCustomBgToast(<span class="string">"获取失败，错误信息："</span> + throwable.getMessage() + <span class="string">""</span>);</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+    
+	  <div class="readmore">
+      <a href="/2018/02/08/Android常用代码-发送验证码倒计时/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Android/">Android</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/02/05/Android常用代码-时间轴布局/">
         Android常用代码-时间轴布局
       </a>
@@ -533,50 +573,6 @@
 </article>
     </div>
   
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/">
-        Android疑难杂症-onRestoreInstanceState类型强转报错
-      </a>
-    </h2>
-    
-    <time>
-      12月 21, 2017
-    </time>
-		
-    
-    <div class='cats'>
-        <a href="/categories/Android疑难杂症/">Android疑难杂症</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><h3 id="层级关系"><a href="#层级关系" class="headerlink" title="层级关系"></a>层级关系</h3><ul>
-<li>ViewPager+Indicator<br> -&gt;Fragment<pre><code> -&gt;ViewPager+Indicator
--&gt;Fragment
-</code></pre></li>
-</ul>
-
-    
-	  <div class="readmore">
-      <a href="/2017/12/21/Android疑难杂症-onRestoreInstanceState类型强转报错/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Android/">Android</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -642,7 +638,7 @@
     
         <li><a class="flat-box" href="/categories/Android版本特性/"><div class='name'>Android版本特性</div><div class='badget'>4</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>18</div></a></li>
+        <li><a class="flat-box" href="/categories/Android疑难杂症/"><div class='name'>Android疑难杂症</div><div class='badget'>19</div></a></li>
     
         <li><a class="flat-box" href="/categories/Android签名打包/"><div class='name'>Android签名打包</div><div class='badget'>3</div></a></li>
     
